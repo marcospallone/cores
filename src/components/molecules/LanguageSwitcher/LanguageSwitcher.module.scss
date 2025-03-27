@@ -1,0 +1,23 @@
+@use "@/styles/includes" as *;
+
+.switcher {
+    display: flex;
+    align-items: center;
+    .toggleGroup {
+        background-color: var(--mui-palette-grey-800);
+        border-radius: 0;
+        border: 1px solid var(--mui-palette-grey-600);
+        .toggleButton {
+            color: var(--mui-palette-white-900);
+            padding: toRem(10) toRem(20);
+            transition: background-color 0.5s ease;
+            cursor: pointer;
+            border: none;
+            border-radius: 0;
+
+            &:hover {
+                background-color: var(--mui-palette-primary-main);
+            }
+        }
+    }
+}

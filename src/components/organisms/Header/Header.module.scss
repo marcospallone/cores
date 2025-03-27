@@ -6,6 +6,7 @@
   justify-content: space-between;
   width: 100%;
   position: relative;
+  z-index: 2;
 
   .leftHeader {
     display: flex;
@@ -26,7 +27,7 @@
         height: 1px;
         width: 0;
         background-color: var(--mui-palette-primary-main);
-        transition: width 0.3s ease;
+        transition: width 0.5s ease;
       }
 
       &:hover {
@@ -40,9 +41,9 @@
   }
 
   .logo {
-    // position: absolute;
-    // left: 50%;
-    // transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     a {
       display: flex;
     }
