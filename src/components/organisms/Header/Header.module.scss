@@ -1,0 +1,121 @@
+@use "@/styles/includes" as *;
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+
+  .leftHeader {
+    display: flex;
+    align-items: center;
+    gap: toRem(32);
+    .leftLink {
+      position: relative;
+      color: var(--mui-palette-white-900);
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 700;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        width: 0;
+        background-color: var(--mui-palette-primary-main);
+        transition: width 0.3s ease;
+      }
+
+      &:hover {
+        color: var(--mui-palette-primary-main);
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+
+  .logo {
+    // position: absolute;
+    // left: 50%;
+    // transform: translateX(-50%);
+    a {
+      display: flex;
+    }
+  }
+
+  .rightHeader {
+    display: flex;
+    align-items: center;
+    gap: toRem(32);
+
+    .contactButton {
+      position: relative;
+      overflow: hidden;
+      transition: background-color 0.3s ease;
+
+      .text,
+      .textHover {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        left: 0;
+      }
+
+      .textWrapper {
+        visibility: hidden;
+        opacity: 0;
+      }
+
+      .text {
+        top: 50%;
+        transform: translateY(-50%);
+        transition: opacity 0.3s ease;
+      }
+
+      .textHover {
+        top: 100%;
+        transform: translateY(0%);
+        opacity: 0;
+      }
+
+      &:hover .text {
+        animation: slideUp 0.5s forwards;
+      }
+
+      &:hover .textHover {
+        animation: slideIn 0.5s forwards;
+      }
+    }
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    top: 50%;
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+  100% {
+    top: -100%;
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    top: 100%;
+    opacity: 0;
+    transform: translateY(0%);
+  }
+  100% {
+    top: 50%;
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+}

@@ -1,7 +1,20 @@
-import { Components, createTheme } from "@mui/material/styles";
+import { createTheme } from "@mui/material/styles";
 import { getMuiContainer } from "./mui-container";
+import { Jost, Poppins } from "next/font/google";
+import { getMuiButton } from "./mui-button";
+
+export const fontPrimary = Jost({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
+export const fontSecondary = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
 
 declare module "@mui/material/styles/createPalette" {
+
   interface Palette {
     white: { 900: string };
   }
@@ -24,10 +37,11 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      main: "#FF6A00",
+      main: "#BFA06A",
     },
     secondary: {
-      main: "#FF4C29",
+      main: "#FF6A00",
+      dark: "#D88D58"
     },
     success: {
       main: "#385539",
@@ -47,6 +61,7 @@ const theme = createTheme({
 
 theme.components = {
   MuiContainer: getMuiContainer(theme),
+  MuiButton: getMuiButton(theme),
 };
 
 export default theme;
