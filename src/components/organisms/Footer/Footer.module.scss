@@ -1,0 +1,210 @@
+@use "@/styles/includes" as *;
+
+.footer {
+  background-color: var(--mui-palette-primary-main);
+
+  .footerContainer {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(28);
+    padding-top: toRem(32);
+    padding-bottom: toRem(32);
+    margin: 0;
+
+    .firstRow {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @include media-breakpoint-down(lg) {
+        flex-direction: column;
+        gap: toRem(16);
+        align-items: flex-start;
+      }
+
+      .logo {
+        margin-left: toRem(-24);
+
+        @include media-breakpoint-down(lg) {
+          margin: auto;
+        }
+        a {
+          display: flex;
+        }
+      }
+
+      .links {
+        display: flex;
+        gap: toRem(32);
+
+        @include media-breakpoint-down(xxl) {
+          gap: toRem(12);
+          flex-direction: column;
+        }
+
+        .link {
+          position: relative;
+          display: flex;
+          width: fit-content;
+          color: var(--mui-palette-white-900);
+          text-decoration: none;
+          text-transform: uppercase;
+          font-weight: 700;
+          font-size: toRem(20);
+          transition: color 0.2s ease;
+
+          @include media-breakpoint-down(xl) {
+            font-size: toRem(18);
+          }
+
+          @include media-breakpoint-down(lg) {
+            font-size: toRem(16);
+          }
+
+          &:hover {
+            color: var(--mui-palette-success-main);
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 1px;
+            width: 0;
+            background-color: var(--mui-palette-success-main);
+            transition: width 0.5s ease;
+          }
+
+          &:hover::after {
+            width: 100%;
+          }
+        }
+      }
+
+      .location {
+        display: flex;
+        align-items: center;
+        gap: toRem(8);
+        cursor: pointer;
+
+        &:hover {
+          .icon {
+            color: var(--mui-palette-success-main);
+          }
+
+          .address {
+            color: var(--mui-palette-success-main);
+
+            &::after {
+              width: 100%;
+            }
+          }
+        }
+
+        .icon {
+          transition: color 0.2s ease;
+        }
+
+        .address {
+          color: var(--mui-palette-white-900);
+          font-size: toRem(20);
+          text-decoration: none;
+          position: relative;
+          transition: color 0.2s ease;
+
+          @include media-breakpoint-down(xl) {
+            font-size: toRem(18);
+          }
+
+          @include media-breakpoint-down(lg) {
+            font-size: toRem(16);
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 1px;
+            width: 0;
+            background-color: var(--mui-palette-success-main);
+            transition: width 0.5s ease;
+          }
+        }
+      }
+
+      .tel {
+        display: flex;
+        align-items: center;
+        gap: toRem(8);
+        cursor: pointer;
+
+        &:hover {
+          .icon {
+            color: var(--mui-palette-success-main);
+          }
+
+          .phone {
+            color: var(--mui-palette-success-main);
+
+            &::after {
+              width: 100%;
+            }
+          }
+        }
+
+        .icon {
+          transition: color 0.2s ease;
+        }
+
+        .phone {
+          font-size: toRem(20);
+          color: var(--mui-palette-white-900);
+          text-decoration: none;
+          transition: color 0.2s ease;
+          position: relative;
+
+          @include media-breakpoint-down(xl) {
+            font-size: toRem(18);
+          }
+
+          @include media-breakpoint-down(lg) {
+            font-size: toRem(16);
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 1px;
+            width: 0;
+            background-color: var(--mui-palette-success-main);
+            transition: width 0.5s ease;
+          }
+        }
+      }
+    }
+
+    .secondRow {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @include media-breakpoint-down(lg) {
+        flex-direction: column;
+        gap: toRem(8);
+        align-items: flex-start;
+      }
+
+      .copyright {
+        color: var(--mui-palette-white-900);
+      }
+
+      .madeBy {
+        color: var(--mui-palette-white-900);
+      }
+    }
+  }
+}

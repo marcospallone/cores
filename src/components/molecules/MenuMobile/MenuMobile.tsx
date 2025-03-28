@@ -1,17 +1,14 @@
-import { Box, Container } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import styles from "./MenuMobile.module.scss";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 
-interface MenuMobileProps {
-  open: boolean;
-}
-
-const MenuMobile: React.FC<MenuMobileProps> = ({ open }) => {
+const MenuMobile: React.FC = () => {
   const t = useTranslations();
 
   return (
-    <Container className={styles.menuBox}>
+    <Box className={styles.menuBox}>
       <Box className={styles.menuItems}>
         <Link className={styles.leftLink} href={"/properties"}>
           {t("properties")}
@@ -23,7 +20,16 @@ const MenuMobile: React.FC<MenuMobileProps> = ({ open }) => {
           {t("services")}
         </Link>
       </Box>
-    </Container>
+      <Box className={styles.bottomBox}>
+        <LanguageSwitcher />
+        <Button
+          className={styles.contactsButton}
+          href={"/contacts"}
+        >
+          {t("contact_button")}
+        </Button>
+      </Box>
+    </Box>
   );
 };
 

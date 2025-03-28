@@ -5,13 +5,18 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  position: relative;
+  position: absolute;
   z-index: 2;
 
   .leftHeader {
     display: flex;
     align-items: center;
     gap: toRem(32);
+
+    @include media-breakpoint-down(xl) {
+      gap: toRem(24);
+    }
+
     .leftLink {
       position: relative;
       color: var(--mui-palette-white-900);
@@ -54,6 +59,10 @@
     align-items: center;
     gap: toRem(32);
 
+    @include media-breakpoint-down(xl) {
+      gap: toRem(24);
+    }
+
     .contactButton {
       position: relative;
       overflow: hidden;
@@ -94,69 +103,63 @@
     }
   }
 
-  .leftLogo {
-    margin-left: toRem(-25);
-    z-index: 5;
-  }
+  .mobileHeader {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .leftLogo {
+      margin-left: toRem(-25);
+      z-index: 5;
+      display: flex;
 
-  .mobileMenuOpening {
-    z-index: 5;
-    .menuButton {
-      position: relative;
-      overflow: hidden;
-      transition: background-color 0.3s ease;
-      .text,
-      .textHover {
-        position: absolute;
-        width: 100%;
-        text-align: center;
-        left: toRem(-8);
-      }
-
-      .textWrapper {
-        visibility: hidden;
-        opacity: 0;
-      }
-
-      .text {
-        top: 50%;
-        left: toRem(-8);
-        transform: translateY(-50%);
-        transition: opacity 0.3s ease;
-      }
-
-      .textHover {
-        top: 100%;
-        left: toRem(-8);
-        transform: translateY(0%);
-        opacity: 0;
-      }
-
-      &:hover .text {
-        animation: slideUp 0.5s forwards;
-      }
-
-      &:hover .textHover {
-        animation: slideIn 0.5s forwards;
+      a {
+        display: flex;
       }
     }
 
-    .menuIcon {
-      transition: transform 0.1s ease;
-    }
-    
-    .iconOpen {
-      transform: rotate(45deg);
+    .mobileMenuOpening {
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      .menuButton {
+        position: relative;
+        overflow: hidden;
+        
+        &:hover {
+          background-color: var(--mui-palette-primary-main);
+        }
+      }
+
+      .menuIcon {
+        transition: transform 0.1s ease;
+      }
+
+      .iconOpen {
+        transform: rotate(45deg);
+      }
     }
   }
 
   .mobileMenu {
     position: absolute;
+    top: toRem(-5);
+    left: 50%;
+    transform: translateX(-50%) !important;
+    width: 95%;
+    z-index: 4;
+    background-color: var(--mui-palette-grey-800);
+    border: 1px solid var(--mui-palette-grey-600);
+  }
+
+  .blur {
+    position: absolute;
     top: toRem(-20);
     left: 0;
     width: 100%;
-    z-index: 4;
-    background-color: var(--mui-palette-grey-800);
+    height: 100vh;
+    z-index: 3;
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.3);
   }
 }
 

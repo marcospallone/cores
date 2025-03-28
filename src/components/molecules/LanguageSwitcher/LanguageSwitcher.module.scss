@@ -15,6 +15,10 @@
             border: none;
             border-radius: 0;
 
+            @include media-breakpoint-down(lg) {
+                padding: toRem(10) toRem(16);
+            }
+
             &:hover {
                 background-color: var(--mui-palette-primary-main);
             }

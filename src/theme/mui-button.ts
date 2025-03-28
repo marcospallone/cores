@@ -21,7 +21,7 @@ export const getMuiButton = (theme: Theme): Components["MuiButton"] => ({
         },
 
         [theme.breakpoints.down('lg')]: {
-          padding: `${theme.spacing(12)} ${theme.spacing(28)}`
+          padding: `${theme.spacing(10)} ${theme.spacing(24)}`
         },
   
     },

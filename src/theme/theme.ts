@@ -13,6 +13,12 @@ export const fontSecondary = Poppins({
   weight: ["400", "700"],
 });
 
+declare module '@mui/material/styles' {
+  interface BreakpointOverrides {
+    xxl: true;
+  }
+}
+
 declare module "@mui/material/styles/createPalette" {
 
   interface Palette {
@@ -33,6 +39,7 @@ const theme = createTheme({
       md: 768,
       lg: 1024,
       xl: 1280,
+      xxl: 1440,
     },
   },
   palette: {

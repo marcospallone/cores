@@ -1,0 +1,14 @@
+@use 'sass:map';
+@use '@/styles/variables' as *;
+
+@mixin media-breakpoint-down($breakpoint) {
+    $max-width: map.get($breakpoints, $breakpoint);
+
+  @if $max-width {
+    @media (max-width: #{$max-width - 1}px) {
+      @content;
+    }
+  } @else {
+    @warn "Unknown breakpoint: #{$breakpoint}.";
+  }
+}

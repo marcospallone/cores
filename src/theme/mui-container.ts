@@ -10,8 +10,8 @@ export const getMuiContainer = (theme: Theme): Components['MuiContainer'] => ({
       maxWidth: '100% !important',
 
       [theme.breakpoints.down('xl')]: {
-        paddingLeft: `${theme.spacing(60)} !important`,
-        paddingRight: `${theme.spacing(60)} !important`
+        paddingLeft: `${theme.spacing(48)} !important`,
+        paddingRight: `${theme.spacing(48)} !important`
       },
 
 
