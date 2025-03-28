@@ -56,7 +56,7 @@ const theme = createTheme({
       "900": "#F5F5F5",
     },
   },
-  spacing: (factor: number) => `${factor / 20}rem`,
+  spacing: (factor: number) => `${factor / 16}rem`,
 });
 
 theme.components = {

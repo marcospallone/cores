@@ -1,0 +1,22 @@
+@use "@/styles/includes" as *;
+
+.menuBox {
+    padding-top: toRem(108);
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+
+    .menuItems {
+        display: flex;
+        flex-direction: column;
+
+        .leftLink {
+            position: relative;
+            color: var(--mui-palette-white-900);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 700;
+            text-align: right;
+          }
+    }
+}

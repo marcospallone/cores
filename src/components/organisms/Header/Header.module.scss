@@ -93,6 +93,71 @@
       }
     }
   }
+
+  .leftLogo {
+    margin-left: toRem(-25);
+    z-index: 5;
+  }
+
+  .mobileMenuOpening {
+    z-index: 5;
+    .menuButton {
+      position: relative;
+      overflow: hidden;
+      transition: background-color 0.3s ease;
+      .text,
+      .textHover {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        left: toRem(-8);
+      }
+
+      .textWrapper {
+        visibility: hidden;
+        opacity: 0;
+      }
+
+      .text {
+        top: 50%;
+        left: toRem(-8);
+        transform: translateY(-50%);
+        transition: opacity 0.3s ease;
+      }
+
+      .textHover {
+        top: 100%;
+        left: toRem(-8);
+        transform: translateY(0%);
+        opacity: 0;
+      }
+
+      &:hover .text {
+        animation: slideUp 0.5s forwards;
+      }
+
+      &:hover .textHover {
+        animation: slideIn 0.5s forwards;
+      }
+    }
+
+    .menuIcon {
+      transition: transform 0.1s ease;
+    }
+    
+    .iconOpen {
+      transform: rotate(45deg);
+    }
+  }
+
+  .mobileMenu {
+    position: absolute;
+    top: toRem(-20);
+    left: 0;
+    width: 100%;
+    z-index: 4;
+    background-color: var(--mui-palette-grey-800);
+  }
 }
 
 @keyframes slideUp {

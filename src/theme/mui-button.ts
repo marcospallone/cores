@@ -19,6 +19,11 @@ export const getMuiButton = (theme: Theme): Components["MuiButton"] => ({
         '&:hover': {
             backgroundColor: theme.palette.success.main,
         },
+
+        [theme.breakpoints.down('lg')]: {
+          padding: `${theme.spacing(12)} ${theme.spacing(28)}`
+        },
+  
     },
   },
 });
