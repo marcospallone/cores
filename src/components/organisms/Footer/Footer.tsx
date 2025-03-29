@@ -1,11 +1,11 @@
 "use client";
 
-import { Box, Container, useMediaQuery } from "@mui/material";
+import { Box, Button, Container, useMediaQuery } from "@mui/material";
 import styles from "./Footer.module.scss";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import PlaceIcon from "@mui/icons-material/Place";
-import CallIcon from "@mui/icons-material/Call";
+import MailIcon from "@mui/icons-material/Mail";
 import theme from "@/theme/theme";
 
 const Footer: React.FC = () => {
@@ -57,14 +57,17 @@ const Footer: React.FC = () => {
               {t("address")}
             </Link>
           </Box>
-          <Box className={styles.tel}>
-            <CallIcon
-              className={styles.icon}
-              sx={{ color: theme.palette.white[900] }}
-            />
-            <Link href={"tel:+393487921802"} className={styles.phone}>
-              +39 348 7921802
-            </Link>
+          <Box className={styles.contacts}>
+            <Button className={styles.contactsButton}>
+              <MailIcon
+                className={styles.icon}
+                sx={{ color: theme.palette.white[900] }}
+              />
+              {/* {t("contacts_link")} */}
+              <span className={styles.textWrapper}>{t("contacts_link")}</span>
+              <span className={styles.text}>{t("contacts_link")}</span>
+              <span className={styles.textHover}>{t("contacts_link")}</span>
+            </Button>
           </Box>
         </Box>
         <Box className={styles.secondRow}>

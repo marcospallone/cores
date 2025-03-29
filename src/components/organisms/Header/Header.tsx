@@ -1,11 +1,6 @@
 "use client";
 
-import {
-  Box,
-  Button,
-  Container,
-  useMediaQuery,
-} from "@mui/material";
+import { Box, Button, Container, useMediaQuery } from "@mui/material";
 import styles from "./Header.module.scss";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
@@ -15,8 +10,12 @@ import AddIcon from "@mui/icons-material/Add";
 import MenuMobile from "@/components/molecules/MenuMobile/MenuMobile";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
+import { usePathname } from "next/navigation";
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  isHome?: boolean;
+}
+const Header: React.FC<HeaderProps> = ({ isHome }) => {
   const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
   const t = useTranslations();
 
@@ -26,13 +25,18 @@ const Header: React.FC = () => {
     setMenuMobileOpen(!menuMobileOpen);
   };
 
+  const pathname = usePathname();
+  const transparent = pathname === "/en" || pathname === "/it";
+
+  console.log(transparent);
+
   useEffect(() => {
     if (menuMobileOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
     }
-  
+
     return () => {
       document.body.style.overflow = "";
     };
@@ -53,7 +57,13 @@ const Header: React.FC = () => {
 
   return (
     <header>
-      <Container className={styles.headerContainer}>
+      <Container
+        className={
+          transparent
+            ? `${styles.headerContainer} ${styles.transparent}`
+            : styles.headerContainer
+        }
+      >
         {isMobile ? (
           <>
             <AnimatePresence>

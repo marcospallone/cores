@@ -11,6 +11,10 @@
     padding-bottom: toRem(32);
     margin: 0;
 
+    @include media-breakpoint-down(lg) {
+      position: relative;
+    }
+
     .firstRow {
       display: flex;
       align-items: center;
@@ -88,6 +92,10 @@
         gap: toRem(8);
         cursor: pointer;
 
+        @include media-breakpoint-down(xl) {
+          gap: toRem(4);
+        }
+
         &:hover {
           .icon {
             color: var(--mui-palette-success-main);
@@ -134,54 +142,77 @@
         }
       }
 
-      .tel {
-        display: flex;
-        align-items: center;
-        gap: toRem(8);
-        cursor: pointer;
-
-        &:hover {
-          .icon {
-            color: var(--mui-palette-success-main);
-          }
-
-          .phone {
-            color: var(--mui-palette-success-main);
-
-            &::after {
-              width: 100%;
-            }
-          }
+      .contacts {
+        @include media-breakpoint-down(lg) {
+          position: absolute;
+          z-index: 9;
+          top: -7%;
+          left: 50%;
+          transform: translateX(-50%);
         }
 
-        .icon {
-          transition: color 0.2s ease;
-        }
-
-        .phone {
-          font-size: toRem(20);
+        .contactsButton {
+          background-color: var(--mui-palette-success-main);
           color: var(--mui-palette-white-900);
-          text-decoration: none;
-          transition: color 0.2s ease;
+          display: flex;
+          gap: toRem(8);
           position: relative;
+          overflow: hidden;
+
+          @media (min-width: 1440px) and (max-width: 1480px) {
+            gap: toRem(4);
+            padding: toRem(16) toRem(12);
+          }
 
           @include media-breakpoint-down(xl) {
-            font-size: toRem(18);
+            padding: toRem(16) toRem(16);
+            gap: toRem(6);
           }
 
-          @include media-breakpoint-down(lg) {
-            font-size: toRem(16);
+          .icon {
+            transition: color 0.2s ease;
           }
 
-          &::after {
-            content: "";
+          &:hover {
+            background-color: var(--mui-palette-grey-700);
+            color: var(--mui-palette-primary-main);
+
+            .icon {
+              color: var(--mui-palette-primary-main);
+            }
+          }
+
+          .text,
+          .textHover {
             position: absolute;
-            left: 0;
-            bottom: 0;
-            height: 1px;
-            width: 0;
-            background-color: var(--mui-palette-success-main);
-            transition: width 0.5s ease;
+            width: 100%;
+            text-align: center;
+            left: toRem(16);
+          }
+
+          .textWrapper {
+            visibility: hidden;
+            opacity: 0;
+          }
+
+          .text {
+            top: 50%;
+            transform: translateY(-50%);
+            transition: opacity 0.3s ease;
+          }
+
+          .textHover {
+            top: 100%;
+            transform: translateY(0%);
+            opacity: 0;
+          }
+
+          &:hover .text {
+            animation: slideUp 0.5s forwards;
+          }
+
+          &:hover .textHover {
+            animation: slideIn 0.5s forwards;
           }
         }
       }
@@ -206,5 +237,31 @@
         color: var(--mui-palette-white-900);
       }
     }
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    top: 50%;
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+  100% {
+    top: -100%;
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    top: 100%;
+    opacity: 0;
+    transform: translateY(0%);
+  }
+  100% {
+    top: 50%;
+    opacity: 1;
+    transform: translateY(-50%);
   }
 }
