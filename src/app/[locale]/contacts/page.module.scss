@@ -1,0 +1,22 @@
+@use "@/styles/includes" as *;
+
+.contactsContainer {
+
+
+    .formBox {
+        .form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: toRem(24);
+
+            .inputBox {
+                position: relative;
+                width: 100%;
+
+                .inputField {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

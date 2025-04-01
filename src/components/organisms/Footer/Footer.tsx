@@ -58,12 +58,11 @@ const Footer: React.FC = () => {
             </Link>
           </Box>
           <Box className={styles.contacts}>
-            <Button className={styles.contactsButton}>
+            <Button className={styles.contactsButton} href={'/contacts'}>
               <MailIcon
                 className={styles.icon}
                 sx={{ color: theme.palette.white[900] }}
               />
-              {/* {t("contacts_link")} */}
               <span className={styles.textWrapper}>{t("contacts_link")}</span>
               <span className={styles.text}>{t("contacts_link")}</span>
               <span className={styles.textHover}>{t("contacts_link")}</span>

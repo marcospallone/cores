@@ -28,8 +28,6 @@ const Header: React.FC<HeaderProps> = ({ isHome }) => {
   const pathname = usePathname();
   const transparent = pathname === "/en" || pathname === "/it";
 
-  console.log(transparent);
-
   useEffect(() => {
     if (menuMobileOpen) {
       document.body.style.overflow = "hidden";

@@ -1,5 +1,5 @@
 import { Components, Theme } from "@mui/material/styles";
-import { fontPrimary, fontSecondary } from "./theme";
+import { fontPrimary } from "./theme";
 
 export const getMuiButton = (theme: Theme): Components["MuiButton"] => ({
   styleOverrides: {

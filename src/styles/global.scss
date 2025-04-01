@@ -4,3 +4,91 @@ body {
     background-color: var(--mui-palette-grey-900) !important;
     font-family: 'Jost', sans-serif !important;
 }
+
+.animated-border {
+    position: relative;
+    display: inline-block;
+  
+    .MuiOutlinedInput-root {
+      position: relative;
+      z-index: 1;
+      border: 2px solid #ccc; // bordo grigio iniziale
+      background-color: #fff;
+  
+      &:hover {
+        border-color: transparent;
+        background-color: #f9f9f9;
+      }
+  
+      // Top line
+      &::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        height: 2px;
+        width: 0;
+        background-color: #3084AC;
+        transition: width 100ms ease 0ms;
+        z-index: 2;
+      }
+  
+      // Right line
+      &::after {
+        content: "";
+        position: absolute;
+        top: -2px;
+        right: -2px;
+        width: 2px;
+        height: 0;
+        background-color: #3084AC;
+        transition: height 100ms ease 100ms;
+        z-index: 2;
+      }
+  
+      // Bottom line
+      .bottom-line {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        right: -2px;
+        height: 2px;
+        width: 0;
+        background-color: #3084AC;
+        transition: width 100ms ease 200ms;
+        z-index: 2;
+      }
+  
+      // Left line
+      .left-line {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: -2px;
+        width: 2px;
+        height: 0;
+        background-color: #3084AC;
+        transition: height 100ms ease 300ms;
+        z-index: 2;
+      }
+  
+      &:hover {
+        // &::before {
+        //   width: calc(100% + 4px);
+        // }
+  
+        // &::after {
+        //   height: calc(100% + 4px);
+        // }
+  
+        .bottom-line {
+          width: calc(100% + 4px);
+        }
+  
+        .left-line {
+          height: calc(100% + 4px);
+        }
+      }
+    }
+  }
+  

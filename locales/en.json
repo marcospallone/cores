@@ -6,5 +6,12 @@
     "address": "134 Viale del Lago, Scanno (AQ), Italy",
     "copyright": "© 2025 Studio Tecnico - Geometra Spallone Pierfrancesco",
     "made_by": "Made by Marco Spallone",
-    "contacts_link": "Get in touch!"
+    "contacts_link": "Get in touch!",
+    "contacts_title": "Contact Us",
+    "contacts_message": "Leave us a message. We will get back to you as soon as possible.",
+    "name": "First Name",
+    "surname": "Last Name",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Write your message..."
 }

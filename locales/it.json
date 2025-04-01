@@ -6,5 +6,12 @@
     "address": "Viale del Lago, 134 - Scanno (AQ)",
     "copyright": "© 2025 Studio Tecnico - Geometra Spallone Pierfrancesco",
     "made_by": "Realizzato da Marco Spallone",
-    "contacts_link": "Contattaci!"
+    "contacts_link": "Contattaci!",
+    "contacts_title": "Contattaci",
+    "contacts_message": "Inviaci un messaggio. Ti risponderemo il prima possibile.",
+    "name": "Nome",
+    "surname": "Cognome",
+    "email": "Email",
+    "phone": "Telefono",
+    "message": "Scrivi un messaggio..."
 }

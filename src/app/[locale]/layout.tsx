@@ -7,7 +7,6 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import Footer from "@/components/organisms/Footer/Footer";
-import { headers } from "next/headers";
 export const metadata: Metadata = {
   title: "Studio Tecnico Geom. Spallone Piefrancesco",
   description: "Studio Tecnico Geom. Spallone Piefrancesco",

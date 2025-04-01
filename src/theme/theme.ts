@@ -2,6 +2,7 @@ import { createTheme } from "@mui/material/styles";
 import { getMuiContainer } from "./mui-container";
 import { Jost, Poppins } from "next/font/google";
 import { getMuiButton } from "./mui-button";
+import { getMuiTextField } from "./mui-textfield";
 
 export const fontPrimary = Jost({
   subsets: ["latin"],
@@ -69,6 +70,7 @@ const theme = createTheme({
 theme.components = {
   MuiContainer: getMuiContainer(theme),
   MuiButton: getMuiButton(theme),
+  MuiTextField: getMuiTextField(theme)
 };
 
 export default theme;
