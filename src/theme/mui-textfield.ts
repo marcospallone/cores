@@ -1,4 +1,5 @@
 import { Components, Theme } from "@mui/material/styles";
+import { color } from "motion/react";
 
 export const getMuiTextField = (theme: Theme): Components["MuiTextField"] => ({
   styleOverrides: {
@@ -11,6 +12,7 @@ export const getMuiTextField = (theme: Theme): Components["MuiTextField"] => ({
         border: `2px solid ${theme.palette.grey[600]}`,
         borderRadius: 0,
         transition: "background-color 0.3s ease",
+        color : theme.palette.white[900],
 
         "&::before, &::after": {
           content: '""',
@@ -43,7 +45,6 @@ export const getMuiTextField = (theme: Theme): Components["MuiTextField"] => ({
         },
 
         "&:hover": {
-          borderColor: theme.palette.grey[600],
           "&::before": {
             width: "100%",
           },
@@ -51,6 +52,10 @@ export const getMuiTextField = (theme: Theme): Components["MuiTextField"] => ({
             height: "calc(100% + 2px)",
           },
         },
+
+        "&.Mui-focused": {
+          borderColor: theme.palette.primary.main,
+        }
       },
 
       "& ~ .custom-bottom-border": {

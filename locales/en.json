@@ -13,5 +13,6 @@
     "surname": "Last Name",
     "email": "Email",
     "phone": "Phone",
-    "message": "Write your message..."
+    "message": "Write your message...",
+    "send_message": "Send"
 }

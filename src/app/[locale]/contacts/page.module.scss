@@ -1,22 +1,132 @@
 @use "@/styles/includes" as *;
 
 .contactsContainer {
+  .grid1 {
+    display: flex;
+    align-items: center;
 
-
-    .formBox {
-        .form {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: toRem(24);
-
-            .inputBox {
-                position: relative;
-                width: 100%;
-
-                .inputField {
-                    width: 100%;
-                }
-            }
-        }
+    .imgBox {
+      .mapLink {
+        display: flex;
+      }
     }
+  }
 }
+
+.formContainer {
+  background-color: var(--mui-palette-success-main);
+  padding: toRem(64) 0;
+  margin: 0 !important;
+  .formBox {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(32);
+    background-color: var(--mui-palette-success-main);
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      gap: toRem(8);
+      .title {
+        font-family: "Jost", sans-serif !important;
+      }
+
+      .description {
+        font-family: "Poppins", sans-serif !important;
+      }
+    }
+
+    .form {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: toRem(24);
+
+      .inputBox {
+        position: relative;
+        width: 100%;
+
+        &:last-child {
+          grid-column: span 2;
+        }
+
+        .inputField {
+          width: 100%;
+        }
+      }
+    }
+
+    .submitBox {
+      display: flex;
+      justify-content: center;
+      .cta {
+        width: 20%;
+        position: relative;
+        overflow: hidden;
+        transition: background-color 0.3s ease;
+
+        .text,
+        .textHover {
+          position: absolute;
+          width: 100%;
+          text-align: center;
+          left: toRem(-8);
+        }
+
+        .textWrapper {
+          visibility: hidden;
+          opacity: 0;
+        }
+
+        .text {
+          top: 50%;
+          transform: translateY(-50%);
+          transition: opacity 0.3s ease;
+        }
+
+        .textHover {
+          top: 100%;
+          transform: translateY(0%);
+          opacity: 0;
+        }
+
+        &:hover .text {
+          animation: slideUp 0.5s forwards;
+        }
+
+        &:hover .textHover {
+          animation: slideIn 0.5s forwards;
+        }
+        &:hover {
+          background-color: var(--mui-palette-grey-700);
+        }
+      }
+    }
+  }
+}
+
+@keyframes slideUp {
+    0% {
+      top: 50%;
+      opacity: 1;
+      transform: translateY(-50%);
+    }
+    100% {
+      top: -100%;
+      opacity: 0;
+      transform: translateY(-50%);
+    }
+  }
+  
+  @keyframes slideIn {
+    0% {
+      top: 100%;
+      opacity: 0;
+      transform: translateY(0%);
+    }
+    100% {
+      top: 50%;
+      opacity: 1;
+      transform: translateY(-50%);
+    }
+  }
+  
