@@ -14,5 +14,8 @@
     "email": "Email",
     "phone": "Telefono",
     "message": "Scrivi un messaggio...",
-    "send_message": "Invia"
+    "send_message": "Invia",
+    "contacts_address": "Indirizzo",
+    "contacts_phone": "Telefono",
+    "contacts_email": "Email"
 }

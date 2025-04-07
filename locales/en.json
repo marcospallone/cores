@@ -14,5 +14,8 @@
     "email": "Email",
     "phone": "Phone",
     "message": "Write your message...",
-    "send_message": "Send"
+    "send_message": "Send",
+    "contacts_address": "Address",
+    "contacts_phone": "Phone",
+    "contacts_email": "Email"
 }

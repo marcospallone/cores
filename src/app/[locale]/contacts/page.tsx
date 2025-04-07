@@ -16,6 +16,8 @@ import Row from "@/components/atoms/Row";
 import Link from "next/link";
 import SendIcon from "@mui/icons-material/Send";
 import theme from "@/theme/theme";
+import FadeIn from "@/components/atoms/FadeIn";
+import { sendEmail } from "@/utils/sendEmail";
 
 const Contacts: React.FC = () => {
   const t = useTranslations();
@@ -26,23 +28,62 @@ const Contacts: React.FC = () => {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
 
+  const handleSend = () => {
+    sendEmail(name, surname, email, phone, message);
+  };
+
   return (
     <>
       <Container className={styles.contactsContainer}>
         <Row>
           <Grid2 size={5} className={styles.grid1}>
-            <Box className={styles.imgBox}>
-              <Link
-                href={"https://maps.app.goo.gl/uisG3vD5gRauRJTH7"}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.mapLink}
-              >
-                <Map width={"100%"} />
-              </Link>
+            <FadeIn>
+              <Box className={styles.imgBox}>
+                <Link
+                  href={"https://maps.app.goo.gl/uisG3vD5gRauRJTH7"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.mapLink}
+                >
+                  <Map width={"100%"} />
+                </Link>
+              </Box>
+            </FadeIn>
+          </Grid2>
+          <Grid2 size={7} className={styles.grid2}>
+            <Box className={styles.textBox}>
+              <Box className={styles.addressBox}>
+                <Typography variant="h4" className={styles.title}>
+                  {t("contacts_address")}
+                </Typography>
+                <Typography className={styles.description}>
+                  {t("address")}
+                </Typography>
+              </Box>
+              <Box className={styles.phoneBox}>
+                <Typography variant="h4" className={styles.title}>
+                  {t("contacts_phone")}
+                </Typography>
+                <Link href={"tel:+390864747751"} className={styles.description}>
+                  0864 747751
+                </Link>
+                <Link href={"tel:+393487921802"} className={styles.description}>
+                  +39 348 7921802
+                </Link>
+              </Box>
+              <Box className={styles.emailBox}>
+                <Typography variant="h4" className={styles.title}>
+                  {t("contacts_email")}
+                </Typography>
+                <Link
+                  href={"mailto:p.spallone@libero.it"}
+                  className={styles.description}
+                >
+                  p.spallone@libero.it
+                </Link>
+              </Box>
             </Box>
           </Grid2>
-          <Grid2 size={7}></Grid2>
         </Row>
       </Container>
       <Container className={styles.formContainer}>
@@ -138,6 +179,7 @@ const Contacts: React.FC = () => {
                       }}
                     />
                   }
+                  onClick={handleSend}
                 >
                   <span className={styles.textWrapper}>
                     {t("send_message")}

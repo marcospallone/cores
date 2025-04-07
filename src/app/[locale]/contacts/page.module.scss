@@ -11,6 +11,34 @@
       }
     }
   }
+
+  .grid2 {
+    display: flex;
+    align-items: center;
+    .textBox {
+      display: flex;
+      flex-direction: column;
+      gap: toRem(32);
+
+      .addressBox, .phoneBox, .emailBox {
+        display: flex;
+        flex-direction: column;
+        gap: toRem(8);
+      }
+
+      .title {
+        font-family: "Jost", sans-serif !important;
+        font-weight: 500;
+        color: var(--mui-palette-primary-main);
+      }
+
+      .description {
+        font-family: "Poppins", sans-serif !important;
+        color: var(--mui-palette-white-900);
+        text-underline-offset: 3px;
+      }
+    }
+  }
 }
 
 .formContainer {
@@ -105,28 +133,27 @@
 }
 
 @keyframes slideUp {
-    0% {
-      top: 50%;
-      opacity: 1;
-      transform: translateY(-50%);
-    }
-    100% {
-      top: -100%;
-      opacity: 0;
-      transform: translateY(-50%);
-    }
+  0% {
+    top: 50%;
+    opacity: 1;
+    transform: translateY(-50%);
   }
-  
-  @keyframes slideIn {
-    0% {
-      top: 100%;
-      opacity: 0;
-      transform: translateY(0%);
-    }
-    100% {
-      top: 50%;
-      opacity: 1;
-      transform: translateY(-50%);
-    }
+  100% {
+    top: -100%;
+    opacity: 0;
+    transform: translateY(-50%);
   }
-  
+}
+
+@keyframes slideIn {
+  0% {
+    top: 100%;
+    opacity: 0;
+    transform: translateY(0%);
+  }
+  100% {
+    top: 50%;
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+}
