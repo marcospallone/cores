@@ -45,6 +45,16 @@
   background-color: var(--mui-palette-success-main);
   padding: toRem(64) 0;
   margin: 0 !important;
+  transition: height 0.3s ease;
+  min-height: toRem(250);
+
+  .feedbackBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: toRem(32);
+  }
+
   .formBox {
     display: flex;
     flex-direction: column;
