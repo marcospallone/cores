@@ -9,13 +9,15 @@
     "contacts_link": "Contattaci!",
     "contacts_title": "Contattaci",
     "contacts_message": "Inviaci un messaggio. Ti risponderemo il prima possibile.",
-    "name": "Nome",
-    "surname": "Cognome",
-    "email": "Email",
+    "name": "Nome*",
+    "surname": "Cognome*",
+    "email": "Email*",
     "phone": "Telefono",
-    "message": "Scrivi un messaggio...",
+    "message": "Scrivi un messaggio...*",
     "send_message": "Invia",
     "contacts_address": "Indirizzo",
     "contacts_phone": "Telefono",
-    "contacts_email": "Email"
+    "contacts_email": "Email",
+    "not_compiled": "Compila tutti i campi contrassegnati con *",
+    "invalid_email": "Email non valida"
 }

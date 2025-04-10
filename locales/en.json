@@ -9,13 +9,15 @@
     "contacts_link": "Get in touch!",
     "contacts_title": "Contact Us",
     "contacts_message": "Leave us a message. We will get back to you as soon as possible.",
-    "name": "First Name",
-    "surname": "Last Name",
-    "email": "Email",
+    "name": "First Name*",
+    "surname": "Last Name*",
+    "email": "Email*",
     "phone": "Phone",
-    "message": "Write your message...",
+    "message": "Write your message...*",
     "send_message": "Send",
     "contacts_address": "Address",
     "contacts_phone": "Phone",
-    "contacts_email": "Email"
+    "contacts_email": "Email",
+    "not_compiled": "Fill in all fields marked with *",
+    "invalid_email": "Invalid email address"
 }

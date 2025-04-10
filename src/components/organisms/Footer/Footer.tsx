@@ -7,10 +7,13 @@ import { useTranslations } from "next-intl";
 import PlaceIcon from "@mui/icons-material/Place";
 import MailIcon from "@mui/icons-material/Mail";
 import theme from "@/theme/theme";
+import { usePathname } from "next/navigation";
 
 const Footer: React.FC = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
   const t = useTranslations();
+
+  const isContacts = usePathname() === "/it/contacts";
 
   return (
     <footer className={styles.footer}>
@@ -57,17 +60,19 @@ const Footer: React.FC = () => {
               {t("address")}
             </Link>
           </Box>
-          <Box className={styles.contacts}>
-            <Button className={styles.contactsButton} href={'/contacts'}>
-              <MailIcon
-                className={styles.icon}
-                sx={{ color: theme.palette.white[900] }}
-              />
-              <span className={styles.textWrapper}>{t("contacts_link")}</span>
-              <span className={styles.text}>{t("contacts_link")}</span>
-              <span className={styles.textHover}>{t("contacts_link")}</span>
-            </Button>
-          </Box>
+          {!isContacts && (
+            <Box className={styles.contacts}>
+              <Button className={styles.contactsButton} href={"/contacts"}>
+                <MailIcon
+                  className={styles.icon}
+                  sx={{ color: theme.palette.white[900] }}
+                />
+                <span className={styles.textWrapper}>{t("contacts_link")}</span>
+                <span className={styles.text}>{t("contacts_link")}</span>
+                <span className={styles.textHover}>{t("contacts_link")}</span>
+              </Button>
+            </Box>
+          )}
         </Box>
         <Box className={styles.secondRow}>
           <Box className={styles.copyright}>{t("copyright")}</Box>

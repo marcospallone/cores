@@ -12,10 +12,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { usePathname } from "next/navigation";
 
-interface HeaderProps {
-  isHome?: boolean;
-}
-const Header: React.FC<HeaderProps> = ({ isHome }) => {
+const Header: React.FC = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
   const t = useTranslations();
 

@@ -8,6 +8,7 @@
     .imgBox {
       .mapLink {
         display: flex;
+        justify-content: center;
       }
     }
   }
@@ -20,10 +21,23 @@
       flex-direction: column;
       gap: toRem(32);
 
-      .addressBox, .phoneBox, .emailBox {
+      @include media-breakpoint-down(lg) {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        padding-bottom: toRem(24);
+      }
+
+      .addressBox,
+      .phoneBox,
+      .emailBox {
         display: flex;
         flex-direction: column;
         gap: toRem(8);
+
+        @include media-breakpoint-down(lg) {
+          align-items: center;
+        }
       }
 
       .title {
@@ -36,6 +50,29 @@
         font-family: "Poppins", sans-serif !important;
         color: var(--mui-palette-white-900);
         text-underline-offset: 3px;
+        display: flex;
+        width: fit-content;
+        text-decoration: none;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: 1px;
+          width: 0;
+          background-color: var(--mui-palette-primary-main);
+          transition: width 0.5s ease;
+        }
+
+        &:hover {
+          color: var(--mui-palette-primary-main);
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
       }
     }
   }
@@ -47,8 +84,24 @@
   margin: 0 !important;
   transition: height 0.3s ease;
   min-height: toRem(250);
+  position: relative;
 
-  .feedbackBox{
+  @include media-breakpoint-down(lg) {
+    padding: toRem(32) 0;
+    // min-height: toRem(400);s
+  }
+
+  .loaderBox {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  .feedbackBox {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -96,11 +149,26 @@
     .submitBox {
       display: flex;
       justify-content: center;
+      position: relative;
+
+      .errorText {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        color: var(--mui-palette-secondary-main);
+        font-family: "Poppins", sans-serif !important;
+      }
+
       .cta {
         width: 20%;
         position: relative;
         overflow: hidden;
         transition: background-color 0.3s ease;
+
+        @include media-breakpoint-down(lg) {
+          width: 100%;
+        }
 
         .text,
         .textHover {

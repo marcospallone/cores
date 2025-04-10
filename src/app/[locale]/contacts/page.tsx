@@ -3,10 +3,12 @@
 import {
   Box,
   Button,
+  CircularProgress,
   Container,
   Grid2,
   TextField,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
 import styles from "./page.module.scss";
 import Map from "@/components/atoms/Map";
@@ -22,6 +24,7 @@ import ErrorIcon from "@mui/icons-material/Error";
 import { AnimatePresence, motion } from "motion/react";
 
 const Contacts: React.FC = () => {
+  const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
   const t = useTranslations();
 
   const [name, setName] = useState("");
@@ -30,6 +33,8 @@ const Contacts: React.FC = () => {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
 
+  const [notCompiled, setNotCompiled] = useState(false);
+  const [invalidEmail, setinvalidEmail] = useState(false);
   const [loading, setLoading] = useState(false);
   const [feedback, setFeedback] = useState<null | {
     success: boolean;
@@ -37,38 +42,54 @@ const Contacts: React.FC = () => {
   }>(null);
 
   const handleSend = async () => {
-    setLoading(true);
-    setFeedback(null);
+    setNotCompiled(false);
+    setinvalidEmail(false);
+    if (name === "" || surname === "" || email === "" || message === "") {
+      setNotCompiled(true);
+    } else {
+      const emailValid = isValidEmail(email);
+      const allFilled =
+        name.trim() && surname.trim() && email.trim() && message.trim();
 
-    try {
-      const response = await fetch("/api/send-email", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, surname, email, phone, message }),
-      });
-      const data = await response.json();
-      if (response.ok) {
-        setFeedback({ success: true, message: data.message });
-        setName("");
-        setSurname("");
-        setEmail("");
-        setPhone("");
-        setMessage("");
-      } else {
-        setFeedback({ success: false, message: data.message });
+      if (!allFilled || !emailValid) {
+        setinvalidEmail(true);
+        return;
       }
-    } catch (error) {
-      setFeedback({ success: false, message: "Errore di rete o server." });
-    } finally {
-      setLoading(false);
+      setLoading(true);
+      setFeedback(null);
+      try {
+        const response = await fetch("/api/send-email", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name, surname, email, phone, message }),
+        });
+        const data = await response.json();
+        if (response.ok) {
+          setFeedback({ success: true, message: data.message });
+          setName("");
+          setSurname("");
+          setEmail("");
+          setPhone("");
+          setMessage("");
+        } else {
+          setFeedback({ success: false, message: data.message });
+        }
+      } catch (error) {
+        setFeedback({ success: false, message: "Errore di rete o server." });
+      } finally {
+        setLoading(false);
+      }
     }
   };
+
+  const isValidEmail = (email: string) =>
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
   return (
     <>
       <Container className={styles.contactsContainer}>
         <Row>
-          <Grid2 size={5} className={styles.grid1}>
+          <Grid2 size={{ xs: 12, lg: 6 }} className={styles.grid1}>
             <FadeIn>
               <Box className={styles.imgBox}>
                 <Link
@@ -77,20 +98,23 @@ const Contacts: React.FC = () => {
                   rel="noopener noreferrer"
                   className={styles.mapLink}
                 >
-                  <Map width={"100%"} />
+                  <Map width={isMobile ? "100%" : "80%"} />
                 </Link>
               </Box>
             </FadeIn>
           </Grid2>
-          <Grid2 size={7} className={styles.grid2}>
+          <Grid2 size={{xs: 12, lg: 6}} className={styles.grid2}>
             <Box className={styles.textBox}>
               <Box className={styles.addressBox}>
                 <Typography variant="h4" className={styles.title}>
                   {t("contacts_address")}
                 </Typography>
-                <Typography className={styles.description}>
+                <Link
+                  href={"https://maps.app.goo.gl/uisG3vD5gRauRJTH7"}
+                  className={styles.description}
+                >
                   {t("address")}
-                </Typography>
+                </Link>
               </Box>
               <Box className={styles.phoneBox}>
                 <Typography variant="h4" className={styles.title}>
@@ -118,7 +142,6 @@ const Contacts: React.FC = () => {
           </Grid2>
         </Row>
       </Container>
-
       <Container className={styles.formContainer}>
         <AnimatePresence mode="wait">
           <motion.div
@@ -127,11 +150,14 @@ const Contacts: React.FC = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
+            layout
             style={{ overflow: "hidden" }}
           >
             {loading && (
               <FadeIn>
-                <Typography className={styles.loadingText}>...</Typography>
+                <Box className={styles.loaderBox}>
+                  <CircularProgress sx={{ color: theme.palette.white[900] }} />
+                </Box>
               </FadeIn>
             )}
 
@@ -143,7 +169,6 @@ const Contacts: React.FC = () => {
                       <CheckCircleIcon
                         sx={{
                           fontSize: theme.spacing(48),
-                          color: theme.palette.primary.main,
                         }}
                       />
                       <Typography variant="h4" className={styles.feedbackText}>
@@ -155,7 +180,7 @@ const Contacts: React.FC = () => {
                       <ErrorIcon
                         sx={{
                           fontSize: theme.spacing(48),
-                          color: theme.palette.error.main,
+                          color: theme.palette.secondary.dark,
                         }}
                       />
                       <Typography variant="h4" className={styles.feedbackText}>
@@ -191,6 +216,14 @@ const Contacts: React.FC = () => {
                               setName(event.target.value);
                             }}
                             className={styles.inputField}
+                            sx={{
+                              "& .MuiOutlinedInput-root": {
+                                borderColor:
+                                  notCompiled && name === ""
+                                    ? theme.palette.secondary.dark
+                                    : "none",
+                              },
+                            }}
                           />
                           <Box className="custom-bottom-border" />
                           <Box className="custom-left-border" />
@@ -206,6 +239,14 @@ const Contacts: React.FC = () => {
                               setSurname(event.target.value);
                             }}
                             className={styles.inputField}
+                            sx={{
+                              "& .MuiOutlinedInput-root": {
+                                borderColor:
+                                  notCompiled && surname === ""
+                                    ? theme.palette.secondary.dark
+                                    : "none",
+                              },
+                            }}
                           />
                           <Box className="custom-bottom-border" />
                           <Box className="custom-left-border" />
@@ -215,12 +256,22 @@ const Contacts: React.FC = () => {
                             id="email"
                             placeholder={t("email")}
                             value={email}
+                            type="email"
                             onChange={(
                               event: React.ChangeEvent<HTMLInputElement>
                             ) => {
-                              setEmail(event.target.value);
+                              const value = event.target.value;
+                              setEmail(value);
                             }}
                             className={styles.inputField}
+                            sx={{
+                              "& .MuiOutlinedInput-root": {
+                                borderColor:
+                                  invalidEmail || (notCompiled && email === "")
+                                    ? theme.palette.secondary.dark
+                                    : "none",
+                              },
+                            }}
                           />
                           <Box className="custom-bottom-border" />
                           <Box className="custom-left-border" />
@@ -233,7 +284,12 @@ const Contacts: React.FC = () => {
                             onChange={(
                               event: React.ChangeEvent<HTMLInputElement>
                             ) => {
-                              setPhone(event.target.value);
+                              const input = event.target.value;
+                              const filteredInput = input.replace(
+                                /[^\d+ ]/g,
+                                ""
+                              );
+                              setPhone(filteredInput);
                             }}
                             className={styles.inputField}
                           />
@@ -253,12 +309,34 @@ const Contacts: React.FC = () => {
                               setMessage(event.target.value);
                             }}
                             className={styles.inputField}
+                            sx={{
+                              "& .MuiOutlinedInput-root": {
+                                borderColor:
+                                  notCompiled && message === ""
+                                    ? theme.palette.secondary.dark
+                                    : "none",
+                              },
+                            }}
                           />
                           <Box className="custom-bottom-border" />
                           <Box className="custom-left-border" />
                         </Box>
                       </Box>
                       <Box className={styles.submitBox}>
+                        {notCompiled && (
+                          <FadeIn duration={0.5}>
+                            <Typography className={styles.errorText}>
+                              {t("not_compiled")}
+                            </Typography>
+                          </FadeIn>
+                        )}
+                        {invalidEmail && (
+                          <FadeIn duration={0.5}>
+                            <Typography className={styles.errorText}>
+                              {t("invalid_email")}
+                            </Typography>
+                          </FadeIn>
+                        )}
                         <Button
                           className={styles.cta}
                           endIcon={
