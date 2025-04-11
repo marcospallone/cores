@@ -11,17 +11,23 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import styles from "./page.module.scss";
-import Map from "@/components/atoms/Map";
-import { useTranslations } from "next-intl";
-import { useState } from "react";
-import Row from "@/components/atoms/Row";
-import Link from "next/link";
-import SendIcon from "@mui/icons-material/Send";
-import theme from "@/theme/theme";
+// import Map from "@/components/atoms/Map";
 import FadeIn from "@/components/atoms/FadeIn";
+import Row from "@/components/atoms/Row";
+import theme from "@/theme/theme";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import ErrorIcon from "@mui/icons-material/Error";
+import SendIcon from "@mui/icons-material/Send";
 import { AnimatePresence, motion } from "motion/react";
+import { useTranslations } from "next-intl";
+import Link from "next/link";
+import { useState } from "react";
+
+import dynamic from "next/dynamic";
+
+const Map = dynamic(() => import("@/components/atoms/Map"), {
+  ssr: false,
+});
 
 const Contacts: React.FC = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
@@ -90,20 +96,11 @@ const Contacts: React.FC = () => {
       <Container className={styles.contactsContainer}>
         <Row>
           <Grid2 size={{ xs: 12, lg: 6 }} className={styles.grid1}>
-            <FadeIn>
-              <Box className={styles.imgBox}>
-                <Link
-                  href={"https://maps.app.goo.gl/uisG3vD5gRauRJTH7"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.mapLink}
-                >
-                  <Map width={isMobile ? "100%" : "80%"} />
-                </Link>
-              </Box>
-            </FadeIn>
+            <Box className={styles.mapBox}>
+              <Map />
+            </Box>
           </Grid2>
-          <Grid2 size={{xs: 12, lg: 6}} className={styles.grid2}>
+          <Grid2 size={{ xs: 12, lg: 6 }} className={styles.grid2}>
             <Box className={styles.textBox}>
               <Box className={styles.addressBox}>
                 <Typography variant="h4" className={styles.title}>
@@ -111,6 +108,7 @@ const Contacts: React.FC = () => {
                 </Typography>
                 <Link
                   href={"https://maps.app.goo.gl/uisG3vD5gRauRJTH7"}
+                  target="_blank"
                   className={styles.description}
                 >
                   {t("address")}
@@ -203,6 +201,20 @@ const Contacts: React.FC = () => {
                         <Typography className={styles.description}>
                           {t("contacts_message")}
                         </Typography>
+                        {notCompiled && isMobile && (
+                          <FadeIn duration={0.5}>
+                            <Typography className={styles.errorTextMobile}>
+                              {t("not_compiled")}
+                            </Typography>
+                          </FadeIn>
+                        )}
+                        {invalidEmail && isMobile && (
+                          <FadeIn duration={0.5}>
+                            <Typography className={styles.errorTextMobile}>
+                              {t("invalid_email")}
+                            </Typography>
+                          </FadeIn>
+                        )}
                       </Box>
                       <Box className={styles.form}>
                         <Box className={styles.inputBox}>
@@ -323,14 +335,14 @@ const Contacts: React.FC = () => {
                         </Box>
                       </Box>
                       <Box className={styles.submitBox}>
-                        {notCompiled && (
+                        {notCompiled && !isMobile && (
                           <FadeIn duration={0.5}>
                             <Typography className={styles.errorText}>
                               {t("not_compiled")}
                             </Typography>
                           </FadeIn>
                         )}
-                        {invalidEmail && (
+                        {invalidEmail && !isMobile && (
                           <FadeIn duration={0.5}>
                             <Typography className={styles.errorText}>
                               {t("invalid_email")}

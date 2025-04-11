@@ -6,8 +6,8 @@ import {
   ToggleButtonGroup,
   Typography,
 } from "@mui/material";
-import { usePathname, useRouter } from "next/navigation";
 import { useLocale } from "next-intl";
+import { usePathname, useRouter } from "next/navigation";
 import styles from "./LanguageSwitcher.module.scss";
 
 const LanguageSwitcher: React.FC = () => {
@@ -17,8 +17,16 @@ const LanguageSwitcher: React.FC = () => {
 
   const otherLocale = currentLocale === "en" ? "it" : "en";
 
-  const switchLanguage = () => {
-    const newPath = pathname.replace(`/${currentLocale}`, `/${otherLocale}`);
+  console.log(currentLocale);
+
+  const switchLanguage = (
+    _event: React.MouseEvent<HTMLElement>,
+    value: string
+  ) => {
+    const newPath =
+      !value || value === currentLocale
+        ? pathname
+        : pathname.replace(`/${currentLocale}`, `/${otherLocale}`);
     router.push(newPath);
   };
 
@@ -31,18 +39,11 @@ const LanguageSwitcher: React.FC = () => {
         className={styles.toggleGroup}
       >
         <ToggleButton
-          value="en"
-          className={styles.toggleButton}
-          sx={{
-            "&.Mui-selected": {
-              background: "none",
-            },
-          }}
-        >
-          <Typography className={styles.languageText}>EN</Typography>
-        </ToggleButton>
-        <ToggleButton
-          className={styles.toggleButton}
+          className={
+            currentLocale === "it"
+              ? `${styles.toggleButton} ${styles.active}`
+              : styles.toggleButton
+          }
           value="it"
           sx={{
             "&.Mui-selected": {
@@ -51,6 +52,21 @@ const LanguageSwitcher: React.FC = () => {
           }}
         >
           <Typography className={styles.languageText}>IT</Typography>
+        </ToggleButton>
+        <ToggleButton
+          value="en"
+          className={
+            currentLocale === "en"
+              ? `${styles.toggleButton} ${styles.active}`
+              : styles.toggleButton
+          }
+          sx={{
+            "&.Mui-selected": {
+              background: "none",
+            },
+          }}
+        >
+          <Typography className={styles.languageText}>EN</Typography>
         </ToggleButton>
       </ToggleButtonGroup>
     </Box>

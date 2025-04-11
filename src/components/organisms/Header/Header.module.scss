@@ -170,7 +170,7 @@
     top: toRem(-20);
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh + toRem(20));
     z-index: 3;
     backdrop-filter: blur(8px);
     background-color: rgba(0, 0, 0, 0.3);

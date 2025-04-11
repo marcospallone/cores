@@ -4,26 +4,25 @@ import { fontPrimary } from "./theme";
 export const getMuiButton = (theme: Theme): Components["MuiButton"] => ({
   styleOverrides: {
     root: {
-        display: 'flex',
-        alignItems: 'center',
-        padding: `${theme.spacing(16)} ${theme.spacing(32)}`,
-        borderRadius: 0,
-        textTransform: 'uppercase',
-        textDecoration: 'none',
-        fontWeight: 700,
-        backgroundColor: theme.palette.primary.main,
-        color: theme.palette.white[900],
-        transition: 'background-color 0.5s ease',
-        fontFamily: `${fontPrimary.style.fontFamily}, sans-serif`,
+      display: "flex",
+      alignItems: "center",
+      padding: `${theme.spacing(16)} ${theme.spacing(32)}`,
+      borderRadius: 0,
+      textTransform: "uppercase",
+      textDecoration: "none",
+      fontWeight: 700,
+      backgroundColor: theme.palette.primary.main,
+      color: theme.palette.white[900],
+      transition: "background-color 0.5s ease",
+      fontFamily: `${fontPrimary.style.fontFamily}, sans-serif`,
 
-        '&:hover': {
-            backgroundColor: theme.palette.success.main,
-        },
+      "&:hover": {
+        backgroundColor: theme.palette.success.main,
+      },
 
-        [theme.breakpoints.down('lg')]: {
-          padding: `${theme.spacing(10)} ${theme.spacing(24)}`
-        },
-  
+      [theme.breakpoints.down("lg")]: {
+        padding: `${theme.spacing(10)} ${theme.spacing(24)}`,
+      },
     },
   },
 });

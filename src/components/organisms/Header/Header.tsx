@@ -1,16 +1,18 @@
 "use client";
 
-import { Box, Button, Container, useMediaQuery } from "@mui/material";
-import styles from "./Header.module.scss";
-import Link from "next/link";
-import { useTranslations } from "next-intl";
 import LanguageSwitcher from "@/components/molecules/LanguageSwitcher/LanguageSwitcher";
+import MenuMobile from "@/components/molecules/MenuMobile/MenuMobile";
 import theme from "@/theme/theme";
 import AddIcon from "@mui/icons-material/Add";
-import MenuMobile from "@/components/molecules/MenuMobile/MenuMobile";
-import { useEffect, useState } from "react";
+import { Box, Button, Container, useMediaQuery } from "@mui/material";
 import { AnimatePresence, motion } from "motion/react";
+import { useTranslations } from "next-intl";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import styles from "./Header.module.scss";
+
+const transparentPathname = ["/en", "/it", "/en/garden-hotel", "/it/garden-hotel"];
 
 const Header: React.FC = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
@@ -23,7 +25,7 @@ const Header: React.FC = () => {
   };
 
   const pathname = usePathname();
-  const transparent = pathname === "/en" || pathname === "/it";
+  const transparent = transparentPathname.includes(pathname);
 
   useEffect(() => {
     if (menuMobileOpen) {

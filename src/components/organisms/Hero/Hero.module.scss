@@ -3,7 +3,7 @@
 .hero {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
 
   .overlay {
@@ -15,19 +15,47 @@
     pointer-events: none;
     background: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0.3)
     );
     z-index: 1;
   }
 
-  .image{
+  .imageWrapper {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    top: 0;
+    left: 0;
     z-index: 0;
+  }
+
+  .image {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .image.active {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  .title {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+
+    .titleText {
+      color: var(--mui-palette-white-900);
+      font-family: "Poppins", sans-serif !important;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
   }
 }

@@ -1,8 +1,8 @@
 import { Box, Button } from "@mui/material";
-import styles from "./MenuMobile.module.scss";
-import Link from "next/link";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
+import styles from "./MenuMobile.module.scss";
 
 const MenuMobile: React.FC = () => {
   const t = useTranslations();
@@ -22,10 +22,7 @@ const MenuMobile: React.FC = () => {
       </Box>
       <Box className={styles.bottomBox}>
         <LanguageSwitcher />
-        <Button
-          className={styles.contactsButton}
-          href={"/contacts"}
-        >
+        <Button className={styles.contactsButton} href={"/contacts"}>
           {t("contact_button")}
         </Button>
       </Box>

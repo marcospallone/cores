@@ -1,13 +1,13 @@
 "use client";
 
-import { Box, Button, Container, useMediaQuery } from "@mui/material";
-import styles from "./Footer.module.scss";
-import Link from "next/link";
-import { useTranslations } from "next-intl";
-import PlaceIcon from "@mui/icons-material/Place";
-import MailIcon from "@mui/icons-material/Mail";
 import theme from "@/theme/theme";
+import MailIcon from "@mui/icons-material/Mail";
+import PlaceIcon from "@mui/icons-material/Place";
+import { Box, Button, Container, useMediaQuery } from "@mui/material";
+import { useTranslations } from "next-intl";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
+import styles from "./Footer.module.scss";
 
 const Footer: React.FC = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
