@@ -23,11 +23,11 @@ declare module '@mui/material/styles' {
 declare module "@mui/material/styles/createPalette" {
 
   interface Palette {
-    white: { 900: string };
+    white: { 900: string, 800: string };
   }
 
   interface PaletteOptions {
-    white?: { 900: string };
+    white?: { 900: string, 800: string };
   }
 }
 
@@ -59,9 +59,11 @@ const theme = createTheme({
       "800": "#1E1E1E",
       "700": "#2C2C2C",
       "600": "#B0B0B0",
+      "500": "#D3D3D3"
     },
     white: {
       "900": "#F5F5F5",
+      "800": "#F1EBE3"
     },
   },
   spacing: (factor: number) => `${factor / 16}rem`,

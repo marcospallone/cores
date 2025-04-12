@@ -5,8 +5,8 @@ export const getMuiContainer = (theme: Theme): Components['MuiContainer'] => ({
     root: {
       paddingLeft: `${theme.spacing(80)} !important`,
       paddingRight: `${theme.spacing(80)} !important`,
-      marginTop: theme.spacing(40),
-      marginBottom: theme.spacing(40),
+      paddingTop: theme.spacing(40),
+      paddingBottom: theme.spacing(40),
       maxWidth: '100% !important',
 
       [theme.breakpoints.down('xl')]: {
@@ -18,15 +18,15 @@ export const getMuiContainer = (theme: Theme): Components['MuiContainer'] => ({
       [theme.breakpoints.down('lg')]: {
         paddingLeft: `${theme.spacing(40)} !important`,
         paddingRight: `${theme.spacing(40)} !important`,
-        marginTop: theme.spacing(20),
-        marginBottom: theme.spacing(20),
+        paddingTop: theme.spacing(20),
+        paddingBottom: theme.spacing(20),
       },
 
       [theme.breakpoints.down('md')]: {
         paddingLeft: `${theme.spacing(20)} !important`,
         paddingRight: `${theme.spacing(20)} !important`,
-        marginTop: theme.spacing(20),
-        marginBottom: theme.spacing(20),
+        paddingTop: theme.spacing(20),
+        paddingBottom: theme.spacing(20),
       },
     },
   },

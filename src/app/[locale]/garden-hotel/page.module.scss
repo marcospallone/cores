@@ -1,0 +1,15 @@
+@use "@/styles/includes" as *;
+
+.descContainer {
+    display: flex;
+    justify-content: center;
+    background-color: var(--mui-palette-white-800);
+
+    .desc {
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+        font-style: italic;
+        color: var(--mui-palette-grey-900);
+        padding: toRem(40) toRem(150);
+    }
+}
