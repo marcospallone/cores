@@ -1,44 +1,44 @@
 import { Box, Typography } from "@mui/material";
-import styles from "./Card.module.scss";
+import styles from "./CardEntrypoint.module.scss";
 import Image from "next/image";
 
-interface CardProps {
+interface CardEntrypointProps {
   data: {
     title: string;
     description: string;
     image: string;
-    imagePosition: string;
   };
 }
 
-const Card: React.FC<CardProps> = ({ data }) => {
-    console.log(data.imagePosition)
+const CardEntrypoint: React.FC<CardEntrypointProps> = ({ data }) => {
   return (
     <Box className={styles.cardBox}>
+      <Box className={styles.decorationBox}>
+        <Box className={styles.decoration}></Box>
+      </Box>
+      <Box className={styles.cardTitle}>
+        <Typography
+          variant="h5"
+          component={"div"}
+          className={styles.title}
+        >
+          {data.title}
+        </Typography>
+      </Box>
       <Box className={styles.cardImageBox}>
         <Image
-          src={data.image}
+          src={process.env.NEXT_PUBLIC_SUPABASE_FOLDER + data.image}
           alt={data.title}
           width={1000}
           height={800}
           className={styles.cardImage}
-          style={{
-            objectPosition: data?.imagePosition,
-          }}
         />
       </Box>
       <Box className={styles.cardContent}>
         <Typography
           variant="body2"
           component={"div"}
-          className={styles.cardTitle}
-        >
-          {data.title}
-        </Typography>
-        <Typography
-          variant="body2"
-          component={"div"}
-          className={styles.cardDescription}
+          className={styles.description}
         >
           {data.description}
         </Typography>
@@ -47,4 +47,4 @@ const Card: React.FC<CardProps> = ({ data }) => {
   );
 };
 
-export default Card;
+export default CardEntrypoint;

@@ -25,5 +25,12 @@
     "garden_floors": "5 livelli",
     "garden_location": "Affacciato sul centro storico di Scanno",
     "garden_overview": "Panoramica",
-    "garden_text1": "Il Garden Hotel rappresenta un'opportunità unica nel cuore dell’Abruzzo: una struttura ricettiva storica, ben distribuita e pronta per essere rilanciata o trasformata secondo nuove esigenze. <br></br><br></br> Grazie alla sua versatilità, la struttura si presta a numerose destinazioni d’uso alternative: residence turistico, casa di riposo per anziani autosufficienti, residenza sanitaria, centro benessere o SPA, complesso di appartamenti in vendita o in affitto. <br></br><br></br>Nato come hotel tre stelle nel 1964, è stato oggetto di numerosi ampliamenti e ammodernamenti fino al conseguimento della classificazione quattro stelle nel 1996, rimanendo l’unico hotel di tale categoria a Scanno. <br></br><br></br> La struttura è stata gestita con continuità fino a pochi anni fa ed è attualmente in buone condizioni generali, pur richiedendo aggiornamenti impiantistici e interventi di rinnovo parziale ma non strutturale."
+    "garden_text1": "Il Garden Hotel rappresenta un'opportunità unica nel cuore dell’Abruzzo: una struttura ricettiva storica, ben distribuita e pronta per essere rilanciata o trasformata secondo nuove esigenze. <br></br><br></br> Grazie alla sua versatilità, la struttura si presta a numerose destinazioni d’uso alternative: residence turistico, casa di riposo per anziani autosufficienti, residenza sanitaria, centro benessere o SPA, complesso di appartamenti in vendita o in affitto. <br></br><br></br>Nato come hotel tre stelle nel 1964, è stato oggetto di numerosi ampliamenti e ammodernamenti fino al conseguimento della classificazione quattro stelle nel 1996, rimanendo l’unico hotel di tale categoria a Scanno. <br></br><br></br> La struttura è stata gestita con continuità fino a pochi anni fa ed è attualmente in buone condizioni generali, pur richiedendo aggiornamenti impiantistici e interventi di rinnovo parziale ma non strutturale.",
+    "garden_rooms": {
+        "title": "Ricettività",
+        "description":
+            "La capacità ricettiva arriva fino a 90 posti letto, distribuiti in camere singole, doppie, triple, quadruple e suite/appartamenti.",
+        "image": "/DSCN0259.JPG",
+        "imagePosition": "left"
+    }
 }

@@ -1,16 +1,20 @@
 import { Box, Container, Grid2, Typography } from "@mui/material";
-import styles from "./InformativoText.module.scss";
+import styles from "./InformativoTextImage.module.scss";
 import { useTranslations } from "next-intl";
 import Row from "@/components/atoms/Row";
 import { richText } from "@/utils/richtext";
 import Image from "next/image";
 
-const InformativoText: React.FC = () => {
+interface InformativoTextImageModel {
+  imageRight?: boolean;
+}
+
+const InformativoTextImage: React.FC<InformativoTextImageModel> = ({imageRight}) => {
   const t = useTranslations();
 
   return (
     <Container className={styles.informativoTextContainer}>
-      <Row>
+      <Row className={imageRight ? `${styles.row} ${styles.inverse}` : styles.row}>
         <Grid2 size={6} className={styles.textBox}>
           <Box className={styles.overviewBox}>
             <Typography variant="h3" component="h3" className={styles.overview}>
@@ -37,4 +41,4 @@ const InformativoText: React.FC = () => {
   );
 };
 
-export default InformativoText;
+export default InformativoTextImage;

@@ -7,6 +7,7 @@ import SquareFootIcon from "@mui/icons-material/SquareFoot";
 import ApartmentIcon from "@mui/icons-material/Apartment";
 import PushPinIcon from "@mui/icons-material/PushPin";
 import theme from "@/theme/theme";
+import FadeIn from "@/components/atoms/FadeIn";
 
 const InformativoIconText: React.FC = () => {
   const t = useTranslations();
@@ -16,19 +17,24 @@ const InformativoIconText: React.FC = () => {
       <Row>
         <Grid2 size={1.5} />
         <Grid2 size={9}>
-          <Box className={styles.imageBox}>
-            <Image
-              src={process.env.NEXT_PUBLIC_SUPABASE_FOLDER + "/sala1.JPG"}
-              alt="Garden Hotel"
-              width={1200}
-              height={500}
-              className={styles.image}
-            />
-          </Box>
+          <FadeIn>
+            <Box className={styles.imageBox}>
+              <Image
+                src={process.env.NEXT_PUBLIC_SUPABASE_FOLDER + "/sala1.JPG"}
+                alt="Garden Hotel"
+                width={1200}
+                height={500}
+                className={styles.image}
+              />
+            </Box>
+          </FadeIn>
         </Grid2>
         <Grid2 size={1.5} />
       </Row>
-      <Row sx={{ textAlign: "center", justifyContent: "center" }} spacing={{xs: 0, lg: 0}}>
+      <Row
+        sx={{ textAlign: "center", justifyContent: "center" }}
+        spacing={{ xs: 0, lg: 0 }}
+      >
         <Grid2 size={3} className={styles.infoGridItem}>
           <Box className={styles.infoBox}>
             <SquareFootIcon

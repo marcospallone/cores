@@ -1,0 +1,46 @@
+@use "@/styles/includes" as *;
+
+.informativoTextContainer {
+  background-color: var(--mui-palette-white-800);
+
+  .row {
+    display: flex;
+    flex-direction: row;
+
+    &.inverse {
+      flex-direction: row-reverse;
+    }
+
+    .textBox {
+      display: flex;
+      align-items: center;
+      .overviewBox {
+          display: flex;
+          flex-direction: column;
+          gap: toRem(24);
+      
+          .overview {
+            text-align: right;
+            font-family: "Poppins_BoldItalic", sans-serif;
+            color: var(--mui-palette-grey-900);
+          }
+          .text {
+            text-align: right;
+            font-family: "Jost", sans-serif;
+            color: var(--mui-palette-grey-900);
+          }
+        }
+    }
+  
+    .imageBox {
+      width: 100%;
+      margin: auto;
+  
+      .overviewImage {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+  }
+}

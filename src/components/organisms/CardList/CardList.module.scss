@@ -1,8 +1,0 @@
-@use "@/styles/includes" as *;
-
-.cardlist {
-    background-color: var(--mui-palette-white-800);
-    display: flex;
-    flex-direction: column;
-    gap: toRem(48);
-}
