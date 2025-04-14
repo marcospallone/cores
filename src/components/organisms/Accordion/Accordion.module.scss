@@ -1,0 +1,113 @@
+@use "@/styles/includes" as *;
+
+.accordionsContainer {
+  .leftBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    .textBox {
+      display: flex;
+      flex-direction: column;
+      gap: toRem(8);
+
+      .title {
+        font-family: "Poppins_Bold", sans-serif;
+        text-transform: uppercase;
+        font-size: toRem(32);
+        color: var(--mui-palette-primary-main);
+      }
+
+      .desc {
+        font-family: "Jost", sans-serif;
+        font-size: toRem(20);
+      }
+    }
+
+    .iconBox {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        svg {
+            font-size: toRem(140);
+            color: var(--mui-palette-primary-main);
+            opacity: 0.5;
+        }
+    }
+  }
+
+  .accordionBox {
+    .accordion {
+      background-color: var(--mui-palette-grey-900);
+      box-shadow: none;
+      transition: none;
+
+      &:first-of-type,
+      &:last-of-type {
+        border-radius: 0 !important;
+      }
+
+      &::before {
+        display: none;
+      }
+
+      .accordionSummary {
+        margin: 0 !important;
+        &:hover {
+          span {
+            svg {
+              color: var(--mui-palette-grey-900);
+            }
+          }
+          .accordionSummaryText {
+            color: var(--mui-palette-primary-main);
+          }
+        }
+
+        span {
+          display: flex;
+          align-items: center;
+          gap: toRem(8);
+
+          svg {
+            transition: color 0.3s ease-in-out;
+          }
+        }
+
+        .accordionSummaryText {
+          color: var(--mui-palette-white-900);
+          font-family: "Jost", sans-serif;
+          font-weight: 700;
+          text-transform: uppercase;
+          transition: color 0.3s ease-in-out;
+        }
+      }
+
+      .accordionDetails {
+        color: var(--mui-palette-white-900);
+        .accordionDetailsText {
+          font-family: "Jost", sans-serif;
+        }
+        .accordionList {
+          .accordionListItem {
+            padding-top: 0;
+            padding-bottom: 0;
+            display: flex;
+            gap: toRem(8);
+
+            .accordionListIcon {
+              min-width: fit-content;
+            }
+            .accordionListText {
+              span {
+                font-family: "Jost", sans-serif;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

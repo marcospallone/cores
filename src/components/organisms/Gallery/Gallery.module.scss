@@ -89,12 +89,13 @@
       .swiperNextButton {
         width: toRem(48);
         height: toRem(48);
+        border-radius: 50%;
         background-color: var(--mui-palette-primary-main);
         display: flex;
         justify-content: center;
         align-items: center;
-        // border-radius: toRem(0);
         cursor:pointer;
+        transition: background-color 0.2s ease-in-out;
 
         &:hover {
             background-color: var(--mui-palette-success-main);

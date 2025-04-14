@@ -1,7 +1,6 @@
 import Row from "@/components/atoms/Row";
 import { Box, Container, Grid2 } from "@mui/material";
 import styles from "./Entrypoint.module.scss";
-import { cardCamere } from "@/utils/constants";
 import CardEntrypoint from "@/components/molecules/CardEntrypoint/CardEntrypoint";
 
 interface EntrypointProps {
@@ -18,7 +17,6 @@ interface EntrypointProps {
 }
 
 const Entrypoint: React.FC<EntrypointProps> = ({card1Data, card2Data}) => {
-    console.log(card1Data)
   return (
     <Container className={styles.entrypointContainer}>
         <Row>

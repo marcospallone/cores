@@ -29,8 +29,71 @@
     "garden_rooms": {
         "title": "Hospitality",
         "description":
-            "La capacità ricettiva arriva fino a 90 posti letto, distribuiti in camere singole, doppie, triple, quadruple e suite/appartamenti.",
-        "image": "/DSCN0259.JPG",
-        "imagePosition": "left"
+            "The accommodation capacity reaches up to 90 beds, distributed in single, double, triple, quadruple rooms and suites/apartments.",
+        "image": "/DSCN0259.JPG"
+    },
+    "garden_spaces": {
+        "title": "Common spaces",
+        "description":
+            "The Garden Hotel also has large common areas: reception, hall, bar, restaurant rooms, breakfast room, games and entertainment rooms.",
+        "image": "/DSCN0107.JPG"
+    },
+    "garden_restaurant": {
+        "title": "Restaurant",
+        "description":
+            "The dining area can accommodate up to 300 people between the restaurant, porch and atrium. The hotel also has a large professional kitchen.",
+        "image": "/DSCN0091.JPG"
+    },
+    "garden_service": {
+        "title": "Service rooms",
+        "description":
+            "The hotel has some service rooms and technical rooms, including industrial laundry, boiler room, warehouse and changing rooms.",
+        "image": "/lavanderia.JPG"
+    },
+    "garden_parking": {
+        "title": "Parking",
+        "description":
+            "Immediately outside the hotel there is also a private car park with 25-30 spaces, also accessible to coaches.",
+        "image": "/DSCF9184.jpg" 
+    },
+    "garden_outdoor": {
+        "title": "Outdoor spaces",
+        "description":
+            "Among the outdoor spaces, there is a panoramic garden on two levels, terraces, balconies, and a small terrace/solarium.",
+        "image": "/DSCF8952.jpg" 
+    },
+    "garden_position": {
+        "title": "Strategic position",
+        "description":
+            "The property is located in a strategic position, adjacent to the public gardens and well connected to the main services, schools and public transport.",
+        "image": "/DSCN1818.JPG" 
+    },
+    "garden_surroundings": {
+        "title": "In the surroundings",
+        "description":
+            "The historic center can be reached on foot in a few minutes, while Lake Scanno is just over 2 km away.",
+        "image": "/scanno.jpg" 
+    },
+    "garden_kitchen_title": "The Hotel's Kitchen",
+    "garden_kitchen_desc": "Professional equipment and room layout",
+    "garden_kitchen_zone1": {
+        "title": "Kitchen Areas",
+        "description": "The kitchen is divided into various rooms, for a total of 150 m²:",
+        "items": ["kitchen area", "appetizers and fruit section", "washing and dishwashing section", "warehouses", "service entrance for suppliers", "service bathroom"]
+    },
+    "garden_kitchen_zone2": {
+        "title": "Cooking Area",
+        "description": "The kitchen is equipped with:",
+        "items": ["two convection ovens", "two fryers", "two grills", "four-burner stove", "two fry-top plates", "two-basket pasta cooker", "single-plate stove with two ovens fueled by diesel", "cream maker", "two slicers", "two extractor hoods that cover all the hobs with an effective extraction system complete with motor and exhaust flue on the roof"] 
+    },
+    "garden_kitchen_zone3": {
+        "title": "Refrigeration",
+        "description": "The kitchen is also equipped with:",
+        "items": ["two cold rooms", "an additional cold room for fine wines", "two freezers", "stainless steel column refrigerator", "refrigerator table", "blast chiller for freezing products", "ice machine", "two column refrigerators for bottles in the restaurant room", "an ice cream display case in the restaurant room"]
+    },
+    "garden_kitchen_zone4": {
+        "title": "Washing",
+        "description": "The washing area has:",
+        "items": ["three industrial sinks", "industrial dishwasher with sliding baskets", "glass washer"]
     }
 }

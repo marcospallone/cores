@@ -1,23 +1,29 @@
 "use client";
 
 import Hero from "@/components/organisms/Hero/Hero";
-import { Card, Container, Grid2, Typography } from "@mui/material";
+import { Container, Grid2, Typography } from "@mui/material";
 import { useMessages, useTranslations } from "next-intl";
 import styles from "./page.module.scss";
 import Row from "@/components/atoms/Row";
 import InformativoIconText from "@/components/organisms/InformativoIconText/InformativoIconText";
 import InformativoTextImage from "@/components/organisms/InformativoTextImage/InformativoTextImage";
 import Entrypoint from "@/components/organisms/Entrypoint/Entrypoint";
-import { cardCamere, cardDintorni, cardEsterni, cardParcheggio, cardPosizione, cardRistorante, cardServizio, cardSpazi, gardenImages } from "@/utils/constants";
+import { gardenImages } from "@/utils/constants";
 import Gallery from "@/components/organisms/Gallery/Gallery";
+import Accordion from "@/components/organisms/Accordion/Accordion";
 
 const GardenHotel: React.FC = () => {
   const m = useMessages();
   const t = useTranslations();
 
   const gardenRooms = m?.garden_rooms;
-
-  console.log(gardenRooms)
+  const gardenSpaces = m?.garden_spaces;
+  const gardenRestaurant = m?.garden_restaurant;
+  const gardenService = m?.garden_service;
+  const gardenParking = m?.garden_parking;
+  const gardenOutdoor = m?.garden_outdoor;
+  const gardenPosition = m?.garden_position;
+  const gardenSurroundings = m?.garden_surroundings;
 
   return (
     <>
@@ -49,11 +55,12 @@ const GardenHotel: React.FC = () => {
       </Container>
       <InformativoIconText />
       <InformativoTextImage />
-      <Entrypoint card1Data={gardenRooms} card2Data={cardSpazi} />
-      <Entrypoint card1Data={cardRistorante} card2Data={cardServizio} />
-      <Entrypoint card1Data={cardParcheggio} card2Data={cardEsterni} />
-      <Entrypoint card1Data={cardPosizione} card2Data={cardDintorni} />
+      <Entrypoint card1Data={gardenRooms} card2Data={gardenSpaces} />
+      <Entrypoint card1Data={gardenRestaurant} card2Data={gardenService} />
+      <Entrypoint card1Data={gardenParking} card2Data={gardenOutdoor} />
+      <Entrypoint card1Data={gardenPosition} card2Data={gardenSurroundings} />
       <Gallery data={gardenImages} />
+      <Accordion />
     </>
   );
 };
