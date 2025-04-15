@@ -7,9 +7,14 @@
 
     .desc {
         text-align: center;
-        font-family: "Poppins", sans-serif;
+        font-family: "Jost", sans-serif;
         font-style: italic;
         color: var(--mui-palette-grey-900);
         padding: toRem(40) toRem(150);
+
+        @include media-breakpoint-down(lg) {
+            padding: 0;
+            font-size: toRem(32);
+        }
     }
 }

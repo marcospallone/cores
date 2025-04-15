@@ -5,11 +5,13 @@ import CardEntrypoint from "@/components/molecules/CardEntrypoint/CardEntrypoint
 
 interface EntrypointProps {
     card1Data: {
+        icon: string;
         title: string;
         description: string;
         image: string;
     };
     card2Data: {
+        icon: string;
         title: string;
         description: string;
         image: string;

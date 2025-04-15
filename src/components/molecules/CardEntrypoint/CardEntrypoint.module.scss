@@ -8,14 +8,13 @@
   border: 2px solid var(--mui-palette-primary-main);
   padding: toRem(24);
 
-  .decorationBox {
+  .cardIcon{
     display: flex;
     justify-content: center;
-    .decoration {
-      background-color: var(--mui-palette-primary-main);
-      width: toRem(18);
-      height: toRem(18);
-      border-radius: 50%;
+
+    svg {
+      font-size: toRem(32);
+      color: var(--mui-palette-primary-main);
     }
   }
 

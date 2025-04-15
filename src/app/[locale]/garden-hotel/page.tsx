@@ -5,12 +5,12 @@ import { Container, Grid2, Typography } from "@mui/material";
 import { useMessages, useTranslations } from "next-intl";
 import styles from "./page.module.scss";
 import Row from "@/components/atoms/Row";
-import InformativoIconText from "@/components/organisms/InformativoIconText/InformativoIconText";
 import InformativoTextImage from "@/components/organisms/InformativoTextImage/InformativoTextImage";
 import Entrypoint from "@/components/organisms/Entrypoint/Entrypoint";
 import { gardenImages } from "@/utils/constants";
 import Gallery from "@/components/organisms/Gallery/Gallery";
 import Accordion from "@/components/organisms/Accordion/Accordion";
+import InformativoNumbers from "@/components/organisms/InformativoNumbers/InformativoNumbers";
 
 const GardenHotel: React.FC = () => {
   const m = useMessages();
@@ -53,7 +53,7 @@ const GardenHotel: React.FC = () => {
           </Grid2>
         </Row>
       </Container>
-      <InformativoIconText />
+      <InformativoNumbers />
       <InformativoTextImage />
       <Entrypoint card1Data={gardenRooms} card2Data={gardenSpaces} />
       <Entrypoint card1Data={gardenRestaurant} card2Data={gardenService} />

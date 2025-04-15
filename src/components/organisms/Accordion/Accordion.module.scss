@@ -15,7 +15,7 @@
       .title {
         font-family: "Poppins_Bold", sans-serif;
         text-transform: uppercase;
-        font-size: toRem(32);
+        font-size: toRem(42);
         color: var(--mui-palette-primary-main);
       }
 
@@ -31,7 +31,7 @@
         width: 100%;
 
         svg {
-            font-size: toRem(140);
+            font-size: toRem(250);
             color: var(--mui-palette-primary-main);
             opacity: 0.5;
         }

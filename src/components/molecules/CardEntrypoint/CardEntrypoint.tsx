@@ -1,9 +1,12 @@
 import { Box, Typography } from "@mui/material";
 import styles from "./CardEntrypoint.module.scss";
 import Image from "next/image";
+import { iconMapper } from "@/utils/constants";
+import React from "react";
 
 interface CardEntrypointProps {
   data: {
+    icon: string;
     title: string;
     description: string;
     image: string;
@@ -13,15 +16,11 @@ interface CardEntrypointProps {
 const CardEntrypoint: React.FC<CardEntrypointProps> = ({ data }) => {
   return (
     <Box className={styles.cardBox}>
-      <Box className={styles.decorationBox}>
-        <Box className={styles.decoration}></Box>
+      <Box className={styles.cardIcon}>
+        {iconMapper[data?.icon] && React.createElement(iconMapper[data?.icon])}
       </Box>
       <Box className={styles.cardTitle}>
-        <Typography
-          variant="h5"
-          component={"div"}
-          className={styles.title}
-        >
+        <Typography variant="h5" component={"div"} className={styles.title}>
           {data.title}
         </Typography>
       </Box>
