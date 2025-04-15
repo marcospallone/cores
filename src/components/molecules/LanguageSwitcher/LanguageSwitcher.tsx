@@ -17,8 +17,6 @@ const LanguageSwitcher: React.FC = () => {
 
   const otherLocale = currentLocale === "en" ? "it" : "en";
 
-  console.log(currentLocale);
-
   const switchLanguage = (
     _event: React.MouseEvent<HTMLElement>,
     value: string
