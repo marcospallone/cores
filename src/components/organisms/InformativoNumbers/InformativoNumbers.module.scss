@@ -23,6 +23,12 @@
     display: flex;
     justify-content: space-between;
     gap: toRem(88);
+
+    @include media-breakpoint-down(lg) {
+      flex-direction: column;
+      align-items: center;
+      gap: toRem(24);
+    }
     .numberItem {
       display: flex;
       flex-direction: column;
@@ -34,6 +40,10 @@
         font-family: "Jost", sans-serif;
         font-weight: 700;
         color: var(--mui-palette-primary-main);
+
+        @include media-breakpoint-down(lg) {
+          font-size: toRem(36);
+        }
       }
 
       .numberTitle {
@@ -42,6 +52,10 @@
         font-weight: 700;
         text-transform: uppercase;
         font-family: "Jost", sans-serif;
+
+        @include media-breakpoint-down(lg) {
+          font-size: toRem(20);
+        }
       }
     }
   }

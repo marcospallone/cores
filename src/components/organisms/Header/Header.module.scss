@@ -121,6 +121,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    z-index: 100;
     .leftLogo {
       margin-left: toRem(-25);
       z-index: 5;
@@ -160,7 +161,7 @@
     left: 50%;
     transform: translateX(-50%) !important;
     width: 95%;
-    z-index: 4;
+    z-index: 100;
     background-color: var(--mui-palette-grey-800);
     border: 1px solid var(--mui-palette-grey-600);
   }
@@ -171,7 +172,7 @@
     left: 0;
     width: 100%;
     height: calc(100vh + toRem(20));
-    z-index: 3;
+    z-index: 99;
     backdrop-filter: blur(8px);
     background-color: rgba(0, 0, 0, 0.3);
   }

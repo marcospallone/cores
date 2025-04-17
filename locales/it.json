@@ -1,109 +1,355 @@
 {
-    "properties": "Proposte",
-    "hotel": "Garden Hotel",
-    "services": "Servizi",
-    "contact_button": "Contatti",
-    "address": "Viale del Lago, 134 - Scanno (AQ)",
-    "copyright": "© 2025 Studio Tecnico - Geometra Spallone Pierfrancesco",
-    "made_by": "Realizzato da Marco Spallone",
-    "contacts_link": "Contattaci!",
-    "contacts_title": "Contattaci",
-    "contacts_message": "Inviaci un messaggio. Ti risponderemo il prima possibile.",
-    "name": "Nome*",
-    "surname": "Cognome*",
-    "email": "Email*",
-    "phone": "Telefono",
-    "message": "Scrivi un messaggio...*",
-    "send_message": "Invia",
-    "contacts_address": "Indirizzo",
-    "contacts_phone": "Telefono",
-    "contacts_email": "Email",
-    "not_compiled": "Compila tutti i campi contrassegnati con *",
-    "invalid_email": "Email non valida",
-    "garden_desc": "Una struttura alberghiera versatile, in posizione centrale a Scanno, nel cuore dell'Abruzzo.",
-    "garden_area": "Superficie totale",
-    "garden_floors": "Livelli",
-    "garden_location": "Dal centro storico di Scanno",
-    "garden_overview": "Panoramica",
-    "garden_text1": "Il Garden Hotel rappresenta un'opportunità unica nel cuore dell’Abruzzo: una struttura ricettiva storica, ben distribuita e pronta per essere rilanciata o trasformata secondo nuove esigenze. <br></br><br></br> Grazie alla sua versatilità, la struttura si presta a numerose destinazioni d’uso alternative: residence turistico, casa di riposo per anziani autosufficienti, residenza sanitaria, centro benessere o SPA, complesso di appartamenti in vendita o in affitto. <br></br><br></br>Nato come hotel tre stelle nel 1964, è stato oggetto di numerosi ampliamenti e ammodernamenti fino al conseguimento della classificazione quattro stelle nel 1996, rimanendo l’unico hotel di tale categoria a Scanno. <br></br><br></br> La struttura è stata gestita con continuità fino a pochi anni fa ed è attualmente in buone condizioni generali, pur richiedendo aggiornamenti impiantistici e interventi di rinnovo parziale ma non strutturale.",
-    "garden_rooms": {
-        "icon": "bed",
-        "title": "Ricettività",
-        "description":
-            "La capacità ricettiva arriva fino a 90 posti letto, distribuiti in camere singole, doppie, triple, quadruple e suite/appartamenti, per un totale di 36 camere.",
-        "image": "/DSCN0259.JPG"
+  "properties": "Proposte",
+  "hotel": "Garden Hotel",
+  "services": "Servizi",
+  "contact_button": "Contatti",
+  "address": "Viale del Lago, 134 - Scanno (AQ)",
+  "copyright": "© 2025 Studio Tecnico - Geometra Spallone Pierfrancesco",
+  "made_by": "Realizzato da Marco Spallone",
+  "contacts_link": "Contattaci!",
+  "contacts_title": "Contattaci",
+  "contacts_message": "Inviaci un messaggio. Ti risponderemo il prima possibile.",
+  "name": "Nome*",
+  "surname": "Cognome*",
+  "email": "Email*",
+  "phone": "Telefono",
+  "message": "Scrivi un messaggio...*",
+  "send_message": "Invia",
+  "contacts_address": "Indirizzo",
+  "contacts_phone": "Telefono",
+  "contacts_email": "Email",
+  "not_compiled": "Compila tutti i campi contrassegnati con *",
+  "invalid_email": "Email non valida",
+  "garden_desc": "Una struttura alberghiera versatile, in posizione centrale a Scanno, nel cuore dell'Abruzzo.",
+  "garden_area": "Superficie totale",
+  "garden_floors": "Livelli",
+  "garden_location": "Dal centro storico di Scanno",
+  "garden_overview": "Panoramica",
+  "garden_text1": "Il Garden Hotel rappresenta un'opportunità unica nel cuore dell’Abruzzo: una struttura ricettiva storica, ben distribuita e pronta per essere rilanciata o trasformata secondo nuove esigenze. <br></br><br></br> Grazie alla sua versatilità, la struttura si presta a numerose destinazioni d’uso alternative: residence turistico, casa di riposo per anziani autosufficienti, residenza sanitaria, centro benessere o SPA, complesso di appartamenti in vendita o in affitto. <br></br><br></br>Nato come hotel tre stelle nel 1964, è stato oggetto di numerosi ampliamenti e ammodernamenti fino al conseguimento della classificazione quattro stelle nel 1996, rimanendo l’unico hotel di tale categoria a Scanno. <br></br><br></br> La struttura è stata gestita con continuità fino a pochi anni fa ed è attualmente in buone condizioni generali, pur richiedendo aggiornamenti impiantistici e interventi di rinnovo parziale ma non strutturale.",
+  "garden_rooms": {
+    "icon": "bed",
+    "title": "Ricettività",
+    "description": "La capacità ricettiva arriva fino a 90 posti letto, distribuiti in camere singole, doppie, triple, quadruple e suite/appartamenti, per un totale di 36 camere.",
+    "image": "/DSCN0259.JPG"
+  },
+  "garden_spaces": {
+    "icon": "bar",
+    "title": "Spazi comuni",
+    "description": "Il Garden Hotel dispone inoltre di ampi spazi comuni: reception, hall, bar, sale ristorante, sala colazioni, sale gioco e intrattenimento.",
+    "image": "/DSCN0107.JPG"
+  },
+  "garden_restaurant": {
+    "icon": "restaurant",
+    "title": "Ristorante",
+    "description": "La zona ristorazione può ospitare fino a 300 persone tra ristorante, porticato e atrio. L'hotel dispone inoltre di un'ampia cucina professionale.",
+    "image": "/DSCN0091.JPG"
+  },
+  "garden_service": {
+    "icon": "laundry",
+    "title": "Locali di servizio",
+    "description": "L'hotel dispone di alcuni locali di servizio e vani tecnici, tra cui lavanderia industriale, vano caldaia, magazzino e spogliatoi.",
+    "image": "/lavanderia.JPG"
+  },
+  "garden_parking": {
+    "icon": "parking",
+    "title": "Parcheggio",
+    "description": "Immediatamente fuori l'hotel è presente anche un parcheggio privato da 25-30 posti auto, accessibile anche a pullman.",
+    "image": "/DSCF9184.jpg"
+  },
+  "garden_outdoor": {
+    "icon": "park",
+    "title": "Spazi esterni",
+    "description": "Tra gli spazi esterni, si segnalano un giardino panoramico su due livelli, terrazze, balconi, e un terrazzino/solarium.",
+    "image": "/DSCF8952.jpg"
+  },
+  "garden_position": {
+    "icon": "location",
+    "title": "Posizione strategica",
+    "description": "La struttura si trova in posizione strategica, adiacente ai giardini pubblici e ben collegata con i principali servizi, scuole e trasporti pubblici.",
+    "image": "/DSCN1818.JPG"
+  },
+  "garden_surroundings": {
+    "icon": "map",
+    "title": "Nei dintorni",
+    "description": "Il centro storico è raggiungibile a piedi in pochi minuti, mentre il Lago di Scanno è distante poco più di 2 km.",
+    "image": "/scanno.jpg"
+  },
+  "garden_kitchen_title": "La Cucina dell'Hotel",
+  "garden_kitchen_desc": "Attrezzature professionali e ripartizione degli ambienti",
+  "garden_kitchen_zone1": {
+    "title": "Ambienti",
+    "description": "La cucina è suddivisa in vari ambienti, per un totale di 150 m²:",
+    "items": [
+      "zona cucina",
+      "reparto antipasti e frutta",
+      "reparto lavaggio e stoviglie",
+      "magazzini",
+      "ingresso di servizio per fornitori",
+      "bagno di servizio"
+    ]
+  },
+  "garden_kitchen_zone2": {
+    "title": "Zona Cottura",
+    "description": "La cucina è dotata di:",
+    "items": [
+      "due forni a convenzione",
+      "due friggitrici",
+      "due griglie",
+      "fornello quattro fuochi",
+      "due piastre fry-top",
+      "cuocipasta a due cesti",
+      "stufa a piastra unica con due forni alimentata a gasolio",
+      "macchina per la produzione di panna",
+      "due affettatrici",
+      "due cappe aspiranti che coprono tutti i piani di cottura con efficace sistema di aspirazione completo di motore e canna fumaria di scarico sul tetto"
+    ]
+  },
+  "garden_kitchen_zone3": {
+    "title": "Refrigerazione",
+    "description": "La cucina è inoltre dotata di:",
+    "items": [
+      "due celle frigorifere",
+      "una ulteriore cella frigorifera per i vini di pregio",
+      "due freezer",
+      "frigorifero a colonna in acciaio inox",
+      "tavolo frigo",
+      "abbattitore di temperatura per surgelare i prodotti",
+      "macchina del ghiaccio",
+      "due frigoriferi a colonna per bottiglie nella sala ristorante",
+      "una vetrina per gelati nella sala ristorante"
+    ]
+  },
+  "garden_kitchen_zone4": {
+    "title": "Lavaggio",
+    "description": "La zona lavaggio dispone di:",
+    "items": [
+      "tre lavelli industriali",
+      "macchina lavastoviglie industriale a cestelli scorrevoli",
+      "lavabicchieri"
+    ]
+  },
+  "garden_numbers_title": "L'hotel in numeri",
+  "garden_numbers_desc": "Alcune delle caratteristiche che rendono l’hotel una straordinaria opportunità.",
+  "garden_images": [
+    {
+      "src": "/171.jpeg",
+      "title": "Scalinata d'ingresso"
     },
-    "garden_spaces": {
-        "icon": "bar",
-        "title": "Spazi comuni",
-        "description":
-            "Il Garden Hotel dispone inoltre di ampi spazi comuni: reception, hall, bar, sale ristorante, sala colazioni, sale gioco e intrattenimento.",
-        "image": "/DSCN0107.JPG"
+    {
+      "src": "/DSCF8952.jpg",
+      "title": "Giardino esterno"
     },
-    "garden_restaurant": {
-        "icon": "restaurant",
-        "title": "Ristorante",
-        "description":
-            "La zona ristorazione può ospitare fino a 300 persone tra ristorante, porticato e atrio. L'hotel dispone inoltre di un'ampia cucina professionale.",
-        "image": "/DSCN0091.JPG"
+    {
+      "src": "/DSCF8955.jpg",
+      "title": "Vista Sud-Est "
     },
-    "garden_service": {
-        "icon": "laundry",
-        "title": "Locali di servizio",
-        "description":
-            "L'hotel dispone di alcuni locali di servizio e vani tecnici, tra cui lavanderia industriale, vano caldaia, magazzino e spogliatoi.",
-        "image": "/lavanderia.JPG"
+    {
+      "src": "/DSCF9193.jpg",
+      "title": "Vista Est"
     },
-    "garden_parking": {
-        "icon": "parking",
-        "title": "Parcheggio",
-        "description":
-            "Immediatamente fuori l'hotel è presente anche un parcheggio privato da 25-30 posti auto, accessibile anche a pullman.",
-        "image": "/DSCF9184.jpg" 
+    {
+      "src": "/DSCF9192.jpg",
+      "title": "Ingresso superiore"
     },
-    "garden_outdoor": {
-        "icon": "park",
-        "title": "Spazi esterni",
-        "description":
-            "Tra gli spazi esterni, si segnalano un giardino panoramico su due livelli, terrazze, balconi, e un terrazzino/solarium.",
-        "image": "/DSCF8952.jpg" 
+    {
+      "src": "/DSCN0062.JPG",
+      "title": "Fornelli Cucina"
     },
-    "garden_position": {
-        "icon": "location",
-        "title": "Posizione strategica",
-        "description":
-            "La struttura si trova in posizione strategica, adiacente ai giardini pubblici e ben collegata con i principali servizi, scuole e trasporti pubblici.",
-        "image": "/DSCN1818.JPG" 
+    {
+      "src": "/DSCN0068.JPG",
+      "title": "Banchi Cucina"
     },
-    "garden_surroundings": {
-        "icon": "map",
-        "title": "Nei dintorni",
-        "description":
-            "Il centro storico è raggiungibile a piedi in pochi minuti, mentre il Lago di Scanno è distante poco più di 2 km.",
-        "image": "/scanno.jpg" 
+    {
+      "src": "/DSCN0070.JPG",
+      "title": "Lavelli Cucina"
     },
-    "garden_kitchen_title": "La Cucina dell'Hotel",
-    "garden_kitchen_desc": "Attrezzature professionali e ripartizione degli ambienti",
-    "garden_kitchen_zone1": {
-        "title": "Ambienti",
-        "description": "La cucina è suddivisa in vari ambienti, per un totale di 150 m²:",
-        "items": ["zona cucina", "reparto antipasti e frutta", "reparto lavaggio e stoviglie", "magazzini", "ingresso di servizio per fornitori", "bagno di servizio"] 
+    {
+      "src": "/DSCN0072.JPG",
+      "title": "Lavaggio Cucina"
     },
-    "garden_kitchen_zone2": {
-        "title": "Zona Cottura",
-        "description": "La cucina è dotata di:",
-        "items": ["due forni a convenzione", "due friggitrici", "due griglie", "fornello quattro fuochi", "due piastre fry-top", "cuocipasta a due cesti", "stufa a piastra unica con due forni alimentata a gasolio", "macchina per la produzione di panna", "due affettatrici", "due cappe aspiranti che coprono tutti i piani di cottura con efficace sistema di aspirazione completo di motore e canna fumaria di scarico sul tetto"] 
+    {
+      "src": "/DSCN0081.JPG",
+      "title": "Sala principale ristorante"
     },
-    "garden_kitchen_zone3": {
-        "title": "Refrigerazione",
-        "description": "La cucina è inoltre dotata di:",
-        "items": ["due celle frigorifere", "una ulteriore cella frigorifera per i vini di pregio", "due freezer", "frigorifero a colonna in acciaio inox", "tavolo frigo", "abbattitore di temperatura per surgelare i prodotti", "macchina del ghiaccio", "due frigoriferi a colonna per bottiglie nella sala ristorante", "una vetrina per gelati nella sala ristorante"] 
+    {
+      "src": "/DSCN0091.JPG",
+      "title": "Porticato ristorante"
     },
-    "garden_kitchen_zone4": {
-        "title": "Lavaggio",
-        "description": "La zona lavaggio dispone di:",
-        "items": ["tre lavelli industriali", "macchina lavastoviglie industriale a cestelli scorrevoli", "lavabicchieri"] 
+    {
+      "src": "/DSCN0092.JPG",
+      "title": "Porticato ristorante"
     },
-    "garden_numbers_title": "L'hotel in numeri",
-    "garden_numbers_desc": "Alcune delle caratteristiche che rendono l’hotel una straordinaria opportunità."
+    {
+      "src": "/DSCN0093.JPG",
+      "title": "Vista sala dal porticato"
+    },
+    {
+      "src": "/DSCN0095.JPG",
+      "title": "Porticato ristorante"
+    },
+    {
+      "src": "/DSCN0097.JPG",
+      "title": "Porticato ristorante"
+    },
+    {
+      "src": "/DSCN0107.JPG",
+      "title": "Sala polivalente"
+    },
+    {
+      "src": "/DSCN0110.JPG",
+      "title": "Sala polivalente"
+    },
+    {
+      "src": "/DSCN0113.JPG",
+      "title": "Lavandino bagno ristorante"
+    },
+    {
+      "src": "/DSCN0115.JPG",
+      "title": "Bagni ristorante"
+    },
+    {
+      "src": "/DSCN0143.JPG",
+      "title": "Bureau"
+    },
+    {
+      "src": "/DSCN0147.JPG",
+      "title": "Bar"
+    },
+    {
+      "src": "/DSCN0150.JPG",
+      "title": "Sala bar"
+    },
+    {
+      "src": "/DSCN0153.JPG",
+      "title": "Sala bar"
+    },
+    {
+      "src": "/DSCN0156.JPG",
+      "title": "Sala tv"
+    },
+    {
+      "src": "/DSCN0157.JPG",
+      "title": "Camino Sala tv"
+    },
+    {
+      "src": "/DSCN0159.JPG",
+      "title": "Camino"
+    },
+    {
+      "src": "/DSCN0166.JPG",
+      "title": "Sala giochi"
+    },
+    {
+      "src": "/DSCN0162.JPG",
+      "title": "Sala giochi"
+    },
+    {
+      "src": "/DSCN0170.JPG",
+      "title": "Sala convegni"
+    },
+    {
+      "src": "/DSCN0174.JPG",
+      "title": "Fontana Scalinata"
+    },
+    {
+      "src": "/DSCN0175.JPG",
+      "title": "Vista dalla scala"
+    },
+    {
+      "src": "/DSCN0176.JPG",
+      "title": "Scalinata ingresso"
+    },
+    {
+      "src": "/DSCN0177.JPG",
+      "title": "Ingresso"
+    },
+    {
+      "src": "/DSCN0184.JPG",
+      "title": "Sala convegni"
+    },
+    {
+      "src": "/DSCN0188.JPG",
+      "title": "Sala convegni"
+    },
+    {
+      "src": "/DSCN0189.JPG",
+      "title": "Sala convegni"
+    },
+    {
+      "src": "/DSCN0196.JPG",
+      "title": "Camera singola"
+    },
+    {
+      "src": "/DSCN0199.JPG",
+      "title": "Camera doppia"
+    },
+    {
+      "src": "/DSCN0204.JPG",
+      "title": "Bagno privato"
+    },
+    {
+      "src": "/DSCN0209.JPG",
+      "title": "Camera tripla"
+    },
+    {
+      "src": "/DSCN0210.JPG",
+      "title": "Bagno privato"
+    },
+    {
+      "src": "/DSCN0211.JPG",
+      "title": "Vasca"
+    },
+    {
+      "src": "/DSCN0230.JPG",
+      "title": "Corridoio camere"
+    },
+    {
+      "src": "/DSCN0240.JPG",
+      "title": "Camera doppia"
+    },
+    {
+      "src": "/DSCN0242.JPG",
+      "title": "Camera doppia"
+    },
+    {
+      "src": "/DSCN0250.JPG",
+      "title": "Doccia"
+    },
+    {
+      "src": "/DSCN0254.JPG",
+      "title": "Camera tripla"
+    },
+    {
+      "src": "/DSCN0259.JPG",
+      "title": "Camera matrimoniale"
+    },
+    {
+      "src": "/DSCN0271.JPG",
+      "title": "Scrittoio in camera"
+    },
+    {
+      "src": "/DSCN0315.JPG",
+      "title": "Scale"
+    },
+    {
+      "src": "/DSCN1818.JPG",
+      "title": "Vista nord"
+    },
+    {
+      "src": "/lavanderia.JPG",
+      "title": "lavanderia"
+    },
+    {
+      "src": "/Hero1.jpg",
+      "title": "Vista del centro storico"
+    },
+    {
+      "src": "/sala1.JPG",
+      "title": "Sala intrattenimento"
+    },
+    {
+      "src": "/DSCF9184.jpg",
+      "title": "Parcheggio"
+    }
+  ]
 }

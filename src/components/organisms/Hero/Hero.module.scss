@@ -56,6 +56,10 @@
       font-family: "Poppins", sans-serif !important;
       font-weight: 700;
       text-transform: uppercase;
+
+      @include media-breakpoint-down(lg) {
+        font-size: toRem(76);
+      }
     }
   }
 }

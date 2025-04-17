@@ -9,6 +9,7 @@ import {
   ListItemIcon,
   ListItemText,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
 import styles from "./Accordion.module.scss";
 import Row from "@/components/atoms/Row";
@@ -27,6 +28,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import AnimatedAccordion from "@/components/molecules/AnimatedAccordion/AnimatedAccordion";
 
 const Accordion: React.FC = () => {
+  const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
   const t = useTranslations();
   const m = useMessages();
   const [expanded, setExpanded] = useState<string | false>(false);
@@ -67,7 +69,7 @@ const Accordion: React.FC = () => {
   const handleChange =
     (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
       setExpanded(isExpanded ? panel : false);
-      if (isExpanded) {
+      if (isExpanded && !isMobile) {
         const timeout = setTimeout(() => {
           setShowIconBox(true);
         }, 100);
@@ -80,7 +82,7 @@ const Accordion: React.FC = () => {
   return (
     <Container className={styles.accordionsContainer}>
       <Row>
-        <Grid2 size={5}>
+        <Grid2 size={{ xs: 12, lg: 5 }}>
           <Box className={styles.leftBox}>
             <Box className={styles.textBox}>
               <Typography
@@ -117,8 +119,8 @@ const Accordion: React.FC = () => {
             )}
           </Box>
         </Grid2>
-        <Grid2 size={1}></Grid2>
-        <Grid2 size={6}>
+        <Grid2 size={1} display={{ xs: "none", lg: "block" }}></Grid2>
+        <Grid2 size={{ xs: 12, lg: 6 }}>
           <Box className={styles.accordionBox}>
             {zones?.map((zone: any, index: number) => (
               <AnimatedAccordion

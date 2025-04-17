@@ -1,5 +1,11 @@
 import Row from "@/components/atoms/Row";
-import { Box, Container, Grid2, Typography } from "@mui/material";
+import {
+  Box,
+  Container,
+  Grid2,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import styles from "./InformativoNumbers.module.scss";
 import { useTranslations } from "next-intl";
 import CountUp from "react-countup";
@@ -10,6 +16,7 @@ import theme from "@/theme/theme";
 import { useInView } from "react-intersection-observer";
 
 const InformativoNumbers: React.FC = () => {
+  const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
   const t = useTranslations();
   const { ref: countUpRef, inView: inView } = useInView({ triggerOnce: true });
 
@@ -39,7 +46,7 @@ const InformativoNumbers: React.FC = () => {
             <Box className={styles.numberItem}>
               <SquareFootIcon
                 sx={{
-                  fontSize: theme.spacing(64),
+                  fontSize: isMobile ? theme.spacing(48) : theme.spacing(64),
                 }}
               />
               {inView && (
@@ -60,7 +67,11 @@ const InformativoNumbers: React.FC = () => {
               </Typography>
             </Box>
             <Box className={styles.numberItem}>
-              <ApartmentIcon sx={{ fontSize: theme.spacing(64) }} />
+              <ApartmentIcon
+                sx={{
+                  fontSize: isMobile ? theme.spacing(48) : theme.spacing(64),
+                }}
+              />
               {inView && (
                 <CountUp end={5} duration={5} className={styles.countup} />
               )}
@@ -73,7 +84,11 @@ const InformativoNumbers: React.FC = () => {
               </Typography>
             </Box>
             <Box className={styles.numberItem}>
-              <PushPinIcon sx={{ fontSize: theme.spacing(64) }} />
+              <PushPinIcon
+                sx={{
+                  fontSize: isMobile ? theme.spacing(48) : theme.spacing(64),
+                }}
+              />
               {inView && (
                 <CountUp
                   end={500}

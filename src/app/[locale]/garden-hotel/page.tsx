@@ -7,10 +7,10 @@ import styles from "./page.module.scss";
 import Row from "@/components/atoms/Row";
 import InformativoTextImage from "@/components/organisms/InformativoTextImage/InformativoTextImage";
 import Entrypoint from "@/components/organisms/Entrypoint/Entrypoint";
-import { gardenImages } from "@/utils/constants";
 import Gallery from "@/components/organisms/Gallery/Gallery";
 import Accordion from "@/components/organisms/Accordion/Accordion";
 import InformativoNumbers from "@/components/organisms/InformativoNumbers/InformativoNumbers";
+import InformativoDinamico from "@/components/organisms/InformativoDinamico/InformativoDinamico";
 
 const GardenHotel: React.FC = () => {
   const m = useMessages();
@@ -24,6 +24,7 @@ const GardenHotel: React.FC = () => {
   const gardenOutdoor = m?.garden_outdoor;
   const gardenPosition = m?.garden_position;
   const gardenSurroundings = m?.garden_surroundings;
+  const gardenImages = m?.garden_images;
 
   return (
     <>
@@ -55,10 +56,11 @@ const GardenHotel: React.FC = () => {
       </Container>
       <InformativoNumbers />
       <InformativoTextImage />
-      <Entrypoint card1Data={gardenRooms} card2Data={gardenSpaces} />
+      <InformativoDinamico />
+      {/* <Entrypoint card1Data={gardenRooms} card2Data={gardenSpaces} />
       <Entrypoint card1Data={gardenRestaurant} card2Data={gardenService} />
       <Entrypoint card1Data={gardenParking} card2Data={gardenOutdoor} />
-      <Entrypoint card1Data={gardenPosition} card2Data={gardenSurroundings} />
+      <Entrypoint card1Data={gardenPosition} card2Data={gardenSurroundings} /> */}
       <Gallery data={gardenImages} />
       <Accordion />
     </>

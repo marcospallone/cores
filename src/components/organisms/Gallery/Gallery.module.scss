@@ -21,6 +21,10 @@
           width: 100%;
           height: toRem(750);
           object-fit: cover;
+
+          @include media-breakpoint-down(lg) {
+            height: toRem(450);
+          }
         }
 
         .overlay {
@@ -41,6 +45,12 @@
           position: absolute;
           top: toRem(32);
           right: toRem(32);
+
+          @include media-breakpoint-down(lg) {
+            top: toRem(16);
+            right: toRem(16);
+            max-width: 90%;
+          }
 
           &:hover {
             .title {
@@ -94,11 +104,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        cursor:pointer;
+        cursor: pointer;
         transition: background-color 0.2s ease-in-out;
 
         &:hover {
-            background-color: var(--mui-palette-success-main);
+          background-color: var(--mui-palette-success-main);
         }
       }
     }

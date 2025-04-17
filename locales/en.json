@@ -105,5 +105,227 @@
         "items": ["three industrial sinks", "industrial dishwasher with sliding baskets", "glass washer"]
     },
     "garden_numbers_title": "Our hotel in numbers",
-    "garden_numbers_desc": "Main features that make our hotel an excellent opportunity."
+    "garden_numbers_desc": "Main features that make our hotel an excellent opportunity.",
+    "garden_images": [
+    {
+      "src": "/171.jpeg",
+      "title": "Entrance staircase"
+    },
+    {
+      "src": "/DSCF8952.jpg",
+      "title": "Outdoor garden"
+    },
+    {
+      "src": "/DSCF8955.jpg",
+      "title": "South-East View"
+    },
+    {
+      "src": "/DSCF9193.jpg",
+      "title": "East View"
+    },
+    {
+      "src": "/DSCF9192.jpg",
+      "title": "Upper entrance"
+    },
+    {
+      "src": "/DSCN0062.JPG",
+      "title": "Kitchen Stoves"
+    },
+    {
+      "src": "/DSCN0068.JPG",
+      "title": "Kitchen Benches"
+    },
+    {
+      "src": "/DSCN0070.JPG",
+      "title": "Kitchen Sinks"
+    },
+    {
+      "src": "/DSCN0072.JPG",
+      "title": "Kitchen Cleaning"
+    },
+    {
+      "src": "/DSCN0081.JPG",
+      "title": "Main restaurant hall"
+    },
+    {
+      "src": "/DSCN0091.JPG",
+      "title": "Restaurant Porch"
+    },
+    {
+      "src": "/DSCN0092.JPG",
+      "title": "Restaurant Porch"
+    },
+    {
+      "src": "/DSCN0093.JPG",
+      "title": "Restaurant hall from the porch"
+    },
+    {
+      "src": "/DSCN0095.JPG",
+      "title": "Restaurant Porch"
+    },
+    {
+      "src": "/DSCN0097.JPG",
+      "title": "Restaurant Porch"
+    },
+    {
+      "src": "/DSCN0107.JPG",
+      "title": "Multipurpose room"
+    },
+    {
+      "src": "/DSCN0110.JPG",
+      "title": "Multipurpose room"
+    },
+    {
+      "src": "/DSCN0113.JPG",
+      "title": "Restaurant Bathroom Sink"
+    },
+    {
+      "src": "/DSCN0115.JPG",
+      "title": "Restaurant bathrooms"
+    },
+    {
+      "src": "/DSCN0143.JPG",
+      "title": "Bureau"
+    },
+    {
+      "src": "/DSCN0147.JPG",
+      "title": "Bar"
+    },
+    {
+      "src": "/DSCN0150.JPG",
+      "title": "bar room"
+    },
+    {
+      "src": "/DSCN0153.JPG",
+      "title": "bar room"
+    },
+    {
+      "src": "/DSCN0156.JPG",
+      "title": "tv room"
+    },
+    {
+      "src": "/DSCN0157.JPG",
+      "title": "tv room fireplace"
+    },
+    {
+      "src": "/DSCN0159.JPG",
+      "title": "fireplace"
+    },
+    {
+      "src": "/DSCN0166.JPG",
+      "title": "game room"
+    },
+    {
+      "src": "/DSCN0162.JPG",
+      "title": "game room"
+    },
+    {
+      "src": "/DSCN0170.JPG",
+      "title": "Conference room"
+    },
+    {
+      "src": "/DSCN0174.JPG",
+      "title": "Fountain staircase"
+    },
+    {
+      "src": "/DSCN0175.JPG",
+      "title": "View from the stairs"
+    },
+    {
+      "src": "/DSCN0176.JPG",
+      "title": "Entrance staircase"
+    },
+    {
+      "src": "/DSCN0177.JPG",
+      "title": "Entrance"
+    },
+    {
+      "src": "/DSCN0184.JPG",
+      "title": "Conference room"
+    },
+    {
+      "src": "/DSCN0188.JPG",
+      "title": "Conference room"
+    },
+    {
+      "src": "/DSCN0189.JPG",
+      "title": "Conference room"
+    },
+    {
+      "src": "/DSCN0196.JPG",
+      "title": "Single room"
+    },
+    {
+      "src": "/DSCN0199.JPG",
+      "title": "Double room"
+    },
+    {
+      "src": "/DSCN0204.JPG",
+      "title": "Private bathroom"
+    },
+    {
+      "src": "/DSCN0209.JPG",
+      "title": "Triple room"
+    },
+    {
+      "src": "/DSCN0210.JPG",
+      "title": "Private bathroom"
+    },
+    {
+      "src": "/DSCN0211.JPG",
+      "title": "Bathtub"
+    },
+    {
+      "src": "/DSCN0230.JPG",
+      "title": "Rooms hallway"
+    },
+    {
+      "src": "/DSCN0240.JPG",
+      "title": "Double room"
+    },
+    {
+      "src": "/DSCN0242.JPG",
+      "title": "Double room"
+    },
+    {
+      "src": "/DSCN0250.JPG",
+      "title": "Shower"
+    },
+    {
+      "src": "/DSCN0254.JPG",
+      "title": "Triple room"
+    },
+    {
+      "src": "/DSCN0259.JPG",
+      "title": "Double bedroom"
+    },
+    {
+      "src": "/DSCN0271.JPG",
+      "title": "Desk in the room"
+    },
+    {
+      "src": "/DSCN0315.JPG",
+      "title": "Stairs"
+    },
+    {
+      "src": "/DSCN1818.JPG",
+      "title": "Nord View"
+    },
+    {
+      "src": "/lavanderia.JPG",
+      "title": "Laundry"
+    },
+    {
+      "src": "/Hero1.jpg",
+      "title": "View of the historic center"
+    },
+    {
+      "src": "/sala1.JPG",
+      "title": "Entertainment Room"
+    },
+    {
+      "src": "/DSCF9184.jpg",
+      "title": "Parking"
+    }
+  ]
 }

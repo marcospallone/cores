@@ -6,6 +6,11 @@ body {
     color: var(--mui-palette-white-900) !important;
 }
 
+header {
+  position: relative;
+  z-index: 101;
+}
+
 .MuiAccordionSummary-content.Mui-expanded {
   margin: 0 !important;
   min-height: toRem(48) !important;

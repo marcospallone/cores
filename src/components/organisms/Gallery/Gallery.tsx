@@ -24,10 +24,16 @@ const Gallery: React.FC<GalleryProps> = ({ data }) => {
       prevEl: `.${styles.swiperPrevButton}`,
       nextEl: `.${styles.swiperNextButton}`,
     },
-    spaceBetween: 32,
-    slidesPerView: 1.5,
+    spaceBetween: 12,
+    slidesPerView: 1.05,
     loop: true,
     centeredSlides: true,
+    breakpoints: {
+      768: {
+        slidesPerView: 1.5,
+        spaceBetween: 32,
+      },
+    },
   };
 
   return (
@@ -37,7 +43,7 @@ const Gallery: React.FC<GalleryProps> = ({ data }) => {
           <SwiperSlide key={index} className={styles.swiperSlide}>
             <Box className={styles.slideBox}>
               <Image
-                src={image?.src}
+                src={process.env.NEXT_PUBLIC_SUPABASE_FOLDER + image?.src}
                 alt={`Gallery Image ${index + 1}`}
                 width={1200}
                 height={1000}
