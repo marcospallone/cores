@@ -49,38 +49,41 @@ const InformativoDinamico: React.FC = () => {
       <Box className={styles.mobileAccordionBox}>
         {infos?.map((item: any, index: number) => (
           <Accordion
+            key={index}
             className={styles.mobileAccordion}
             expanded={expanded === index}
             onChange={handleChange(index)}
             sx={{
+              backgroundImage: `url(${
+                process.env.NEXT_PUBLIC_SUPABASE_FOLDER + item?.image
+              })`,
               ".MuiAccordionSummary-content": {
                 margin: 0,
               },
+              "&.Mui-expanded": {
+                margin: "0 !important",
+              },
+              "&.Mui-expanded svg": {
+                transform: "rotate(180deg)",
+              },
             }}
           >
-            <AccordionSummary
-              className={styles.accordionSummary}
-              sx={{
-                backgroundImage: `url(${
-                  process.env.NEXT_PUBLIC_SUPABASE_FOLDER + item?.image
-                })`,
-              }}
-            >
+            <AccordionSummary className={styles.accordionSummary} sx={{}}>
               <Box className={styles.overlay}></Box>
               <Box className={styles.accordionSummaryContent}>
                 <Typography variant="h5" className={styles.title}>
                   {item?.title}
-                  <KeyboardArrowDownIcon />
+                  <KeyboardArrowDownIcon sx={{ marginLeft: theme.spacing(8)}} />
                 </Typography>
               </Box>
             </AccordionSummary>
             <AccordionDetails className={styles.accordionDetails}>
-              <Typography variant="h4" className={styles.title}>
-                {item?.title}
-              </Typography>
-              <Typography variant="body1" className={styles.description}>
-                {item?.description}
-              </Typography>
+              <Box className={styles.overlay}></Box>
+              <Container className={styles.textContainer}>
+                <Typography variant="body1" className={styles.description}>
+                  {item?.description}
+                </Typography>
+              </Container>
             </AccordionDetails>
           </Accordion>
         ))}

@@ -107,8 +107,10 @@
         cursor: pointer;
         transition: background-color 0.2s ease-in-out;
 
-        &:hover {
-          background-color: var(--mui-palette-success-main);
+        @include media-breakpoint-up(md) {
+          &:hover {
+            background-color: var(--mui-palette-success-main);
+          }
         }
       }
     }
