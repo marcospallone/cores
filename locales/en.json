@@ -352,5 +352,29 @@
       "title": "Parking"
     }
   ],
-  "garden_cards_helper": "Click on one section to view more information"
+  "garden_cards_helper": "Click on one section to view more information",
+  "garden_potential_title": "Building potential",
+  "garden_potential_description": "The complex shape and multiple levels also allow for a different use of the building. The structure can be easily transformed for different internal distributions.",
+  "garden_potential_items": [
+    {
+      "title": "Expansion",
+      "content": "The General Regulatory Plan (PGR) allows for the possibility of expanding the existing gross usable area by 10%.",
+      "image": "/"
+    },
+    {
+      "title": "Socio-health use",
+      "content": "The Garden Hotel is very suitable due to its position, layout and territorial location to be transformed into a tourist residence for the elderly, a rest home for self-sufficient people or a nursing home.",
+      "image": "/"
+    },
+    {
+      "title": "Residential use",
+      "content": "The structure could also be used for residential purposes. In particular, it could be used for civilian housing and appurtenances. The apartments that can be built are about 25. Alternatively, a residence could be created for apartments for rent or sale.",
+      "image": "/"
+    },
+    {
+      "title": "Tourist-receptive use",
+      "content": "The current tourist-receptive use is maintainable and could also be expanded or modified. The presence of many rooms used and necessary in the past for banquets could result in an increase in accommodation, transforming the rooms into bedrooms or creating services such as gyms, digital entertainment rooms, wellness centers/SPA.",
+      "image": "/"
+    }
+  ]
 }

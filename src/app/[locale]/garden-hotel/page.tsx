@@ -6,11 +6,11 @@ import { useMessages, useTranslations } from "next-intl";
 import styles from "./page.module.scss";
 import Row from "@/components/atoms/Row";
 import InformativoTextImage from "@/components/organisms/InformativoTextImage/InformativoTextImage";
-import Entrypoint from "@/components/organisms/Entrypoint/Entrypoint";
 import Gallery from "@/components/organisms/Gallery/Gallery";
 import Accordion from "@/components/organisms/Accordion/Accordion";
 import InformativoNumbers from "@/components/organisms/InformativoNumbers/InformativoNumbers";
 import InformativoDinamico from "@/components/organisms/InformativoDinamico/InformativoDinamico";
+import Carousel from "@/components/organisms/Carousel/Carousel";
 
 const GardenHotel: React.FC = () => {
   const m = useMessages();
@@ -24,7 +24,10 @@ const GardenHotel: React.FC = () => {
   const gardenOutdoor = m?.garden_outdoor;
   const gardenPosition = m?.garden_position;
   const gardenSurroundings = m?.garden_surroundings;
+  
   const gardenImages = m?.garden_images;
+
+  const carouselItems = m?.garden_potential_items;
 
   return (
     <>
@@ -57,12 +60,9 @@ const GardenHotel: React.FC = () => {
       <InformativoNumbers />
       <InformativoTextImage />
       <InformativoDinamico />
-      {/* <Entrypoint card1Data={gardenRooms} card2Data={gardenSpaces} />
-      <Entrypoint card1Data={gardenRestaurant} card2Data={gardenService} />
-      <Entrypoint card1Data={gardenParking} card2Data={gardenOutdoor} />
-      <Entrypoint card1Data={gardenPosition} card2Data={gardenSurroundings} /> */}
       <Gallery data={gardenImages} />
       <Accordion />
+      <Carousel data={carouselItems} />
     </>
   );
 };

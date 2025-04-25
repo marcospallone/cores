@@ -352,5 +352,29 @@
       "title": "Parcheggio"
     }
   ],
-  "garden_cards_helper": "Clicca su una sezione per visualizzare ulteriori informazioni"
+  "garden_cards_helper": "Clicca su una sezione per visualizzare ulteriori informazioni",
+  "garden_potential_title": "Potenzialità edilizia",
+  "garden_potential_description": "La forma articolata e i più livelli consentono anche una diversa destinazione del fabbricato. La struttura risulta eventualmente di facile trasformazione per diverse distribuzioni interne.",
+  "garden_potential_items": [
+    {
+      "title": "Ampliamento",
+      "content": "Il Piano Regolatore Generale (PGR) ammette la possibilità di ampliamento del 10% della superficie utile lorda esistente.",
+      "image": "/"
+    },
+    {
+      "title": "Uso socio-sanitario",
+      "content": "Il Garden Hotel si presta molto per posizione, disposizione e ubicazione territoriale ad essere trasformata anche in residenza turistica per anziani, casa di riposo per persone autosufficienti o in casa di cura.",
+      "image": "/"
+    },
+    {
+      "title": "Uso residenziale",
+      "content": "La struttura potrebbe anche essere adibita ad uso residenziale. In particolare, potrebbe essere adibita in civili abitazioni e pertinenze. Gli appartamenti realizzabili sono circa 25. In alternativa, si potrebbe realizzare un residence per appartamenti in affitto o in vendita.",
+      "image": "/"
+    },
+    {
+      "title": "Uso turistico-ricettivo",
+      "content": "L'attuale uso turistico-ricettivo è mantenibile e potrebbe essere anche ampliato o modificato. La presenza di molte sale utilizzate e necessarie in passato per banchetti potrebbe risultare in un aumento di ricettività, trasformando le sale in camere oppure realizzando servizi come palestre, sale di intrattenimento digitali, centri benessere/SPA.",
+      "image": "/"
+    }
+  ]
 }
