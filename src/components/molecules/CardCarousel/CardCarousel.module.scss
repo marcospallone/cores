@@ -1,0 +1,34 @@
+@use "@/styles/includes" as *;
+
+.cardBox {
+
+  .cardText {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding-left: toRem(32);
+
+    .title {
+      font-family: "Poppins_Bold", sans-serif;
+      text-transform: uppercase;
+      font-size: toRem(32);
+    }
+
+    .content {
+      font-family: "Jost", sans-serif;
+      font-size: toRem(18);
+    }
+  }
+  
+  .cardImage {
+    .image {
+      width: 100%;
+      height: 100%;
+      max-height: toRem(600);
+      object-fit: cover;
+    }
+  }
+  
+}

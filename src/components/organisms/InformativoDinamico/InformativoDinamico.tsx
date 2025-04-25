@@ -4,7 +4,6 @@ import {
   Box,
   Grid2,
   Typography,
-  IconButton,
   Container,
   useMediaQuery,
   Accordion,
@@ -12,7 +11,7 @@ import {
   AccordionDetails,
 } from "@mui/material";
 import styles from "./InformativoDinamico.module.scss";
-import { useMessages, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import Row from "@/components/atoms/Row";
 import { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
@@ -21,20 +20,13 @@ import TouchAppIcon from "@mui/icons-material/TouchApp";
 import theme from "@/theme/theme";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
-const InformativoDinamico: React.FC = () => {
+interface InformativoDinamicoModel {
+  infos: any;
+}
+
+const InformativoDinamico: React.FC<InformativoDinamicoModel> = ({infos}) => {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const t = useTranslations();
-  const m = useMessages();
-  const infos = [
-    m?.garden_rooms,
-    m?.garden_spaces,
-    m?.garden_restaurant,
-    m?.garden_service,
-    m?.garden_parking,
-    m?.garden_outdoor,
-    m?.garden_position,
-    m?.garden_surroundings,
-  ];
 
   const [selectedItem, setSelectedItem] = useState<any | null>(null);
   const [expanded, setExpanded] = useState<number | false>(false);

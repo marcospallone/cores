@@ -1,1 +1,58 @@
 @use "@/styles/includes" as *;
+
+.carouselContainer {
+  display: flex;
+  flex-direction: column;
+
+  .titleBox {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(8);
+
+    .title {
+      font-size: toRem(42);
+      font-family: "Poppins_Bold", sans-serif;
+      text-transform: uppercase;
+      color: var(--mui-palette-primary-main);
+    }
+
+    .description {
+      font-size: toRem(20);
+      font-family: "Jost", sans-serif;
+    }
+  }
+
+  .swiperBox {
+    .swiper {
+      .carouselButtons {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        gap: toRem(24);
+        width: 100%;
+        z-index: 1;
+        top: 50%;
+        transform: translateY(-50%);
+
+        .carouselPrevButton,
+        .carouselNextButton {
+          width: toRem(48);
+          height: toRem(48);
+          border-radius: 50%;
+          background-color: var(--mui-palette-primary-main);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          transition: background-color 0.2s ease-in-out;
+
+          @include media-breakpoint-up(md) {
+            &:hover {
+              background-color: var(--mui-palette-success-main);
+            }
+          }
+        }
+      }
+    }
+  }
+}

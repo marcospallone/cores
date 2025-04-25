@@ -17,54 +17,24 @@ import { useMessages, useTranslations } from "next-intl";
 import { useState } from "react";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
-import LocalFireDepartmentIcon from "@mui/icons-material/LocalFireDepartment";
 import { AnimatePresence, motion } from "motion/react";
-import GridViewIcon from "@mui/icons-material/GridView";
 import LensBlurIcon from "@mui/icons-material/LensBlur";
-import AcUnitIcon from "@mui/icons-material/AcUnit";
-import OpacityIcon from "@mui/icons-material/Opacity";
 import theme from "@/theme/theme";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import AnimatedAccordion from "@/components/molecules/AnimatedAccordion/AnimatedAccordion";
 
-const Accordion: React.FC = () => {
+interface AccordionModel {
+  zones: any;
+}
+
+const Accordion: React.FC<AccordionModel> = ({zones}) => {
   const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
   const t = useTranslations();
   const m = useMessages();
   const [expanded, setExpanded] = useState<string | false>(false);
   const [showIconBox, setShowIconBox] = useState(false);
 
-  const zone1 = m?.garden_kitchen_zone1;
-  const zone2 = m?.garden_kitchen_zone2;
-  const zone3 = m?.garden_kitchen_zone3;
-  const zone4 = m?.garden_kitchen_zone4;
-
-  const zones = [
-    {
-      data: zone1,
-      icon: <GridViewIcon sx={{ color: theme.palette.white[900] }} />,
-      panel: "panel1",
-    },
-    {
-      data: zone2,
-      icon: (
-        <LocalFireDepartmentIcon sx={{ color: theme.palette.white[900] }} />
-      ),
-      panel: "panel2",
-    },
-    {
-      data: zone3,
-      icon: <AcUnitIcon sx={{ color: theme.palette.white[900] }} />,
-      panel: "panel3",
-    },
-    {
-      data: zone4,
-      icon: <OpacityIcon sx={{ color: theme.palette.white[900] }} />,
-      panel: "panel4",
-    },
-  ];
-
-  const currentZone = zones.find((zone) => zone.panel === expanded);
+  const currentZone = zones.find((zone: any) => zone.panel === expanded);
 
   const handleChange =
     (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
