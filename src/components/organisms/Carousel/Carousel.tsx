@@ -1,6 +1,12 @@
 import { useTranslations } from "next-intl";
 import styles from "./Carousel.module.scss";
-import { Box, Container, Grid2, Typography } from "@mui/material";
+import {
+  Box,
+  Container,
+  Grid2,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -9,6 +15,7 @@ import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import CardCarousel from "@/components/molecules/CardCarousel/CardCarousel";
 import Row from "@/components/atoms/Row";
 import theme from "@/theme/theme";
+import { useEffect, useRef } from "react";
 
 interface CarouselModel {
   data: CarouselItem[];
@@ -21,7 +28,9 @@ interface CarouselItem {
 }
 
 const Carousel: React.FC<CarouselModel> = ({ data }) => {
+  const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
   const t = useTranslations();
+  const paginationRef = useRef<HTMLDivElement | null>(null);
 
   const swiperProps = {
     modules: [Navigation, Pagination],
@@ -30,16 +39,21 @@ const Carousel: React.FC<CarouselModel> = ({ data }) => {
       nextEl: `.${styles.carouselNextButton}`,
     },
     pagination: {
-      el: `.${styles.pagination}`,
-      bulletClass: `.${styles.swiperCustomBullet}`,
-      bulletActiveClass: `.${styles.swiperCustomBulletActive}`,
+      el: paginationRef.current,
       clickable: true,
     },
     spaceBetween: 0,
     slidesPerView: 1,
     loop: true,
     centeredSlides: true,
+    draggable: true,
   };
+
+  useEffect(() => {
+    if (paginationRef.current && swiperProps.pagination) {
+      swiperProps.pagination.el = paginationRef.current;
+    }
+  }, []);
 
   return (
     <Container className={styles.carouselContainer}>
@@ -70,19 +84,22 @@ const Carousel: React.FC<CarouselModel> = ({ data }) => {
                   </Box>
                 </SwiperSlide>
               ))}
-              <Box className={styles.carouselButtons}>
-                <Box className={styles.carouselPrevButton}>
-                  <KeyboardArrowLeftIcon sx={{ fontSize: theme.spacing(24) }} />
+              {!isMobile && (
+                <Box className={styles.carouselButtons}>
+                  <Box className={styles.carouselPrevButton}>
+                    <KeyboardArrowLeftIcon
+                      sx={{ fontSize: theme.spacing(24) }}
+                    />
+                  </Box>
+                  <Box className={styles.carouselNextButton}>
+                    <KeyboardArrowRightIcon
+                      sx={{ fontSize: theme.spacing(24) }}
+                    />
+                  </Box>
                 </Box>
-                <Box className={styles.carouselNextButton}>
-                  <KeyboardArrowRightIcon
-                    sx={{ fontSize: theme.spacing(24) }}
-                  />
-                </Box>
-              </Box>
-              <Box className={styles.pagination}></Box>
-
+              )}
             </Swiper>
+            <Box className={styles.pagination} ref={paginationRef}></Box>
           </Box>
         </Grid2>
       </Row>

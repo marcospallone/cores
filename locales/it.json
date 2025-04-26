@@ -359,22 +359,22 @@
     {
       "title": "Ampliamento",
       "content": "Il Piano Regolatore Generale (PGR) ammette la possibilità di ampliamento del 10% della superficie utile lorda esistente.",
-      "image": "/grafica-ampliamento.png"
+      "image": "/assets/grafica-ampliamento.png"
     },
     {
       "title": "Uso socio-sanitario",
       "content": "Il Garden Hotel si presta molto per posizione, disposizione e ubicazione territoriale ad essere trasformata anche in residenza turistica per anziani, casa di riposo per persone autosufficienti o in casa di cura.",
-      "image": "/grafica-sanitaria.png"
+      "image": "/assets/grafica-sanitaria.png"
     },
     {
       "title": "Uso residenziale",
       "content": "La struttura potrebbe anche essere adibita ad uso residenziale. In particolare, potrebbe essere adibita in civili abitazioni e pertinenze. Gli appartamenti realizzabili sono circa 25. In alternativa, si potrebbe realizzare un residence per appartamenti in affitto o in vendita.",
-      "image": "/grafica-residenziale.png"
+      "image": "/assets/grafica-residenziale.png"
     },
     {
       "title": "Uso turistico-ricettivo",
       "content": "L'attuale uso turistico-ricettivo è mantenibile e potrebbe essere anche ampliato o modificato. La presenza di molte sale utilizzate e necessarie in passato per banchetti potrebbe risultare in un aumento di ricettività, trasformando le sale in camere oppure realizzando servizi come palestre, sale di intrattenimento digitali, centri benessere/SPA.",
-      "image": "/grafica-turistica.png"
+      "image": "/assets/grafica-turistica.png"
     }
   ]
 }
