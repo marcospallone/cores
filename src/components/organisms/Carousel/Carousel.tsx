@@ -19,6 +19,7 @@ import { useEffect, useRef } from "react";
 
 interface CarouselModel {
   data: CarouselItem[];
+  dark?: boolean;
 }
 
 interface CarouselItem {
