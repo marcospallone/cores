@@ -102,16 +102,6 @@
       &:global(.swiper-pagination-lock) {
         display: none !important;
       }
-
-      &.dark {
-        :global(.swiper-pagination-bullet) {
-          background: var(--mui-palette-grey-40);
-        }
-
-        :global(.swiper-pagination-bullet-active) {
-          background: var(--mui-palette-neutral-white100);
-        }
-      }
     }
   }
 }

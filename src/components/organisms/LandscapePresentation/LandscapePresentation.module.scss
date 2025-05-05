@@ -35,33 +35,74 @@
     }
 
     .swiper {
-        position: relative;
-        .landscapeButtons {
-            display: flex;
-            justify-content: center;
-            gap: toRem(24);
-            width: 100%;
-            
-            .landscapePrevButton,
-            .landscapeNextButton {
-              width: toRem(48);
-              height: toRem(48);
-              border-radius: 50%;
-              background-color: var(--mui-palette-primary-main);
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              cursor: pointer;
-              transition: background-color 0.2s ease-in-out;
-              color: var(--mui-palette-white-900);
-    
-              @include media-breakpoint-up(md) {
-                &:hover {
-                  background-color: var(--mui-palette-success-main);
-                }
-              }
+      position: relative;
+      .landscapeButtons {
+        display: flex;
+        justify-content: center;
+        gap: toRem(24);
+        width: 100%;
+
+        .landscapePrevButton,
+        .landscapeNextButton {
+          width: toRem(48);
+          height: toRem(48);
+          border-radius: 50%;
+          background-color: var(--mui-palette-primary-main);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          transition: background-color 0.2s ease-in-out;
+          color: var(--mui-palette-white-900);
+
+          @include media-breakpoint-up(md) {
+            &:hover {
+              background-color: var(--mui-palette-success-main);
             }
           }
+        }
+      }
+    }
+
+    .pagination {
+      text-align: center;
+      display: flex;
+      height: fit-content;
+      justify-content: center;
+      width: 100%;
+      gap: toRem(8);
+      margin-top: toRem(32);
+
+      :global(.swiper-pagination-bullet) {
+        width: toRem(20);
+        height: toRem(8);
+        background: var(--mui-palette-grey-700);
+        opacity: 1;
+        transition: all 0.3s ease;
+        border-radius: toRem(4);
+        margin: 0 !important;
+        cursor: pointer;
+
+        @include media-breakpoint-up(lg) {
+          &:hover {
+            background: var(--mui-palette-success-main);
+          }
+        }
+      }
+
+      :global(.swiper-pagination-bullet-active) {
+        width: toRem(36);
+        border-radius: toRem(4);
+        background: var(--mui-palette-primary-main);
+      }
+
+      :global(.swiper-pagination-lock) {
+        display: none !important;
+      }
+
+      &:global(.swiper-pagination-lock) {
+        display: none !important;
+      }
     }
   }
 }
