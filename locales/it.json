@@ -30,25 +30,25 @@
     "icon": "bed",
     "title": "Ricettività",
     "description": "La capacità ricettiva arriva fino a 90 posti letto, distribuiti in camere singole, doppie, triple, quadruple e suite/appartamenti, per un totale di 36 camere. Tutti gli arredi delle camere sono in legno di noce massello realizzati artigianalmente.",
-    "image": "/DSCN0259.JPG"
+    "image": "/DSCN0259.jpg"
   },
   "garden_spaces": {
     "icon": "bar",
     "title": "Spazi comuni",
     "description": "Il Garden Hotel dispone inoltre di ampi spazi comuni: reception, hall, bar, sale ristorante, sala colazioni, sale gioco e intrattenimento.",
-    "image": "/DSCN0107.JPG"
+    "image": "/DSCN0107.jpg"
   },
   "garden_restaurant": {
     "icon": "restaurant",
     "title": "Ristorante",
     "description": "La zona ristorazione può ospitare fino a 300 persone tra ristorante, porticato e atrio. L'hotel dispone inoltre di un'ampia cucina professionale.",
-    "image": "/DSCN0091.JPG"
+    "image": "/DSCN0091.jpg"
   },
   "garden_service": {
     "icon": "laundry",
     "title": "Locali di servizio",
     "description": "L'hotel dispone di alcuni locali di servizio e vani tecnici, tra cui lavanderia industriale, vano caldaia, magazzino e spogliatoi.",
-    "image": "/lavanderia.JPG"
+    "image": "/lavanderia.jpg"
   },
   "garden_parking": {
     "icon": "parking",
@@ -66,7 +66,7 @@
     "icon": "location",
     "title": "Posizione strategica",
     "description": "La struttura si trova in posizione strategica, adiacente ai giardini pubblici e ben collegata con i principali servizi, scuole e trasporti pubblici.",
-    "image": "/DSCN1818.JPG"
+    "image": "/DSCN1818.jpg"
   },
   "garden_surroundings": {
     "icon": "map",
@@ -152,191 +152,191 @@
       "title": "Ingresso superiore"
     },
     {
-      "src": "/DSCN0062.JPG",
+      "src": "/DSCN0062.jpg",
       "title": "Fornelli Cucina"
     },
     {
-      "src": "/DSCN0068.JPG",
+      "src": "/DSCN0068.jpg",
       "title": "Banchi Cucina"
     },
     {
-      "src": "/DSCN0070.JPG",
+      "src": "/DSCN0070.jpg",
       "title": "Lavelli Cucina"
     },
     {
-      "src": "/DSCN0072.JPG",
+      "src": "/DSCN0072.jpg",
       "title": "Lavaggio Cucina"
     },
     {
-      "src": "/DSCN0081.JPG",
+      "src": "/DSCN0081.jpg",
       "title": "Sala principale ristorante"
     },
     {
-      "src": "/DSCN0091.JPG",
+      "src": "/DSCN0091.jpg",
       "title": "Porticato ristorante"
     },
     {
-      "src": "/DSCN0092.JPG",
+      "src": "/DSCN0092.jpg",
       "title": "Porticato ristorante"
     },
     {
-      "src": "/DSCN0093.JPG",
+      "src": "/DSCN0093.jpg",
       "title": "Vista sala dal porticato"
     },
     {
-      "src": "/DSCN0095.JPG",
+      "src": "/DSCN0095.jpg",
       "title": "Porticato ristorante"
     },
     {
-      "src": "/DSCN0097.JPG",
+      "src": "/DSCN0097.jpg",
       "title": "Porticato ristorante"
     },
     {
-      "src": "/DSCN0107.JPG",
+      "src": "/DSCN0107.jpg",
       "title": "Sala polivalente"
     },
     {
-      "src": "/DSCN0110.JPG",
+      "src": "/DSCN0110.jpg",
       "title": "Sala polivalente"
     },
     {
-      "src": "/DSCN0113.JPG",
+      "src": "/DSCN0113.jpg",
       "title": "Lavandino bagno ristorante"
     },
     {
-      "src": "/DSCN0115.JPG",
+      "src": "/DSCN0115.jpg",
       "title": "Bagni ristorante"
     },
     {
-      "src": "/DSCN0143.JPG",
+      "src": "/DSCN0143.jpg",
       "title": "Bureau"
     },
     {
-      "src": "/DSCN0147.JPG",
+      "src": "/DSCN0147.jpg",
       "title": "Bar"
     },
     {
-      "src": "/DSCN0150.JPG",
+      "src": "/DSCN0150.jpg",
       "title": "Sala bar"
     },
     {
-      "src": "/DSCN0153.JPG",
+      "src": "/DSCN0153.jpg",
       "title": "Sala bar"
     },
     {
-      "src": "/DSCN0156.JPG",
+      "src": "/DSCN0156.jpg",
       "title": "Sala tv"
     },
     {
-      "src": "/DSCN0157.JPG",
+      "src": "/DSCN0157.jpg",
       "title": "Camino Sala tv"
     },
     {
-      "src": "/DSCN0159.JPG",
+      "src": "/DSCN0159.jpg",
       "title": "Camino"
     },
     {
-      "src": "/DSCN0166.JPG",
+      "src": "/DSCN0166.jpg",
       "title": "Sala giochi"
     },
     {
-      "src": "/DSCN0162.JPG",
+      "src": "/DSCN0162.jpg",
       "title": "Sala giochi"
     },
     {
-      "src": "/DSCN0170.JPG",
+      "src": "/DSCN0170.jpg",
       "title": "Sala convegni"
     },
     {
-      "src": "/DSCN0174.JPG",
+      "src": "/DSCN0174.jpg",
       "title": "Fontana Scalinata"
     },
     {
-      "src": "/DSCN0175.JPG",
+      "src": "/DSCN0175.jpg",
       "title": "Vista dalla scala"
     },
     {
-      "src": "/DSCN0176.JPG",
+      "src": "/DSCN0176.jpg",
       "title": "Scalinata ingresso"
     },
     {
-      "src": "/DSCN0177.JPG",
+      "src": "/DSCN0177.jpg",
       "title": "Ingresso"
     },
     {
-      "src": "/DSCN0184.JPG",
+      "src": "/DSCN0184.jpg",
       "title": "Sala convegni"
     },
     {
-      "src": "/DSCN0188.JPG",
+      "src": "/DSCN0188.jpg",
       "title": "Sala convegni"
     },
     {
-      "src": "/DSCN0189.JPG",
+      "src": "/DSCN0189.jpg",
       "title": "Sala convegni"
     },
     {
-      "src": "/DSCN0196.JPG",
+      "src": "/DSCN0196.jpg",
       "title": "Camera singola"
     },
     {
-      "src": "/DSCN0199.JPG",
+      "src": "/DSCN0199.jpg",
       "title": "Camera doppia"
     },
     {
-      "src": "/DSCN0204.JPG",
+      "src": "/DSCN0204.jpg",
       "title": "Bagno privato"
     },
     {
-      "src": "/DSCN0209.JPG",
+      "src": "/DSCN0209.jpg",
       "title": "Camera tripla"
     },
     {
-      "src": "/DSCN0210.JPG",
+      "src": "/DSCN0210.jpg",
       "title": "Bagno privato"
     },
     {
-      "src": "/DSCN0211.JPG",
+      "src": "/DSCN0211.jpg",
       "title": "Vasca"
     },
     {
-      "src": "/DSCN0230.JPG",
+      "src": "/DSCN0230.jpg",
       "title": "Corridoio camere"
     },
     {
-      "src": "/DSCN0240.JPG",
+      "src": "/DSCN0240.jpg",
       "title": "Camera doppia"
     },
     {
-      "src": "/DSCN0242.JPG",
+      "src": "/DSCN0242.jpg",
       "title": "Camera doppia"
     },
     {
-      "src": "/DSCN0250.JPG",
+      "src": "/DSCN0250.jpg",
       "title": "Doccia"
     },
     {
-      "src": "/DSCN0254.JPG",
+      "src": "/DSCN0254.jpg",
       "title": "Camera tripla"
     },
     {
-      "src": "/DSCN0259.JPG",
+      "src": "/DSCN0259.jpg",
       "title": "Camera matrimoniale"
     },
     {
-      "src": "/DSCN0271.JPG",
+      "src": "/DSCN0271.jpg",
       "title": "Scrittoio in camera"
     },
     {
-      "src": "/DSCN0315.JPG",
+      "src": "/DSCN0315.jpg",
       "title": "Scale"
     },
     {
-      "src": "/DSCN1818.JPG",
+      "src": "/DSCN1818.jpg",
       "title": "Vista nord"
     },
     {
-      "src": "/lavanderia.JPG",
+      "src": "/lavanderia.jpg",
       "title": "lavanderia"
     },
     {
@@ -344,7 +344,7 @@
       "title": "Vista del centro storico"
     },
     {
-      "src": "/sala1.JPG",
+      "src": "/sala1.jpg",
       "title": "Sala intrattenimento"
     },
     {
@@ -375,6 +375,40 @@
       "title": "Uso turistico-ricettivo",
       "content": "L'attuale uso turistico-ricettivo è mantenibile e potrebbe essere anche ampliato o modificato. La presenza di molte sale utilizzate e necessarie in passato per banchetti potrebbe risultare in un aumento di ricettività, trasformando le sale in camere oppure realizzando servizi come palestre, sale di intrattenimento digitali, centri benessere/SPA.",
       "image": "/assets/grafica-turistica.png"
+    }
+  ],
+  "garden_landscape_title": "Scanno e dintorni: natura, tradizione e meraviglia",
+  "garden_landscape_description": "Scanno, incastonato tra le montagne dell’Abruzzo, è un borgo ricco di fascino, storia e bellezze naturali. Dalle acque cristalline del suo lago ai vicoli medievali, ogni angolo racconta una storia. Scopri le attrazioni imperdibili che rendono unica questa perla della Valle del Sagittario.",
+  "garden_landscape_items": [
+    {
+      "title": "Lago di Scanno",
+      "content": "Il Lago di Scanno è il lago naturale più grande dell'Abruzzo, famoso per la sua forma a cuore e le acque cristalline. È un luogo ideale per passeggiate, pic-nic e sport acquatici.",
+      "image": "/assets/lago.jpg"
+    },
+    {
+      "title": "Centro Storico di Scanno",
+      "content": "Il centro storico di Scanno è un labirinto di vicoli stretti e case in pietra, con chiese storiche, archi antichi e botteghe artigiane. Un viaggio nel tempo tra scorci da cartolina e tradizioni che vivono ancora oggi.",
+      "image": "/assets/centro.jpg"
+    },
+    {
+      "title": "Sentiero del Cuore",
+      "content": "Il Sentiero del Cuore è un percorso panoramico che conduce al punto panoramico da cui si vede il Lago di Scanno a forma di cuore. Un'esperienza unica per gli amanti del trekking e della fotografia.",
+      "image": "/assets/sentiero.jpg"
+    },
+    {
+      "title": "Lago di San Domenico - Villalago",
+      "content": "A pochi chilometri da Scanno, incastonato tra le montagne e attraversato da un suggestivo ponte in pietra, il Lago di San Domenico è un luogo di pace e bellezza senza tempo. Le sue acque verde smeraldo riflettono la natura circostante e l’antico Eremo di San Domenico, costruito in una grotta, offre uno scenario da cartolina. Ideale per una gita rilassante, un picnic, o semplicemente per respirare la quiete della valle.",
+      "image": "/assets/sandomenico.jpg"
+    },
+    {
+      "title": "Parco Nazionale d’Abruzzo, Lazio e Molise",
+      "content": "Scanno si trova nel cuore di uno dei parchi naturali più antichi e affascinanti d’Italia. Il Parco Nazionale d’Abruzzo, Lazio e Molise è un paradiso di biodiversità, con una straordinaria varietà di flora e fauna protetta, tra cui l’orso marsicano. I suoi sentieri offrono panorami mozzafiato, boschi secolari, laghi e rifugi immersi nella natura. Un’esperienza imperdibile per escursionisti, fotografi e amanti dell’aria aperta.",
+      "image": "/assets/orso.jpg"
+    },
+    {
+      "title": "Tradizioni e Gastronomia",
+      "content": "Scanno è un borgo che conserva gelosamente le sue antiche tradizioni. Il Costume tradizionale femminile, ricco di ricami e simbolismi, è tra i più affascinanti d’Abruzzo e viene ancora indossato in occasioni speciali. Per quanto riguarda la gastronomia, tra formaggi, miele di montagna e dolci tradizionali come il Pan dell'Orso, ogni sapore racconta il territorio.",
+      "image": "/assets/tradizioni.jpg"
     }
   ]
 }

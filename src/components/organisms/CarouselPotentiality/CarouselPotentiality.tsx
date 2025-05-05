@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import styles from "./Carousel.module.scss";
+import styles from "./CarouselPotentiality.module.scss";
 import {
   Box,
   Container,
@@ -12,23 +12,23 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import CardCarousel from "@/components/molecules/CardCarousel/CardCarousel";
+import CardPotentiality from "@/components/molecules/CardPotentiality/CardPotentiality";
 import Row from "@/components/atoms/Row";
 import theme from "@/theme/theme";
 import { useEffect, useRef } from "react";
 
-interface CarouselModel {
-  data: CarouselItem[];
+interface CarouselPotentialityModel {
+  data: CarouselPotentialityItem[];
   dark?: boolean;
 }
 
-interface CarouselItem {
+interface CarouselPotentialityItem {
   title: string;
   content: string;
   image: string;
 }
 
-const Carousel: React.FC<CarouselModel> = ({ data }) => {
+const CarouselPotentiality: React.FC<CarouselPotentialityModel> = ({ data }) => {
   const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
   const t = useTranslations();
   const paginationRef = useRef<HTMLDivElement | null>(null);
@@ -81,7 +81,7 @@ const Carousel: React.FC<CarouselModel> = ({ data }) => {
               {data?.map((item, index) => (
                 <SwiperSlide key={index} className={styles.swiperSlide}>
                   <Box className={styles.slideBox}>
-                    <CardCarousel data={item} />
+                    <CardPotentiality data={item} />
                   </Box>
                 </SwiperSlide>
               ))}
@@ -108,4 +108,4 @@ const Carousel: React.FC<CarouselModel> = ({ data }) => {
   );
 };
 
-export default Carousel;
+export default CarouselPotentiality;

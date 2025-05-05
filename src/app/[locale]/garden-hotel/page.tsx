@@ -10,12 +10,14 @@ import Gallery from "@/components/organisms/Gallery/Gallery";
 import Accordion from "@/components/organisms/Accordion/Accordion";
 import InformativoNumbers from "@/components/organisms/InformativoNumbers/InformativoNumbers";
 import InformativoDinamico from "@/components/organisms/InformativoDinamico/InformativoDinamico";
-import Carousel from "@/components/organisms/Carousel/Carousel";
+import CarouselPotentiality from "@/components/organisms/CarouselPotentiality/CarouselPotentiality";
 import LocalFireDepartmentIcon from "@mui/icons-material/LocalFireDepartment";
 import GridViewIcon from "@mui/icons-material/GridView";
 import AcUnitIcon from "@mui/icons-material/AcUnit";
 import OpacityIcon from "@mui/icons-material/Opacity";
 import theme from "@/theme/theme";
+import LandscapePresentation from "@/components/organisms/LandscapePresentation/LandscapePresentation";
+import { title } from "process";
 
 const GardenHotel: React.FC = () => {
   const m = useMessages();
@@ -79,6 +81,12 @@ const GardenHotel: React.FC = () => {
     },
   ];
 
+  const landscapeData = {
+    title: t("garden_landscape_title"),
+    description: t("garden_landscape_description"),
+    items: m?.garden_landscape_items
+  }
+
   const carouselItems = m?.garden_potential_items;
 
   return (
@@ -98,7 +106,8 @@ const GardenHotel: React.FC = () => {
       <InformativoDinamico infos={infos} />
       <Gallery data={gardenImages} />
       <Accordion zones={zones} />
-      <Carousel data={carouselItems} />
+      <LandscapePresentation data={landscapeData} />
+      <CarouselPotentiality data={carouselItems} />
     </>
   );
 };

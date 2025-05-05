@@ -1,10 +1,10 @@
 import { Box, Container, Grid2, Typography } from "@mui/material";
-import styles from "./CardCarousel.module.scss";
+import styles from "./CardPotentiality.module.scss";
 import Image from "next/image";
 import React from "react";
 import Row from "@/components/atoms/Row";
 
-interface CardCarouselModel {
+interface CardPotentialityModel {
   data: {
     title: string;
     content: string;
@@ -12,7 +12,7 @@ interface CardCarouselModel {
   };
 }
 
-const CardCarousel: React.FC<CardCarouselModel> = ({ data }) => {
+const CardPotentiality: React.FC<CardPotentialityModel> = ({ data }) => {
   return (
     <Container className={styles.cardBox}>
       <Row className={styles.row}>
@@ -46,4 +46,4 @@ const CardCarousel: React.FC<CardCarouselModel> = ({ data }) => {
   );
 };
 
-export default CardCarousel;
+export default CardPotentiality;

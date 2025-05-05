@@ -30,25 +30,25 @@
     "icon": "bed",
     "title": "Hospitality",
     "description": "The accommodation capacity reaches up to 90 beds, distributed in single, double, triple, quadruple rooms and suites/apartments, for a total of 36 rooms. All the furnishings in the rooms are handcrafted in solid walnut wood.",
-    "image": "/DSCN0259.JPG"
+    "image": "/DSCN0259.jpg"
   },
   "garden_spaces": {
     "icon": "bar",
     "title": "Common spaces",
     "description": "The Garden Hotel also has large common areas: reception, hall, bar, restaurant rooms, breakfast room, games and entertainment rooms.",
-    "image": "/DSCN0107.JPG"
+    "image": "/DSCN0107.jpg"
   },
   "garden_restaurant": {
     "icon": "restaurant",
     "title": "Restaurant",
     "description": "The dining area can accommodate up to 300 people between the restaurant, porch and atrium. The hotel also has a large professional kitchen.",
-    "image": "/DSCN0091.JPG"
+    "image": "/DSCN0091.jpg"
   },
   "garden_service": {
     "icon": "laundry",
     "title": "Service rooms",
     "description": "The hotel has some service rooms and technical rooms, including industrial laundry, boiler room, warehouse and changing rooms.",
-    "image": "/lavanderia.JPG"
+    "image": "/lavanderia.jpg"
   },
   "garden_parking": {
     "icon": "parking",
@@ -66,7 +66,7 @@
     "icon": "location",
     "title": "Strategic position",
     "description": "The property is located in a strategic position, adjacent to the public gardens and well connected to the main services, schools and public transport.",
-    "image": "/DSCN1818.JPG"
+    "image": "/DSCN1818.jpg"
   },
   "garden_surroundings": {
     "icon": "map",
@@ -152,191 +152,191 @@
       "title": "Upper entrance"
     },
     {
-      "src": "/DSCN0062.JPG",
+      "src": "/DSCN0062.jpg",
       "title": "Kitchen Stoves"
     },
     {
-      "src": "/DSCN0068.JPG",
+      "src": "/DSCN0068.jpg",
       "title": "Kitchen Benches"
     },
     {
-      "src": "/DSCN0070.JPG",
+      "src": "/DSCN0070.jpg",
       "title": "Kitchen Sinks"
     },
     {
-      "src": "/DSCN0072.JPG",
+      "src": "/DSCN0072.jpg",
       "title": "Kitchen Cleaning"
     },
     {
-      "src": "/DSCN0081.JPG",
+      "src": "/DSCN0081.jpg",
       "title": "Main restaurant hall"
     },
     {
-      "src": "/DSCN0091.JPG",
+      "src": "/DSCN0091.jpg",
       "title": "Restaurant Porch"
     },
     {
-      "src": "/DSCN0092.JPG",
+      "src": "/DSCN0092.jpg",
       "title": "Restaurant Porch"
     },
     {
-      "src": "/DSCN0093.JPG",
+      "src": "/DSCN0093.jpg",
       "title": "Restaurant hall from the porch"
     },
     {
-      "src": "/DSCN0095.JPG",
+      "src": "/DSCN0095.jpg",
       "title": "Restaurant Porch"
     },
     {
-      "src": "/DSCN0097.JPG",
+      "src": "/DSCN0097.jpg",
       "title": "Restaurant Porch"
     },
     {
-      "src": "/DSCN0107.JPG",
+      "src": "/DSCN0107.jpg",
       "title": "Multipurpose room"
     },
     {
-      "src": "/DSCN0110.JPG",
+      "src": "/DSCN0110.jpg",
       "title": "Multipurpose room"
     },
     {
-      "src": "/DSCN0113.JPG",
+      "src": "/DSCN0113.jpg",
       "title": "Restaurant Bathroom Sink"
     },
     {
-      "src": "/DSCN0115.JPG",
+      "src": "/DSCN0115.jpg",
       "title": "Restaurant bathrooms"
     },
     {
-      "src": "/DSCN0143.JPG",
+      "src": "/DSCN0143.jpg",
       "title": "Bureau"
     },
     {
-      "src": "/DSCN0147.JPG",
+      "src": "/DSCN0147.jpg",
       "title": "Bar"
     },
     {
-      "src": "/DSCN0150.JPG",
+      "src": "/DSCN0150.jpg",
       "title": "bar room"
     },
     {
-      "src": "/DSCN0153.JPG",
+      "src": "/DSCN0153.jpg",
       "title": "bar room"
     },
     {
-      "src": "/DSCN0156.JPG",
+      "src": "/DSCN0156.jpg",
       "title": "tv room"
     },
     {
-      "src": "/DSCN0157.JPG",
+      "src": "/DSCN0157.jpg",
       "title": "tv room fireplace"
     },
     {
-      "src": "/DSCN0159.JPG",
+      "src": "/DSCN0159.jpg",
       "title": "fireplace"
     },
     {
-      "src": "/DSCN0166.JPG",
+      "src": "/DSCN0166.jpg",
       "title": "game room"
     },
     {
-      "src": "/DSCN0162.JPG",
+      "src": "/DSCN0162.jpg",
       "title": "game room"
     },
     {
-      "src": "/DSCN0170.JPG",
+      "src": "/DSCN0170.jpg",
       "title": "Conference room"
     },
     {
-      "src": "/DSCN0174.JPG",
+      "src": "/DSCN0174.jpg",
       "title": "Fountain staircase"
     },
     {
-      "src": "/DSCN0175.JPG",
+      "src": "/DSCN0175.jpg",
       "title": "View from the stairs"
     },
     {
-      "src": "/DSCN0176.JPG",
+      "src": "/DSCN0176.jpg",
       "title": "Entrance staircase"
     },
     {
-      "src": "/DSCN0177.JPG",
+      "src": "/DSCN0177.jpg",
       "title": "Entrance"
     },
     {
-      "src": "/DSCN0184.JPG",
+      "src": "/DSCN0184.jpg",
       "title": "Conference room"
     },
     {
-      "src": "/DSCN0188.JPG",
+      "src": "/DSCN0188.jpg",
       "title": "Conference room"
     },
     {
-      "src": "/DSCN0189.JPG",
+      "src": "/DSCN0189.jpg",
       "title": "Conference room"
     },
     {
-      "src": "/DSCN0196.JPG",
+      "src": "/DSCN0196.jpg",
       "title": "Single room"
     },
     {
-      "src": "/DSCN0199.JPG",
+      "src": "/DSCN0199.jpg",
       "title": "Double room"
     },
     {
-      "src": "/DSCN0204.JPG",
+      "src": "/DSCN0204.jpg",
       "title": "Private bathroom"
     },
     {
-      "src": "/DSCN0209.JPG",
+      "src": "/DSCN0209.jpg",
       "title": "Triple room"
     },
     {
-      "src": "/DSCN0210.JPG",
+      "src": "/DSCN0210.jpg",
       "title": "Private bathroom"
     },
     {
-      "src": "/DSCN0211.JPG",
+      "src": "/DSCN0211.jpg",
       "title": "Bathtub"
     },
     {
-      "src": "/DSCN0230.JPG",
+      "src": "/DSCN0230.jpg",
       "title": "Rooms hallway"
     },
     {
-      "src": "/DSCN0240.JPG",
+      "src": "/DSCN0240.jpg",
       "title": "Double room"
     },
     {
-      "src": "/DSCN0242.JPG",
+      "src": "/DSCN0242.jpg",
       "title": "Double room"
     },
     {
-      "src": "/DSCN0250.JPG",
+      "src": "/DSCN0250.jpg",
       "title": "Shower"
     },
     {
-      "src": "/DSCN0254.JPG",
+      "src": "/DSCN0254.jpg",
       "title": "Triple room"
     },
     {
-      "src": "/DSCN0259.JPG",
+      "src": "/DSCN0259.jpg",
       "title": "Double bedroom"
     },
     {
-      "src": "/DSCN0271.JPG",
+      "src": "/DSCN0271.jpg",
       "title": "Desk in the room"
     },
     {
-      "src": "/DSCN0315.JPG",
+      "src": "/DSCN0315.jpg",
       "title": "Stairs"
     },
     {
-      "src": "/DSCN1818.JPG",
+      "src": "/DSCN1818.jpg",
       "title": "Nord View"
     },
     {
-      "src": "/lavanderia.JPG",
+      "src": "/lavanderia.jpg",
       "title": "Laundry"
     },
     {
@@ -344,7 +344,7 @@
       "title": "View of the historic center"
     },
     {
-      "src": "/sala1.JPG",
+      "src": "/sala1.jpg",
       "title": "Entertainment Room"
     },
     {
