@@ -376,5 +376,39 @@
       "content": "The current tourist-receptive use is maintainable and could also be expanded or modified. The presence of many rooms used and necessary in the past for banquets could result in an increase in accommodation, transforming the rooms into bedrooms or creating services such as gyms, digital entertainment rooms, wellness centers/SPA.",
       "image": "/assets/grafica-turistica.png"
     }
+  ],
+  "garden_landscape_title": "Scanno and its surroundings: nature, tradition and wonder",
+  "garden_landscape_description": "Scanno, nestled in the mountains of Abruzzo, is a village full of charm, history and natural beauty. From the crystalline waters of its lake to the medieval alleys, every corner tells a story. Discover the unmissable attractions that make this pearl of the Sagittario Valley unique.",
+  "garden_landscape_items": [
+    {
+      "title": "Scanno Lake",
+      "content": "Scanno Lake is the largest natural lake in Abruzzo, famous for its heart shape and crystalline waters. It is an ideal place for walks, picnics and water sports.",
+      "image": "/assets/lago.jpg"
+    },
+    {
+      "title": "Historical Center of Scanno",
+      "content": "The historic center of Scanno is a labyrinth of narrow streets and stone houses, with historic churches, ancient arches and artisan workshops. A journey through time among postcard views and traditions that still live today.",
+      "image": "/assets/centro.jpg"
+    },
+    {
+      "title": "Sentiero del Cuore",
+      "content": "The Sentiero del Cuore is a panoramic path that leads to the panoramic point from which you can see the heart-shaped Lake Scanno. A unique experience for trekking and photography lovers.",
+      "image": "/assets/sentiero.jpg"
+    },
+    {
+      "title": "San Domenico Lake - Villalago",
+      "content": "A few kilometers from Scanno, nestled between the mountains and crossed by a suggestive stone bridge, San Domenico Lake is a place of peace and timeless beauty. Its emerald green waters reflect the surrounding nature and the ancient Hermitage of San Domenico, built in a cave, offers a postcard-like setting. Ideal for a relaxing trip, a picnic, or simply to breathe in the quiet of the valley.",
+      "image": "/assets/sandomenico.jpg"
+    },
+    {
+      "title": "Abruzzo, Lazio and Molise National Park",
+      "content": "Scanno is located in the heart of one of the oldest and most fascinating natural parks in Italy. The Abruzzo, Lazio and Molise National Park is a paradise of biodiversity, with an extraordinary variety of protected flora and fauna, including the Marsican brown bear. Its trails offer breathtaking views, centuries-old woods, lakes and refuges immersed in nature. An unmissable experience for hikers, photographers and lovers of the outdoors.",
+      "image": "/assets/orso.jpg"
+    },
+    {
+      "title": "Traditions and Gastronomy",
+      "content": "Scanno is a village that jealously preserves its ancient traditions. The traditional female costume, rich in embroidery and symbolism, is among the most fascinating in Abruzzo and is still worn on special occasions. As for gastronomy, between cheeses, mountain honey and traditional sweets such as Pan dell'Orso, every flavor tells the story of the territory.",
+      "image": "/assets/tradizioni.jpg"
+    }
   ]
 }
