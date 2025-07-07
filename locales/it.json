@@ -410,5 +410,7 @@
       "content": "Scanno è un borgo che conserva gelosamente le sue antiche tradizioni. Il Costume tradizionale femminile, ricco di ricami e simbolismi, è tra i più affascinanti d’Abruzzo e viene ancora indossato in occasioni speciali. Per quanto riguarda la gastronomia, tra formaggi, miele di montagna e dolci tradizionali come il Pan dell'Orso, ogni sapore racconta il territorio.",
       "image": "/assets/tradizioni.jpg"
     }
-  ]
+  ],
+  "notFound": "La pagina che stai cercando non esiste!",
+  "notFoundButton": "Torna alla home"
 }

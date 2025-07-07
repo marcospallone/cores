@@ -410,5 +410,7 @@
       "content": "Scanno is a village that jealously preserves its ancient traditions. The traditional female costume, rich in embroidery and symbolism, is among the most fascinating in Abruzzo and is still worn on special occasions. As for gastronomy, between cheeses, mountain honey and traditional sweets such as Pan dell'Orso, every flavor tells the story of the territory.",
       "image": "/assets/tradizioni.jpg"
     }
-  ]
+  ],
+  "notFound": "The page you are looking for does not exist!",
+  "notFoundButton": "Back to Home"
 }
