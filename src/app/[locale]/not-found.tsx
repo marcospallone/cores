@@ -1,4 +1,3 @@
-import Header from "@/components/organisms/Header/Header";
 import theme from "@/theme/theme";
 import { Box, Button, Typography } from "@mui/material";
 import { useTranslations } from "next-intl";
