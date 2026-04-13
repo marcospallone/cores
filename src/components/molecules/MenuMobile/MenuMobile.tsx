@@ -10,14 +10,8 @@ const MenuMobile: React.FC = () => {
   return (
     <Box className={styles.menuBox}>
       <Box className={styles.menuItems}>
-        <Link className={styles.leftLink} href={"/properties"}>
-          {t("properties")}
-        </Link>
         <Link className={styles.leftLink} href={"/garden-hotel"}>
           {t("hotel")}
-        </Link>
-        <Link className={styles.leftLink} href={"/services"}>
-          {t("services")}
         </Link>
       </Box>
       <Box className={styles.bottomBox}>

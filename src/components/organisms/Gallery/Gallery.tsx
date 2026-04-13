@@ -43,7 +43,7 @@ const Gallery: React.FC<GalleryProps> = ({ data }) => {
           <SwiperSlide key={index} className={styles.swiperSlide}>
             <Box className={styles.slideBox}>
               <Image
-                src={process.env.NEXT_PUBLIC_SUPABASE_FOLDER + image?.src}
+                src={image?.src}
                 alt={`Gallery Image ${index + 1}`}
                 width={1200}
                 height={1000}

@@ -118,14 +118,8 @@ const Header: React.FC = () => {
         ) : (
           <>
             <Box className={styles.leftHeader}>
-              <Link className={styles.leftLink} href={"/properties"}>
-                {t("properties")}
-              </Link>
               <Link className={styles.leftLink} href={"/garden-hotel"}>
                 {t("hotel")}
-              </Link>
-              <Link className={styles.leftLink} href={"/services"}>
-                {t("services")}
               </Link>
             </Box>
             <Box className={styles.logo}>

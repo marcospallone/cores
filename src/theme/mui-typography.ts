@@ -1,5 +1,5 @@
-import { Components, Theme } from '@mui/material/styles';
+import { Components } from '@mui/material/styles';
 
-export const getMuiTypography = (theme: Theme): Components['MuiTypography'] => ({
-  
+export const getMuiTypography = (): Components['MuiTypography'] => ({
+
 });

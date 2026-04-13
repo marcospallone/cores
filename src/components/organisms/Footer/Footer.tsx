@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
   const t = useTranslations();
 
-  const isContacts = usePathname() === "/it/contacts";
+  const isContacts = usePathname().endsWith("/contacts");
 
   return (
     <footer className={styles.footer}>
@@ -36,14 +36,8 @@ const Footer: React.FC = () => {
             </Link>
           </Box>
           <Box className={styles.links}>
-            <Link className={styles.link} href={"/properties"}>
-              {t("properties")}
-            </Link>
             <Link className={styles.link} href={"/garden-hotel"}>
               {t("hotel")}
-            </Link>
-            <Link className={styles.link} href={"/services"}>
-              {t("services")}
             </Link>
           </Box>
           <Box className={styles.location}>
@@ -76,7 +70,17 @@ const Footer: React.FC = () => {
         </Box>
         <Box className={styles.secondRow}>
           <Box className={styles.copyright}>{t("copyright")}</Box>
-          <Box className={styles.madeBy}>{t("made_by")}</Box>
+          <Box className={styles.madeBy}>
+            {t("made_by")}{" "}
+            <Link
+              href={"https://www.marcospallone.com"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.madeByLink}
+            >
+              Marco Spallone
+            </Link>
+          </Box>
         </Box>
       </Container>
     </footer>

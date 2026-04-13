@@ -44,6 +44,14 @@
         top: 50%;
         transform: translateY(-50%);
 
+        @include media-breakpoint-down(lg) {
+          position: static;
+          justify-content: center;
+          gap: toRem(12);
+          margin-top: toRem(18);
+          transform: none;
+        }
+
         .carouselPrevButton,
         .carouselNextButton {
           width: toRem(48);
@@ -55,6 +63,11 @@
           align-items: center;
           cursor: pointer;
           transition: background-color 0.2s ease-in-out;
+
+          @include media-breakpoint-down(lg) {
+            width: toRem(40);
+            height: toRem(40);
+          }
 
           @include media-breakpoint-up(md) {
             &:hover {
@@ -72,13 +85,15 @@
       justify-content: center;
       width: 100%;
       gap: toRem(8);
+      margin-top: toRem(16);
+
       :global(.swiper-pagination-bullet) {
         width: toRem(20);
         height: toRem(8);
         background: var(--mui-palette-white-900);
         opacity: 1;
         transition: all 0.3s ease;
-        border-radius: toRem(4);
+        border-radius: 0;
         margin: 0 !important;
         cursor: pointer;
 
@@ -91,7 +106,7 @@
 
       :global(.swiper-pagination-bullet-active) {
         width: toRem(36);
-        border-radius: toRem(4);
+        border-radius: 0;
         background: var(--mui-palette-primary-main);
       }
 

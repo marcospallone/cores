@@ -8,8 +8,16 @@ import type { Metadata } from "next";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import dynamic from 'next/dynamic';
+import { Barlow } from "next/font/google";
 
 const PageLoader = dynamic(() => import('@/components/atoms/PageLoader'));
+
+const barlow = Barlow({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+  variable: "--font-barlow",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Studio Tecnico Geom. Spallone Piefrancesco",
@@ -33,7 +41,7 @@ export default async function RootLayout({
       <head>
         <meta name="apple-mobile-web-app-title" content="Studio Tecnico Spallone" />
       </head>
-      <body>
+      <body className={barlow.variable}>
         <ThemeRegistry>
           <PageWrapper>
             <NextIntlClientProvider>

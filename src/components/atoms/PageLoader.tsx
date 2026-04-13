@@ -49,6 +49,10 @@ export default function PageLoader() {
         color: theme.palette.white[900],
         opacity: loading ? 1 : 0,
         transition: "opacity 0.5s ease",
+        px: { xs: 2, sm: 3 },
+        gap: { xs: 3, sm: 4 },
+        overflow: "hidden",
+        boxSizing: "border-box",
       }}
     >
       <Image
@@ -56,10 +60,16 @@ export default function PageLoader() {
         alt="Logo"
         width={700}
         height={350}
+        style={{
+          width: "min(78vw, 700px)",
+          height: "auto",
+          maxWidth: "100%",
+        }}
       />
       <Box
         sx={{
-          width: theme.spacing(400),
+          width: { xs: "72vw", sm: theme.spacing(280), lg: theme.spacing(400) },
+          maxWidth: "100%",
           height: theme.spacing(4),
           background: theme.palette.white[900],
           overflow: "hidden",

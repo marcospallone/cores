@@ -1,8 +1,8 @@
-import { RichTranslationValues } from 'next-intl';
+import { RichTranslationValues, useTranslations } from 'next-intl';
 import React, { JSX } from 'react';
 
 export function richText(
-  t: any,
+  t: ReturnType<typeof useTranslations>,
   key: string,
   values: RichTranslationValues = {
     br: () => <br />

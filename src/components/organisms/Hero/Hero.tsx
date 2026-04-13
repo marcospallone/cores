@@ -8,9 +8,10 @@ import { useEffect, useState } from "react";
 interface HeroProps {
   images: string[];
   title?: string;
+  children?: React.ReactNode;
 }
 
-const Hero: React.FC<HeroProps> = ({ images, title }) => {
+const Hero: React.FC<HeroProps> = ({ images, title, children }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -39,7 +40,8 @@ const Hero: React.FC<HeroProps> = ({ images, title }) => {
           />
         ))}
       </Box>
-      {title && (
+      {children}
+      {!children && title && (
         <Container className={styles.title}>
           <Typography variant="h1" className={styles.titleText}>
             {title}

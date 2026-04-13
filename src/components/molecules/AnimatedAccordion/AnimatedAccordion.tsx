@@ -1,15 +1,15 @@
 import { useRef } from "react";
-import { useInView } from "framer-motion";
-import { motion } from "framer-motion";
+import { useInView, motion } from "motion/react";
 import MUIAccordion from "@mui/material/Accordion";
+import { SxProps, Theme } from "@mui/material/styles";
 
 interface AnimatedAccordionProps {
-  children: any;
+  children: NonNullable<React.ReactNode>;
   index: number;
   expanded: boolean;
   onChange: (event: React.SyntheticEvent, isExpanded: boolean) => void;
   className?: string;
-  sx?: any;
+  sx?: SxProps<Theme>;
 }
 
 const AnimatedAccordion: React.FC<AnimatedAccordionProps> = ({

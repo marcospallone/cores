@@ -169,6 +169,10 @@
             gap: toRem(6);
           }
 
+          @include media-breakpoint-down(lg) {
+            background-color: var(--mui-palette-grey-900);
+          }
+
           .icon {
             transition: color 0.2s ease;
           }
@@ -235,6 +239,51 @@
 
       .madeBy {
         color: var(--mui-palette-white-900);
+
+        .madeByLink {
+          position: relative;
+          display: inline-flex;
+          width: fit-content;
+          align-items: center;
+          color: var(--mui-palette-white-900);
+          text-decoration: none;
+          font-weight: 600;
+          letter-spacing: toRem(0.4);
+          transition: color 0.2s ease;
+
+          &:hover {
+            color: var(--mui-palette-success-main);
+          }
+
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background-color: var(--mui-palette-white-900);
+            z-index: 0;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background-color: var(--mui-palette-success-main);
+            transform: scaleX(0);
+            transform-origin: left center;
+            transition: transform 0.5s ease;
+            z-index: 1;
+          }
+
+          &:hover::after {
+            transform: scaleX(1);
+          }
+        }
       }
     }
   }

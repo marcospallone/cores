@@ -1,20 +1,337 @@
 @use "@/styles/includes" as *;
 
-.descContainer {
-    display: flex;
-    justify-content: center;
-    background-color: var(--mui-palette-white-800);
+.heroContent {
+  position: absolute !important;
+  inset: auto 0 toRem(96) 0;
+  z-index: 2;
+  width: 100%;
 
-    .desc {
-        text-align: center;
-        font-family: "Jost", sans-serif;
-        font-style: italic;
-        color: var(--mui-palette-grey-900);
-        padding: toRem(40) toRem(150);
+  @include media-breakpoint-down(lg) {
+    bottom: toRem(56);
+  }
+}
 
-        @include media-breakpoint-down(lg) {
-            padding: 0;
-            font-size: toRem(32);
-        }
+.heroInner {
+  max-width: toRem(760);
+  display: flex;
+  flex-direction: column;
+  gap: toRem(20);
+}
+
+.heroLabel {
+  font-family: var(--font-barlow), "Jost", sans-serif;
+  font-size: toRem(11);
+  font-weight: 600;
+  letter-spacing: toRem(4);
+  text-transform: uppercase;
+  color: var(--mui-palette-primary-main) !important;
+}
+
+.heroTitle {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  line-height: 0.92;
+  color: var(--mui-palette-white-900) !important;
+
+  @include media-breakpoint-down(lg) {
+    font-size: toRem(56) !important;
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: toRem(40) !important;
+  }
+}
+
+.heroTagline {
+  max-width: toRem(620);
+  font-family: var(--font-barlow), "Jost", sans-serif;
+  font-size: toRem(17);
+  line-height: 1.7;
+  color: rgba(245, 245, 245, 0.78) !important;
+
+  @include media-breakpoint-down(lg) {
+    font-size: toRem(15);
+  }
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: toRem(14);
+
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.heroPrimary,
+.heroSecondary,
+.ctaButton {
+  min-height: toRem(48);
+  border-radius: 0;
+  padding: 0 toRem(24) !important;
+  font-family: "Jost", sans-serif !important;
+  font-size: toRem(13) !important;
+  font-weight: 600 !important;
+  letter-spacing: toRem(1.6);
+  text-transform: uppercase;
+}
+
+.heroPrimary {
+  background-color: var(--mui-palette-primary-main) !important;
+  color: var(--mui-palette-white-900) !important;
+
+  &:hover {
+    background-color: var(--mui-palette-success-main) !important;
+  }
+}
+
+.heroSecondary {
+  color: var(--mui-palette-white-900) !important;
+  border: 1px solid rgba(245, 245, 245, 0.32) !important;
+  background-color: rgba(18, 18, 18, 0.14) !important;
+  backdrop-filter: blur(10px);
+
+  &:hover {
+    border-color: rgba(245, 245, 245, 0.65) !important;
+    background-color: rgba(18, 18, 18, 0.28) !important;
+  }
+}
+
+.introSection {
+  position: relative;
+  z-index: 3;
+  margin-top: toRem(-84);
+
+  @include media-breakpoint-down(lg) {
+    margin-top: toRem(-36);
+  }
+}
+
+.introContainer {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.introPanel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.18fr);
+  gap: toRem(32);
+  align-items: start;
+  padding: toRem(32);
+  border: 1px solid rgba(18, 18, 18, 0.08);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(247, 243, 236, 0.96));
+  box-shadow: 0 toRem(24) toRem(70) rgba(18, 18, 18, 0.12);
+  backdrop-filter: blur(18px);
+
+  @include media-breakpoint-down(lg) {
+    grid-template-columns: 1fr;
+    gap: toRem(28);
+    padding: toRem(28);
+  }
+}
+
+.introBody {
+  display: flex;
+  flex-direction: column;
+  gap: toRem(18);
+}
+
+.sectionLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: toRem(12);
+  margin-bottom: toRem(18);
+  font-family: var(--font-barlow), "Jost", sans-serif;
+  font-size: toRem(11);
+  font-weight: 600;
+  letter-spacing: toRem(4);
+  text-transform: uppercase;
+  color: var(--mui-palette-primary-main) !important;
+
+  &::before {
+    content: "";
+    width: toRem(28);
+    height: 1px;
+    background-color: var(--mui-palette-primary-main);
+    flex-shrink: 0;
+  }
+}
+
+.introTitle {
+  max-width: toRem(460);
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  line-height: 1.08;
+  color: var(--mui-palette-grey-900) !important;
+  font-size: clamp(toRem(30), 3vw, toRem(42)) !important;
+
+  @include media-breakpoint-down(lg) {
+    font-size: toRem(32) !important;
+  }
+}
+
+.introCopy {
+  max-width: toRem(620);
+  padding-top: toRem(12);
+  font-family: var(--font-barlow), "Jost", sans-serif;
+  font-size: toRem(15);
+  line-height: 1.85;
+  color: rgba(18, 18, 18, 0.7) !important;
+
+  @include media-breakpoint-down(lg) {
+    padding-top: 0;
+  }
+}
+
+.introLinks {
+  display: flex;
+  flex-direction: column;
+  gap: toRem(10);
+  max-width: toRem(520);
+}
+
+.introLink {
+  display: grid;
+  grid-template-columns: toRem(42) 1fr auto;
+  align-items: center;
+  gap: toRem(12);
+  min-height: toRem(62);
+  padding: toRem(14) toRem(16);
+  border: 1px solid rgba(18, 18, 18, 0.08);
+  background-color: rgba(255, 255, 255, 0.58);
+  color: var(--mui-palette-grey-900);
+  text-decoration: none;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease;
+
+  &:hover {
+    border-color: rgba(204, 151, 97, 0.28);
+    background-color: rgba(204, 151, 97, 0.08);
+    transform: translateX(toRem(4));
+
+    .introLinkLabel,
+    .introLinkIcon {
+      color: var(--mui-palette-primary-main) !important;
     }
+  }
+}
+
+.introLinkIndex {
+  font-family: "Poppins", sans-serif;
+  font-size: toRem(20);
+  font-weight: 700;
+  line-height: 1;
+  color: rgba(18, 18, 18, 0.45);
+}
+
+.introLinkLabel {
+  font-family: "Jost", sans-serif;
+  font-size: toRem(14);
+  font-weight: 700;
+  letter-spacing: toRem(1.2);
+  text-transform: uppercase;
+  color: var(--mui-palette-grey-900);
+  transition: color 0.2s ease;
+}
+
+.introLinkIcon {
+  color: rgba(18, 18, 18, 0.45);
+  transition: color 0.2s ease;
+}
+
+.gallerySection {
+  background-color: var(--mui-palette-white-800);
+}
+
+.galleryIntro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: toRem(12);
+  padding-top: toRem(24) !important;
+  padding-bottom: 0 !important;
+}
+
+.galleryTitle {
+  max-width: toRem(720);
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  color: var(--mui-palette-grey-900) !important;
+  line-height: 1.08;
+
+  @include media-breakpoint-down(lg) {
+    font-size: toRem(30) !important;
+  }
+}
+
+.galleryDesc {
+  max-width: toRem(700);
+  font-family: var(--font-barlow), "Jost", sans-serif;
+  font-size: toRem(16);
+  line-height: 1.75;
+  color: rgba(18, 18, 18, 0.68) !important;
+}
+
+.ctaSection {
+  background:
+    linear-gradient(135deg, rgba(56, 74, 62, 1) 0%, rgba(31, 31, 31, 1) 100%);
+}
+
+.ctaContainer {
+  padding-top: toRem(88) !important;
+  padding-bottom: toRem(88) !important;
+
+  @include media-breakpoint-down(lg) {
+    padding-top: toRem(56) !important;
+    padding-bottom: toRem(88) !important;
+  }
+}
+
+.ctaContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: toRem(16);
+}
+
+.ctaTitle {
+  max-width: toRem(720);
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  color: var(--mui-palette-white-900) !important;
+
+  @include media-breakpoint-down(lg) {
+    font-size: toRem(30) !important;
+  }
+}
+
+.ctaDesc {
+  max-width: toRem(620);
+  font-family: var(--font-barlow), "Jost", sans-serif;
+  font-size: toRem(16);
+  line-height: 1.8;
+  color: rgba(245, 245, 245, 0.74) !important;
+}
+
+.ctaButton {
+  margin-top: toRem(10);
+  background-color: var(--mui-palette-primary-main) !important;
+  color: var(--mui-palette-white-900) !important;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: var(--mui-palette-white-900) !important;
+    color: var(--mui-palette-grey-900) !important;
+  }
 }

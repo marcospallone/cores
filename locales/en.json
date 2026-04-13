@@ -5,7 +5,7 @@
   "contact_button": "Contacts",
   "address": "134 Viale del Lago, Scanno (AQ), Italy",
   "copyright": "© 2025 Studio Tecnico - Geometra Spallone Pierfrancesco",
-  "made_by": "Made by Marco Spallone",
+  "made_by": "Made by",
   "contacts_link": "Get in touch!",
   "contacts_title": "Contact Us",
   "contacts_message": "Leave us a message. We will get back to you as soon as possible.",
@@ -20,62 +20,92 @@
   "contacts_email": "Email",
   "not_compiled": "Fill in all fields marked with *",
   "invalid_email": "Invalid email address",
+  "garden_hero_label": "Scanno, Abruzzo",
+  "garden_hero_tagline": "A four-star property with a recognizable presence in the village skyline, generous dimensions and a layout suited to a high-level relaunch.",
+  "garden_hero_primary": "Explore the property",
+  "garden_intro_label": "Real estate opportunity",
   "garden_desc": "A versatile hospitality property in the heart of Scanno, nestled in the soul of Abruzzo.",
+  "garden_intro_copy": "A hospitality complex that combines volume, visibility and flexibility of use: suitable for renewed hospitality, residential or socio-health scenarios, with a direct relationship to the landscape and village life.",
+  "garden_numbers_label": "Key figures",
   "garden_area": "Surface area",
   "garden_floors": "Floors",
   "garden_location": "From the historic center of Scanno",
   "garden_overview": "Overview",
+  "garden_overview_label": "Overview",
+  "garden_overview_title": "A historic property ready for a new chapter",
   "garden_text1": "The Garden Hotel represents a unique opportunity in the heart of Abruzzo: a historic accommodation facility, well-distributed and ready to be relaunched or transformed according to new needs. <br></br><br></br> Thanks to its versatility, the structure lends itself to numerous alternative uses: tourist residence, retirement home for self-sufficient elderly people, health residence, wellness center or SPA, apartment complex for sale or rent. <br></br><br></br> Born as a three-star hotel in 1964, it has been the subject of numerous expansions and modernizations until it achieved the four-star classification in 1996, remaining the only hotel of this category in Scanno. <br></br><br></br> The structure was managed continuously until a few years ago and is currently in good general condition, although it requires system updates and partial but not structural renovation work.",
+  "garden_overview_highlights": [
+    {
+      "title": "Multiple vocations",
+      "description": "Hotel, residence, assisted living, SPA or apartments: the layout supports several enhancement scenarios."
+    },
+    {
+      "title": "Already articulated distribution",
+      "description": "Rooms, common areas, restaurant, kitchen and technical spaces create a rare foundation for redevelopment."
+    },
+    {
+      "title": "Recognizable presence",
+      "description": "The Garden Hotel keeps a strong visual identity within Scanno and a direct relationship with the landscape."
+    }
+  ],
+  "garden_overview_fact1_value": "1964",
+  "garden_overview_fact1_label": "year of origin",
+  "garden_overview_fact2_value": "1996",
+  "garden_overview_fact2_label": "upgrade to four stars",
+  "garden_overview_image_caption_label": "Outlook",
+  "garden_overview_image_caption_value": "Open views over the village and the mountains of Scanno",
   "garden_rooms": {
     "icon": "bed",
     "title": "Hospitality",
     "description": "The accommodation capacity reaches up to 90 beds, distributed in single, double, triple, quadruple rooms and suites/apartments, for a total of 36 rooms. All the furnishings in the rooms are handcrafted in solid walnut wood.",
-    "image": "/DSCN0259.jpg"
+    "image": "/assets/DSCN0259.jpg"
   },
   "garden_spaces": {
     "icon": "bar",
     "title": "Common spaces",
     "description": "The Garden Hotel also has large common areas: reception, hall, bar, restaurant rooms, breakfast room, games and entertainment rooms.",
-    "image": "/DSCN0107.jpg"
+    "image": "/assets/DSCN0107.jpg"
   },
   "garden_restaurant": {
     "icon": "restaurant",
     "title": "Restaurant",
     "description": "The dining area can accommodate up to 300 people between the restaurant, porch and atrium. The hotel also has a large professional kitchen.",
-    "image": "/DSCN0091.jpg"
+    "image": "/assets/DSCN0091.jpg"
   },
   "garden_service": {
     "icon": "laundry",
     "title": "Service rooms",
     "description": "The hotel has some service rooms and technical rooms, including industrial laundry, boiler room, warehouse and changing rooms.",
-    "image": "/lavanderia.jpg"
+    "image": "/assets/lavanderia.jpg"
   },
   "garden_parking": {
     "icon": "parking",
     "title": "Parking",
     "description": "Immediately outside the hotel there is also a private car park with 25-30 spaces, also accessible to coaches.",
-    "image": "/DSCF9184.jpg"
+    "image": "/assets/DSCF9184.jpg"
   },
   "garden_outdoor": {
     "icon": "park",
     "title": "Outdoor spaces",
     "description": "Among the outdoor spaces, there is a panoramic garden on two levels, terraces, balconies, and a small terrace/solarium.",
-    "image": "/DSCF8952.jpg"
+    "image": "/assets/DSCF8952.jpg"
   },
   "garden_position": {
     "icon": "location",
     "title": "Strategic position",
     "description": "The property is located in a strategic position, adjacent to the public gardens and well connected to the main services, schools and public transport.",
-    "image": "/DSCN1818.jpg"
+    "image": "/assets/DSCN1818.jpg"
   },
   "garden_surroundings": {
     "icon": "map",
     "title": "In the surroundings",
     "description": "The historic center can be reached on foot in a few minutes, while Lake Scanno is just over 2 km away.",
-    "image": "/scanno.jpg"
+    "image": "/assets/scanno.jpg"
   },
   "garden_kitchen_title": "The Hotel's Kitchen",
   "garden_kitchen_desc": "Professional equipment and room layout",
+  "garden_kitchen_label": "Professional kitchen",
+  "garden_kitchen_preview_suffix": "key assets",
   "garden_kitchen_zone1": {
     "title": "Kitchen Areas",
     "description": "The kitchen is divided into various rooms, for a total of 150 m²:",
@@ -132,227 +162,233 @@
   "garden_numbers_desc": "Main features that make our hotel an excellent opportunity.",
   "garden_images": [
     {
-      "src": "/171.jpeg",
+      "src": "/assets/171.jpg",
       "title": "Entrance staircase"
     },
     {
-      "src": "/DSCF8952.jpg",
+      "src": "/assets/DSCF8952.jpg",
       "title": "Outdoor garden"
     },
     {
-      "src": "/DSCF8955.jpg",
+      "src": "/assets/DSCF8955.jpg",
       "title": "South-East View"
     },
     {
-      "src": "/DSCF9193.jpg",
+      "src": "/assets/DSCF9193.jpg",
       "title": "East View"
     },
     {
-      "src": "/DSCF9192.jpg",
+      "src": "/assets/DSCF9192.jpg",
       "title": "Upper entrance"
     },
     {
-      "src": "/DSCN0062.jpg",
+      "src": "/assets/DSCN0062.jpg",
       "title": "Kitchen Stoves"
     },
     {
-      "src": "/DSCN0068.jpg",
+      "src": "/assets/DSCN0068.jpg",
       "title": "Kitchen Benches"
     },
     {
-      "src": "/DSCN0070.jpg",
+      "src": "/assets/DSCN0070.jpg",
       "title": "Kitchen Sinks"
     },
     {
-      "src": "/DSCN0072.jpg",
+      "src": "/assets/DSCN0072.jpg",
       "title": "Kitchen Cleaning"
     },
     {
-      "src": "/DSCN0081.jpg",
+      "src": "/assets/DSCN0081.jpg",
       "title": "Main restaurant hall"
     },
     {
-      "src": "/DSCN0091.jpg",
+      "src": "/assets/DSCN0091.jpg",
       "title": "Restaurant Porch"
     },
     {
-      "src": "/DSCN0092.jpg",
+      "src": "/assets/DSCN0092.jpg",
       "title": "Restaurant Porch"
     },
     {
-      "src": "/DSCN0093.jpg",
+      "src": "/assets/DSCN0093.jpg",
       "title": "Restaurant hall from the porch"
     },
     {
-      "src": "/DSCN0095.jpg",
+      "src": "/assets/DSCN0095.jpg",
       "title": "Restaurant Porch"
     },
     {
-      "src": "/DSCN0097.jpg",
+      "src": "/assets/DSCN0097.jpg",
       "title": "Restaurant Porch"
     },
     {
-      "src": "/DSCN0107.jpg",
+      "src": "/assets/DSCN0107.jpg",
       "title": "Multipurpose room"
     },
     {
-      "src": "/DSCN0110.jpg",
+      "src": "/assets/DSCN0110.jpg",
       "title": "Multipurpose room"
     },
     {
-      "src": "/DSCN0113.jpg",
+      "src": "/assets/DSCN0113.jpg",
       "title": "Restaurant Bathroom Sink"
     },
     {
-      "src": "/DSCN0115.jpg",
+      "src": "/assets/DSCN0115.jpg",
       "title": "Restaurant bathrooms"
     },
     {
-      "src": "/DSCN0143.jpg",
+      "src": "/assets/DSCN0143.jpg",
       "title": "Bureau"
     },
     {
-      "src": "/DSCN0147.jpg",
+      "src": "/assets/DSCN0147.jpg",
       "title": "Bar"
     },
     {
-      "src": "/DSCN0150.jpg",
+      "src": "/assets/DSCN0150.jpg",
       "title": "bar room"
     },
     {
-      "src": "/DSCN0153.jpg",
+      "src": "/assets/DSCN0153.jpg",
       "title": "bar room"
     },
     {
-      "src": "/DSCN0156.jpg",
+      "src": "/assets/DSCN0156.jpg",
       "title": "tv room"
     },
     {
-      "src": "/DSCN0157.jpg",
+      "src": "/assets/DSCN0157.jpg",
       "title": "tv room fireplace"
     },
     {
-      "src": "/DSCN0159.jpg",
+      "src": "/assets/DSCN0159.jpg",
       "title": "fireplace"
     },
     {
-      "src": "/DSCN0166.jpg",
+      "src": "/assets/DSCN0166.jpg",
       "title": "game room"
     },
     {
-      "src": "/DSCN0162.jpg",
+      "src": "/assets/DSCN0162.jpg",
       "title": "game room"
     },
     {
-      "src": "/DSCN0170.jpg",
+      "src": "/assets/DSCN0170.jpg",
       "title": "Conference room"
     },
     {
-      "src": "/DSCN0174.jpg",
+      "src": "/assets/DSCN0174.jpg",
       "title": "Fountain staircase"
     },
     {
-      "src": "/DSCN0175.jpg",
+      "src": "/assets/DSCN0175.jpg",
       "title": "View from the stairs"
     },
     {
-      "src": "/DSCN0176.jpg",
+      "src": "/assets/DSCN0176.jpg",
       "title": "Entrance staircase"
     },
     {
-      "src": "/DSCN0177.jpg",
+      "src": "/assets/DSCN0177.jpg",
       "title": "Entrance"
     },
     {
-      "src": "/DSCN0184.jpg",
+      "src": "/assets/DSCN0184.jpg",
       "title": "Conference room"
     },
     {
-      "src": "/DSCN0188.jpg",
+      "src": "/assets/DSCN0188.jpg",
       "title": "Conference room"
     },
     {
-      "src": "/DSCN0189.jpg",
+      "src": "/assets/DSCN0189.jpg",
       "title": "Conference room"
     },
     {
-      "src": "/DSCN0196.jpg",
+      "src": "/assets/DSCN0196.jpg",
       "title": "Single room"
     },
     {
-      "src": "/DSCN0199.jpg",
+      "src": "/assets/DSCN0199.jpg",
       "title": "Double room"
     },
     {
-      "src": "/DSCN0204.jpg",
+      "src": "/assets/DSCN0204.jpg",
       "title": "Private bathroom"
     },
     {
-      "src": "/DSCN0209.jpg",
+      "src": "/assets/DSCN0209.jpg",
       "title": "Triple room"
     },
     {
-      "src": "/DSCN0210.jpg",
+      "src": "/assets/DSCN0210.jpg",
       "title": "Private bathroom"
     },
     {
-      "src": "/DSCN0211.jpg",
+      "src": "/assets/DSCN0211.jpg",
       "title": "Bathtub"
     },
     {
-      "src": "/DSCN0230.jpg",
+      "src": "/assets/DSCN0230.jpg",
       "title": "Rooms hallway"
     },
     {
-      "src": "/DSCN0240.jpg",
+      "src": "/assets/DSCN0240.jpg",
       "title": "Double room"
     },
     {
-      "src": "/DSCN0242.jpg",
+      "src": "/assets/DSCN0242.jpg",
       "title": "Double room"
     },
     {
-      "src": "/DSCN0250.jpg",
+      "src": "/assets/DSCN0250.jpg",
       "title": "Shower"
     },
     {
-      "src": "/DSCN0254.jpg",
+      "src": "/assets/DSCN0254.jpg",
       "title": "Triple room"
     },
     {
-      "src": "/DSCN0259.jpg",
+      "src": "/assets/DSCN0259.jpg",
       "title": "Double bedroom"
     },
     {
-      "src": "/DSCN0271.jpg",
+      "src": "/assets/DSCN0271.jpg",
       "title": "Desk in the room"
     },
     {
-      "src": "/DSCN0315.jpg",
+      "src": "/assets/DSCN0315.jpg",
       "title": "Stairs"
     },
     {
-      "src": "/DSCN1818.jpg",
+      "src": "/assets/DSCN1818.jpg",
       "title": "Nord View"
     },
     {
-      "src": "/lavanderia.jpg",
+      "src": "/assets/lavanderia.jpg",
       "title": "Laundry"
     },
     {
-      "src": "/Hero1.jpg",
+      "src": "/assets/Hero1.jpg",
       "title": "View of the historic center"
     },
     {
-      "src": "/sala1.jpg",
+      "src": "/assets/sala1.jpg",
       "title": "Entertainment Room"
     },
     {
-      "src": "/DSCF9184.jpg",
+      "src": "/assets/DSCF9184.jpg",
       "title": "Parking"
     }
   ],
   "garden_cards_helper": "Click on one section to view more information",
+  "garden_features_label": "Spaces and amenities",
+  "garden_features_title": "Existing rooms, already legible potential",
+  "garden_features_desc": "The property includes differentiated and clearly identifiable spaces. Select a section to see how it looks and what role it could play in the relaunch strategy.",
+  "garden_gallery_label": "Interiors and atmosphere",
+  "garden_gallery_title": "A closer reading of the property",
+  "garden_gallery_desc": "From common areas to bedrooms, the gallery brings visitors inside the concrete character of the building.",
   "garden_potential_title": "Building potential",
   "garden_potential_description": "The complex shape and multiple levels also allow for a different use of the building. The structure can be easily transformed for different internal distributions. Take a look at the possible redevelopments of the Garden Hotel.",
   "garden_potential_items": [
@@ -377,6 +413,7 @@
       "image": "/assets/grafica-turistica.png"
     }
   ],
+  "garden_landscape_label": "Territory",
   "garden_landscape_title": "Scanno and its surroundings: nature, tradition and wonder",
   "garden_landscape_description": "Scanno, nestled in the mountains of Abruzzo, is a village full of charm, history and natural beauty. From the crystalline waters of its lake to the medieval alleys, every corner tells a story. Discover the unmissable attractions that make this pearl of the Sagittario Valley unique.",
   "garden_landscape_items": [
@@ -412,5 +449,37 @@
     }
   ],
   "notFound": "The page you are looking for does not exist!",
-  "notFoundButton": "Back to Home"
+  "notFoundButton": "Back to Home",
+  "home_hero_label": "Technical Studio",
+  "home_hero_title": "Geom. Spallone\nPierfrancesco",
+  "home_hero_tagline": "Technical expertise at the service of the Abruzzo territory for over thirty years.",
+  "home_hero_cta_hotel": "Discover the Garden Hotel",
+  "home_hero_cta_contacts": "Contact Us",
+  "home_studio_label": "About Us",
+  "home_studio_title": "Technical Studio of the Surveyor",
+  "home_studio_desc": "With over thirty years of experience in the sector, the Technical Studio of Geom. Spallone Pierfrancesco operates in the heart of Abruzzo with competence, professional rigor and deep roots in the territory. We offer specialized consultancy for private individuals, companies and public bodies, covering the entire life cycle of real estate: from design to appraisal, from buying and selling to asset enhancement.",
+  "home_studio_service1_title": "Design",
+  "home_studio_service1_desc": "Architectural and civil engineering design, with complete management of works from concept to testing.",
+  "home_studio_service2_title": "Valuations & Appraisals",
+  "home_studio_service2_desc": "Real estate valuations, technical and cadastral appraisals for sales, successions and disputes.",
+  "home_studio_service3_title": "Cadastral Practices",
+  "home_studio_service3_desc": "Cadastral variations, amnesties, building permits, energy certifications and compliance.",
+  "home_hotel_label": "Our Proposal",
+  "home_hotel_title": "Garden Hotel",
+  "home_hotel_location": "Scanno, Abruzzo",
+  "home_hotel_desc": "A historic hospitality structure in the heart of Abruzzo. Four stars, 2,600 m² over five floors, ready to be relaunched or transformed for new uses.",
+  "home_hotel_cta": "Discover the opportunity",
+  "home_hotel_stat1_value": "2,600",
+  "home_hotel_stat1_label": "m² total area",
+  "home_hotel_stat2_value": "5",
+  "home_hotel_stat2_label": "Floors",
+  "home_hotel_stat3_value": "90",
+  "home_hotel_stat3_label": "Beds",
+  "home_contacts_title": "Have a question?",
+  "home_contacts_subtitle": "We're here.",
+  "home_contacts_desc": "Contact us for any information about the Garden Hotel or for a personalized technical consultation. We will reply as soon as possible.",
+  "home_contacts_cta": "Write to us",
+  "garden_cta_title": "Interested in this property?",
+  "garden_cta_desc": "Contact us for detailed information, floor plans and complete technical documentation.",
+  "garden_cta_button": "Request information"
 }

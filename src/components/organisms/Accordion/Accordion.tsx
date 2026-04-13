@@ -1,181 +1,143 @@
 "use client";
 
-import {
-  Box,
-  Container,
-  Grid2,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  Typography,
-  useMediaQuery,
-} from "@mui/material";
+import { Box, Container, Grid2, Typography } from "@mui/material";
 import styles from "./Accordion.module.scss";
 import Row from "@/components/atoms/Row";
-import { useMessages, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
 import { AnimatePresence, motion } from "motion/react";
-import LensBlurIcon from "@mui/icons-material/LensBlur";
-import theme from "@/theme/theme";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import AnimatedAccordion from "@/components/molecules/AnimatedAccordion/AnimatedAccordion";
+import Image from "next/image";
 
-interface AccordionModel {
-  zones: any;
+interface ZoneData {
+  title: string;
+  description: string;
+  items: string[];
 }
 
-const Accordion: React.FC<AccordionModel> = ({zones}) => {
-  const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
+interface Zone {
+  data: ZoneData;
+  icon: React.ReactNode;
+  panel: string;
+  image: string;
+}
+
+interface AccordionModel {
+  zones: Zone[];
+}
+
+const Accordion: React.FC<AccordionModel> = ({ zones }) => {
   const t = useTranslations();
-  const m = useMessages();
-  const [expanded, setExpanded] = useState<string | false>(false);
-  const [showIconBox, setShowIconBox] = useState(false);
+  const [expanded, setExpanded] = useState<string>(zones[0]?.panel ?? "");
+  const activeZone =
+    zones.find((zone) => zone.panel === expanded) ?? zones[0];
 
-  const currentZone = zones.find((zone: any) => zone.panel === expanded);
-
-  const handleChange =
-    (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
-      setExpanded(isExpanded ? panel : false);
-      if (isExpanded && !isMobile) {
-        const timeout = setTimeout(() => {
-          setShowIconBox(true);
-        }, 100);
-        return () => clearTimeout(timeout);
-      } else {
-        setShowIconBox(false);
-      }
-    };
+  if (!activeZone) {
+    return null;
+  }
 
   return (
-    <Container className={styles.accordionsContainer}>
-      <Row>
-        <Grid2 size={{ xs: 12, lg: 5 }}>
-          <Box className={styles.leftBox}>
-            <Box className={styles.textBox}>
-              <Typography
-                variant="h5"
-                component={"div"}
-                className={styles.title}
-              >
+    <Box className={styles.sectionShell}>
+      <Container className={styles.accordionsContainer}>
+        <Row className={styles.layout}>
+          <Grid2 size={{ xs: 12, lg: 5 }}>
+            <Box className={styles.leftBox}>
+              <Typography className={styles.label}>
+                {t("garden_kitchen_label")}
+              </Typography>
+              <Typography variant="h3" className={styles.title}>
                 {t("garden_kitchen_title")}
               </Typography>
-              <Typography
-                variant="body1"
-                component={"div"}
-                className={styles.desc}
-              >
+              <Typography className={styles.desc}>
                 {t("garden_kitchen_desc")}
               </Typography>
-            </Box>
-            {showIconBox && currentZone && (
-              <Box className={styles.iconBox}>
-                <AnimatePresence mode="wait">
-                  {expanded && currentZone && (
-                    <motion.div
-                      key={currentZone.panel}
-                      initial={{ opacity: 0, y: -10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
-                      transition={{ duration: 0.1, delay: 0.3 }}
-                    >
-                      {currentZone.icon}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+              <Box className={styles.previewCard}>
+                <Image
+                  src={activeZone.image}
+                  alt={activeZone.data.title}
+                  fill
+                  sizes="(max-width: 1200px) 100vw, 42vw"
+                  className={styles.previewImage}
+                />
+                <Box className={styles.previewOverlay}></Box>
+                <Box className={styles.previewInner}>
+                  <Box className={styles.previewIcon}>{activeZone.icon}</Box>
+                  <Typography className={styles.previewTag}>
+                    {activeZone.data.items.length} {t("garden_kitchen_preview_suffix")}
+                  </Typography>
+                  <Typography className={styles.previewTitle}>
+                    {activeZone.data.title}
+                  </Typography>
+                  <Typography className={styles.previewText}>
+                    {activeZone.data.description}
+                  </Typography>
+                </Box>
               </Box>
-            )}
-          </Box>
-        </Grid2>
-        <Grid2 size={1} display={{ xs: "none", lg: "block" }}></Grid2>
-        <Grid2 size={{ xs: 12, lg: 6 }}>
-          <Box className={styles.accordionBox}>
-            {zones?.map((zone: any, index: number) => (
-              <AnimatedAccordion
-                key={index}
-                index={index}
-                expanded={expanded === zone?.panel}
-                onChange={handleChange(zone?.panel)}
-                className={styles.accordion}
-                sx={{
-                  "&.Mui-expanded": {
-                    margin: "0 !important",
-                  },
-                }}
-              >
-                <AccordionSummary
-                  className={styles.accordionSummary}
-                  expandIcon={
-                    <ExpandMoreIcon sx={{ color: theme.palette.white[900] }} />
-                  }
-                  sx={{
-                    "&.Mui-expanded": {
-                      minHeight: "48px !important",
-                      margin: "0 !important",
-                    },
-                    "&.Mui-expanded .MuiAccordionSummary-expandIconWrapper": {
-                      transform: "rotate(180deg)",
-                    },
-                    ".MuiAccordionSummary-content": {
-                      transition: "none",
-                    },
-                    "&:hover .MuiAccordionSummary-content svg": {
-                      color: `${theme.palette.primary.main} !important`,
-                    },
-                    ".MuiAccordionSummary-expandIconWrapper": {
-                      transition:
-                        "background-color 0.3s ease-in-out, transform 0.2s ease-in-out",
-                      borderRadius: "50%",
-                    },
-                    "&:hover .MuiAccordionSummary-expandIconWrapper": {
-                      backgroundColor: theme.palette.primary.main,
-                    },
-                  }}
+            </Box>
+          </Grid2>
+          <Grid2 size={{ xs: 12, lg: 7 }}>
+            <Box className={styles.rightBox}>
+              <Box className={styles.tabGrid}>
+                {zones.map((zone, index) => {
+                  const isActive = zone.panel === activeZone.panel;
+
+                  return (
+                    <button
+                      key={zone.panel}
+                      type="button"
+                      className={`${styles.tabButton} ${
+                        isActive ? styles.active : ""
+                      }`}
+                      onClick={() => setExpanded(zone.panel)}
+                    >
+                      <span className={styles.tabIcon}>{zone.icon}</span>
+                      <span className={styles.tabText}>
+                        <span className={styles.tabIndex}>
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
+                        <span className={styles.tabTitle}>{zone.data.title}</span>
+                      </span>
+                    </button>
+                  );
+                })}
+              </Box>
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeZone.panel}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.25, ease: "easeOut" }}
                 >
-                  {zone?.icon}
-                  <Typography
-                    variant="body1"
-                    component={"div"}
-                    className={styles.accordionSummaryText}
-                  >
-                    {zone?.data?.title}
-                  </Typography>
-                </AccordionSummary>
-                <AccordionDetails className={styles.accordionDetails}>
-                  <Typography
-                    variant="body1"
-                    component={"div"}
-                    className={styles.accordionDetailsText}
-                  >
-                    {zone?.data?.description}
-                  </Typography>
-                  <List className={styles.accordionList}>
-                    {zone?.data?.items.map((item: any, index: number) => (
-                      <ListItem
-                        key={index}
-                        className={styles.accordionListItem}
-                      >
-                        <ListItemIcon className={styles.accordionListIcon}>
-                          <LensBlurIcon
-                            sx={{ color: theme.palette.white[900] }}
-                          />
-                        </ListItemIcon>
-                        <ListItemText
-                          primary={item}
-                          className={styles.accordionListText}
-                        />
-                      </ListItem>
-                    ))}
-                  </List>
-                </AccordionDetails>
-              </AnimatedAccordion>
-            ))}
-          </Box>
-        </Grid2>
-      </Row>
-    </Container>
+                  <Box className={styles.detailsCard}>
+                    <Box className={styles.detailsHeader}>
+                      <Box className={styles.detailsIcon}>{activeZone.icon}</Box>
+                      <Box className={styles.detailsHeading}>
+                        <Typography className={styles.detailsTitle}>
+                          {activeZone.data.title}
+                        </Typography>
+                        <Typography className={styles.detailsText}>
+                          {activeZone.data.description}
+                        </Typography>
+                      </Box>
+                    </Box>
+                    <Box className={styles.listGrid}>
+                      {activeZone.data.items.map((item, index) => (
+                        <Box key={`${item}-${index}`} className={styles.listItem}>
+                          <Box className={styles.listBullet}></Box>
+                          <Typography className={styles.listText}>
+                            {item}
+                          </Typography>
+                        </Box>
+                      ))}
+                    </Box>
+                  </Box>
+                </motion.div>
+              </AnimatePresence>
+            </Box>
+          </Grid2>
+        </Row>
+      </Container>
+    </Box>
   );
 };
 

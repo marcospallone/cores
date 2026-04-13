@@ -80,7 +80,7 @@ const Contacts: React.FC = () => {
         } else {
           setFeedback({ success: false, message: data.message });
         }
-      } catch (error) {
+      } catch {
         setFeedback({ success: false, message: "Errore di rete o server." });
       } finally {
         setLoading(false);

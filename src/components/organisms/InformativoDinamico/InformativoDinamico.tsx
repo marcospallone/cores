@@ -1,190 +1,184 @@
 "use client";
 
-import {
-  Box,
-  Grid2,
-  Typography,
-  Container,
-  useMediaQuery,
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
-} from "@mui/material";
+import { Box, Container, Grid2, Typography, useMediaQuery } from "@mui/material";
 import styles from "./InformativoDinamico.module.scss";
 import { useTranslations } from "next-intl";
 import Row from "@/components/atoms/Row";
-import { useState } from "react";
-import CloseIcon from "@mui/icons-material/Close";
-import { AnimatePresence, motion } from "framer-motion";
-import TouchAppIcon from "@mui/icons-material/TouchApp";
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
 import theme from "@/theme/theme";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import Image from "next/image";
 
-interface InformativoDinamicoModel {
-  infos: any;
+interface InfoItem {
+  icon: string;
+  title: string;
+  description: string;
+  image: string;
 }
 
-const InformativoDinamico: React.FC<InformativoDinamicoModel> = ({infos}) => {
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+interface InformativoDinamicoModel {
+  infos: InfoItem[];
+}
+
+const InformativoDinamico: React.FC<InformativoDinamicoModel> = ({ infos }) => {
+  const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
   const t = useTranslations();
+  const items = infos?.filter(Boolean) ?? [];
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const selectedItem = items[selectedIndex] ?? items[0];
 
-  const [selectedItem, setSelectedItem] = useState<any | null>(null);
-  const [expanded, setExpanded] = useState<number | false>(false);
+  useEffect(() => {
+    if (isMobile || items.length <= 1) {
+      return;
+    }
 
-  const handleChange =
-    (panel: number) => (event: React.SyntheticEvent, isExpanded: boolean) => {
-      setExpanded(isExpanded ? panel : false);
-    };
+    const interval = window.setInterval(() => {
+      setSelectedIndex((prev) => (prev + 1) % items.length);
+    }, 10000);
+
+    return () => window.clearInterval(interval);
+  }, [isMobile, items.length, selectedIndex]);
+
+  if (!selectedItem) {
+    return null;
+  }
 
   if (isMobile) {
     return (
-      <Box className={styles.mobileAccordionBox}>
-        {infos?.map((item: any, index: number) => (
-          <Accordion
-            key={index}
-            className={styles.mobileAccordion}
-            expanded={expanded === index}
-            onChange={handleChange(index)}
-            sx={{
-              backgroundImage: `url(${
-                process.env.NEXT_PUBLIC_SUPABASE_FOLDER + item?.image
-              })`,
-              ".MuiAccordionSummary-content": {
-                margin: 0,
-              },
-              "&.Mui-expanded": {
-                margin: "0 !important",
-              },
-              "&.Mui-expanded svg": {
-                transform: "rotate(180deg)",
-              },
-            }}
-          >
-            <AccordionSummary className={styles.accordionSummary} sx={{}}>
-              <Box className={styles.overlay}></Box>
-              <Box className={styles.accordionSummaryContent}>
-                <Typography variant="h5" className={styles.title}>
-                  {item?.title}
-                  <KeyboardArrowDownIcon sx={{ marginLeft: theme.spacing(8)}} />
-                </Typography>
-              </Box>
-            </AccordionSummary>
-            <AccordionDetails className={styles.accordionDetails}>
-              <Box className={styles.overlay}></Box>
-              <Container className={styles.textContainer}>
-                <Typography variant="body1" className={styles.description}>
-                  {item?.description}
-                </Typography>
-              </Container>
-            </AccordionDetails>
-          </Accordion>
-        ))}
-      </Box>
-    );
-  } else {
-    return (
-      <Box className={styles.infoMainBox}>
-        <motion.div
-          className={`${styles.rowWrapper} ${
-            selectedItem ? styles.blurred : ""
-          }`}
-          animate={{
-            filter: selectedItem ? "blur(8px)" : "blur(0px)",
-            opacity: selectedItem ? 0.4 : 1,
-          }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
-        >
-          <Row spacing={{ xs: 0 }} className={styles.infoRow}>
-            {infos?.map((item: any, index: number) => (
-              <Grid2
-                key={index}
-                size={{ xs: 12, md: 6, lg: 3, xxl: 1.5 }}
-                className={styles.itemBox}
-                sx={{
-                  backgroundImage: `url(${
-                    process.env.NEXT_PUBLIC_SUPABASE_FOLDER + item?.image
-                  })`,
-                }}
-                onClick={() => setSelectedItem(item)}
-              >
-                <Box className={styles.overlay}></Box>
-                <Box className={styles.textBox}>
-                  <Typography variant="h5" className={styles.title}>
-                    {item?.title}
-                  </Typography>
-                </Box>
-              </Grid2>
-            ))}
-          </Row>
-        </motion.div>
-        <AnimatePresence mode="wait">
-          {selectedItem && (
-            <motion.div
-              key="selected"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.4, ease: "easeOut" }}
-              className={styles.selectedViewMotion}
-            >
-              <Box
-                className={styles.selectedView}
-                sx={{
-                  backgroundImage: `url(${
-                    process.env.NEXT_PUBLIC_SUPABASE_FOLDER +
-                    selectedItem?.image
-                  })`,
-                }}
-              >
-                <Box className={styles.overlay}></Box>
-                <Container className={styles.selectedViewContent}>
-                  <Box
-                    className={styles.closeIconBox}
-                    onClick={() => setSelectedItem(null)}
-                  >
-                    <CloseIcon />
-                  </Box>
-                  <Box className={styles.textBox}>
-                    <Typography variant="h4" className={styles.title}>
-                      {selectedItem?.title}
-                    </Typography>
-                    <Typography variant="body1" className={styles.description}>
-                      {selectedItem?.description}
-                    </Typography>
-                  </Box>
-                </Container>
-              </Box>
-            </motion.div>
-          )}
-        </AnimatePresence>
-        {!selectedItem && !isMobile && (
-          <Box className={styles.helperTextBox}>
-            <motion.div
-              animate={{
-                x: [-10, 0, 10, 0, -10],
-                y: [-10, 0, -10, 0, -10],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className={styles.helperIcon}
-            >
-              <TouchAppIcon sx={{ fontSize: 32 }} />
-            </motion.div>
-            <Typography
-              variant="body1"
-              component={"div"}
-              className={styles.helperText}
-            >
-              {t("garden_cards_helper")}
+      <Box className={styles.sectionShell}>
+        <Container className={styles.infoContainer}>
+          <Box className={styles.sectionIntro}>
+            <Typography className={styles.label}>
+              {t("garden_features_label")}
+            </Typography>
+            <Typography variant="h3" className={styles.title}>
+              {t("garden_features_title")}
+            </Typography>
+            <Typography className={styles.description}>
+              {t("garden_features_desc")}
             </Typography>
           </Box>
-        )}
+          <Box className={styles.mobileList}>
+            {items.map((item, index) => (
+              <Box key={`${item.title}-${index}`} className={styles.mobileCard}>
+                <Box className={styles.mobileImageBox}>
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    sizes="100vw"
+                    className={styles.mobileImage}
+                  />
+                  <Box className={styles.mobileOverlay}></Box>
+                  <Typography className={styles.mobileIndex}>
+                    {String(index + 1).padStart(2, "0")}
+                  </Typography>
+                </Box>
+                <Box className={styles.mobileContent}>
+                  <Typography className={styles.mobileTitle}>
+                    {item.title}
+                  </Typography>
+                  <Typography className={styles.mobileDescription}>
+                    {item.description}
+                  </Typography>
+                </Box>
+              </Box>
+            ))}
+          </Box>
+        </Container>
       </Box>
     );
   }
+
+  return (
+    <Box className={styles.sectionShell}>
+      <Container className={styles.infoContainer}>
+        <Row className={styles.infoRow}>
+          <Grid2 size={{ xs: 12, lg: 5 }}>
+            <Box className={styles.sectionIntro}>
+              <Typography className={styles.label}>
+                {t("garden_features_label")}
+              </Typography>
+              <Typography variant="h3" className={styles.title}>
+                {t("garden_features_title")}
+              </Typography>
+              <Typography className={styles.description}>
+                {t("garden_features_desc")}
+              </Typography>
+              <Typography className={styles.helperText}>
+                {t("garden_cards_helper")}
+              </Typography>
+              <Box className={styles.selectorList}>
+                {items.map((item, index) => {
+                  const isActive = index === selectedIndex;
+
+                  return (
+                    <button
+                      key={`${item.title}-${index}`}
+                      type="button"
+                      className={`${styles.selectorButton} ${
+                        isActive ? styles.active : ""
+                      }`}
+                      onClick={() => setSelectedIndex(index)}
+                    >
+                      <span className={styles.selectorIndex}>
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                      <span className={styles.selectorText}>
+                        <span className={styles.selectorTitle}>{item.title}</span>
+                        <span className={styles.selectorDescription}>
+                          {item.description}
+                        </span>
+                      </span>
+                    </button>
+                  );
+                })}
+              </Box>
+            </Box>
+          </Grid2>
+          <Grid2 size={{ xs: 12, lg: 7 }}>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={selectedItem.title}
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -24 }}
+                transition={{ duration: 0.35, ease: "easeOut" }}
+                className={styles.featureMotion}
+              >
+                <Box className={styles.featureCard}>
+                  <Image
+                    src={selectedItem.image}
+                    alt={selectedItem.title}
+                    fill
+                    sizes="(max-width: 1200px) 100vw, 58vw"
+                    className={styles.featureImage}
+                  />
+                  <Box className={styles.featureOverlay}></Box>
+                  <Box className={styles.featureMeta}>
+                    <Typography className={styles.featureIndex}>
+                      {String(selectedIndex + 1).padStart(2, "0")}
+                    </Typography>
+                    <Typography className={styles.featureKicker}>
+                      {t("garden_features_label")}
+                    </Typography>
+                  </Box>
+                  <Box className={styles.featureContent}>
+                    <Typography variant="h3" className={styles.featureTitle}>
+                      {selectedItem.title}
+                    </Typography>
+                    <Typography className={styles.featureDescription}>
+                      {selectedItem.description}
+                    </Typography>
+                  </Box>
+                </Box>
+              </motion.div>
+            </AnimatePresence>
+          </Grid2>
+        </Row>
+      </Container>
+    </Box>
+  );
 };
 
 export default InformativoDinamico;

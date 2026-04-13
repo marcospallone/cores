@@ -1,10 +1,10 @@
 "use client";
 
+import FadeIn from "@/components/atoms/FadeIn";
 import Hero from "@/components/organisms/Hero/Hero";
-import { Container, Grid2, Typography } from "@mui/material";
+import { Box, Button, Container, Typography } from "@mui/material";
 import { useMessages, useTranslations } from "next-intl";
 import styles from "./page.module.scss";
-import Row from "@/components/atoms/Row";
 import InformativoTextImage from "@/components/organisms/InformativoTextImage/InformativoTextImage";
 import Gallery from "@/components/organisms/Gallery/Gallery";
 import Accordion from "@/components/organisms/Accordion/Accordion";
@@ -17,25 +17,74 @@ import AcUnitIcon from "@mui/icons-material/AcUnit";
 import OpacityIcon from "@mui/icons-material/Opacity";
 import theme from "@/theme/theme";
 import LandscapePresentation from "@/components/organisms/LandscapePresentation/LandscapePresentation";
-import { title } from "process";
+import Link from "next/link";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+
+interface InfoItem {
+  icon: string;
+  title: string;
+  description: string;
+  image: string;
+}
+
+interface GalleryImage {
+  src: string;
+  title: string;
+}
+
+interface KitchenZone {
+  title: string;
+  description: string;
+  items: string[];
+}
+
+interface LandscapeItem {
+  title: string;
+  content: string;
+  image: string;
+}
+
+interface PotentialItem {
+  title: string;
+  content: string;
+  image: string;
+}
+
+interface GardenMessages {
+  garden_rooms: InfoItem;
+  garden_spaces: InfoItem;
+  garden_restaurant: InfoItem;
+  garden_service: InfoItem;
+  garden_parking: InfoItem;
+  garden_outdoor: InfoItem;
+  garden_position: InfoItem;
+  garden_surroundings: InfoItem;
+  garden_images: GalleryImage[];
+  garden_kitchen_zone1: KitchenZone;
+  garden_kitchen_zone2: KitchenZone;
+  garden_kitchen_zone3: KitchenZone;
+  garden_kitchen_zone4: KitchenZone;
+  garden_landscape_items: LandscapeItem[];
+  garden_potential_items: PotentialItem[];
+}
 
 const GardenHotel: React.FC = () => {
-  const m = useMessages();
+  const m = useMessages() as unknown as GardenMessages;
   const t = useTranslations();
 
   const heroImages = [
-    process.env.NEXT_PUBLIC_SUPABASE_FOLDER + "/Hero1.jpg",
-    process.env.NEXT_PUBLIC_SUPABASE_FOLDER + "/DSCF9193.jpg",
-    process.env.NEXT_PUBLIC_SUPABASE_FOLDER + "/DSCN0107.JPG",
-    process.env.NEXT_PUBLIC_SUPABASE_FOLDER + "/DSCN0143.JPG",
-    process.env.NEXT_PUBLIC_SUPABASE_FOLDER + "/DSCN0147.JPG",
-    process.env.NEXT_PUBLIC_SUPABASE_FOLDER + "/DSCN0153.JPG",
-    process.env.NEXT_PUBLIC_SUPABASE_FOLDER + "/DSCN0156.JPG",
-    process.env.NEXT_PUBLIC_SUPABASE_FOLDER + "/DSCN0170.JPG",
-    process.env.NEXT_PUBLIC_SUPABASE_FOLDER + "/DSCN0175.JPG",
-    process.env.NEXT_PUBLIC_SUPABASE_FOLDER + "/DSCN0209.JPG",
-    process.env.NEXT_PUBLIC_SUPABASE_FOLDER + "/DSCN0242.JPG",
-    process.env.NEXT_PUBLIC_SUPABASE_FOLDER + "/DSCN0271.JPG",
+    "/assets/Hero1.jpg",
+    "/assets/DSCF9193.jpg",
+    "/assets/DSCN0107.jpg",
+    "/assets/DSCN0143.jpg",
+    "/assets/DSCN0147.jpg",
+    "/assets/DSCN0153.jpg",
+    "/assets/DSCN0156.jpg",
+    "/assets/DSCN0170.jpg",
+    "/assets/DSCN0175.jpg",
+    "/assets/DSCN0209.jpg",
+    "/assets/DSCN0242.jpg",
+    "/assets/DSCN0271.jpg",
   ];
 
   const infos = [
@@ -50,6 +99,12 @@ const GardenHotel: React.FC = () => {
   ];
 
   const gardenImages = m?.garden_images;
+  const sectionLinks = [
+    { href: "#overview", label: t("garden_overview") },
+    { href: "#features", label: t("garden_features_label") },
+    { href: "#kitchen", label: t("garden_kitchen_label") },
+    { href: "#landscape", label: t("garden_landscape_label") },
+  ];
 
   const zone1 = m?.garden_kitchen_zone1;
   const zone2 = m?.garden_kitchen_zone2;
@@ -61,6 +116,7 @@ const GardenHotel: React.FC = () => {
       data: zone1,
       icon: <GridViewIcon sx={{ color: theme.palette.white[900] }} />,
       panel: "panel1",
+      image: "/assets/DSCN0068.jpg",
     },
     {
       data: zone2,
@@ -68,46 +124,152 @@ const GardenHotel: React.FC = () => {
         <LocalFireDepartmentIcon sx={{ color: theme.palette.white[900] }} />
       ),
       panel: "panel2",
+      image: "/assets/DSCN0062.jpg",
     },
     {
       data: zone3,
       icon: <AcUnitIcon sx={{ color: theme.palette.white[900] }} />,
       panel: "panel3",
+      image: "/assets/DSCN0068.jpg",
     },
     {
       data: zone4,
       icon: <OpacityIcon sx={{ color: theme.palette.white[900] }} />,
       panel: "panel4",
+      image: "/assets/DSCN0070.jpg",
     },
   ];
 
   const landscapeData = {
     title: t("garden_landscape_title"),
     description: t("garden_landscape_description"),
-    items: m?.garden_landscape_items
-  }
+    items: m?.garden_landscape_items,
+  };
 
   const carouselItems = m?.garden_potential_items;
 
   return (
     <>
-      <Hero images={heroImages} title={t("hotel")} />
-      <Container className={styles.descContainer}>
-        <Row>
-          <Grid2 size={12}>
-            <Typography variant="h2" component={"h2"} className={styles.desc}>
-              {t("garden_desc")}
-            </Typography>
-          </Grid2>
-        </Row>
-      </Container>
+      <Hero images={heroImages}>
+        <Container className={styles.heroContent}>
+          <Box className={styles.heroInner}>
+            <FadeIn duration={0.5} delay={0.15}>
+              <Typography className={styles.heroLabel}>
+                {t("garden_hero_label")}
+              </Typography>
+            </FadeIn>
+            <FadeIn duration={0.65} delay={0.35}>
+              <Typography variant="h1" className={styles.heroTitle}>
+                {t("hotel")}
+              </Typography>
+            </FadeIn>
+            <FadeIn duration={0.7} delay={0.55}>
+              <Typography className={styles.heroTagline}>
+                {t("garden_hero_tagline")}
+              </Typography>
+            </FadeIn>
+            <FadeIn duration={0.55} delay={0.8}>
+              <Box className={styles.heroActions}>
+                <Button href="#overview" className={styles.heroPrimary}>
+                  {t("garden_hero_primary")}
+                </Button>
+                <Button
+                  component={Link}
+                  href="/contacts"
+                  className={styles.heroSecondary}
+                >
+                  {t("garden_cta_button")}
+                </Button>
+              </Box>
+            </FadeIn>
+          </Box>
+        </Container>
+      </Hero>
+
+      <Box className={styles.introSection}>
+        <Container className={styles.introContainer}>
+          <Box className={styles.introPanel}>
+            <Box className={styles.introLead}>
+              <Typography className={styles.sectionLabel}>
+                {t("garden_intro_label")}
+              </Typography>
+              <Typography variant="h2" className={styles.introTitle}>
+                {t("garden_desc")}
+              </Typography>
+            </Box>
+            <Box className={styles.introBody}>
+              <Typography className={styles.introCopy}>
+                {t("garden_intro_copy")}
+              </Typography>
+              <Box className={styles.introLinks}>
+                {sectionLinks.map((link, index) => (
+                  <Box
+                    key={link.href}
+                    component="a"
+                    href={link.href}
+                    className={styles.introLink}
+                  >
+                    <span className={styles.introLinkIndex}>
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <span className={styles.introLinkLabel}>{link.label}</span>
+                    <ArrowForwardIcon className={styles.introLinkIcon} />
+                  </Box>
+                ))}
+              </Box>
+            </Box>
+          </Box>
+        </Container>
+      </Box>
+
       <InformativoNumbers />
-      <InformativoTextImage />
-      <InformativoDinamico infos={infos} />
-      <Gallery data={gardenImages} />
-      <Accordion zones={zones} />
-      <LandscapePresentation data={landscapeData} />
+      <Box id="overview">
+        <InformativoTextImage />
+      </Box>
+      <Box id="features">
+        <InformativoDinamico infos={infos} />
+      </Box>
+      <Box className={styles.gallerySection}>
+        <Container className={styles.galleryIntro}>
+          <Typography className={styles.sectionLabel}>
+            {t("garden_gallery_label")}
+          </Typography>
+          <Typography variant="h2" className={styles.galleryTitle}>
+            {t("garden_gallery_title")}
+          </Typography>
+          <Typography className={styles.galleryDesc}>
+            {t("garden_gallery_desc")}
+          </Typography>
+        </Container>
+        <Gallery data={gardenImages} />
+      </Box>
+      <Box id="kitchen">
+        <Accordion zones={zones} />
+      </Box>
+      <Box id="landscape">
+        <LandscapePresentation data={landscapeData} />
+      </Box>
       <CarouselPotentiality data={carouselItems} />
+      <Box className={styles.ctaSection}>
+        <Container className={styles.ctaContainer}>
+          <Box className={styles.ctaContent}>
+            <Typography variant="h2" component="h2" className={styles.ctaTitle}>
+              {t("garden_cta_title")}
+            </Typography>
+            <Typography className={styles.ctaDesc}>
+              {t("garden_cta_desc")}
+            </Typography>
+            <Button
+              component={Link}
+              href="/contacts"
+              className={styles.ctaButton}
+              endIcon={<ArrowForwardIcon />}
+            >
+              {t("garden_cta_button")}
+            </Button>
+          </Box>
+        </Container>
+      </Box>
     </>
   );
 };

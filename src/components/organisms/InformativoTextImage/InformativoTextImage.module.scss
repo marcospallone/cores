@@ -1,58 +1,269 @@
 @use "@/styles/includes" as *;
 
-.informativoTextContainer {
+.sectionBox {
   background-color: var(--mui-palette-white-800);
+}
 
+.informativoTextContainer {
   .row {
-    display: flex;
-    flex-direction: row;
+    align-items: stretch;
 
     &.inverse {
       flex-direction: row-reverse;
     }
+  }
+
+  .textBox {
+    display: flex;
+    align-items: flex-start;
+
+    .overviewBox {
+      display: flex;
+      flex-direction: column;
+      gap: toRem(24);
+
+      .header {
+        display: flex;
+        flex-direction: column;
+        gap: toRem(12);
+      }
+
+      .label {
+        font-family: var(--font-barlow), "Jost", sans-serif;
+        font-size: toRem(11);
+        font-weight: 600;
+        letter-spacing: toRem(4);
+        text-transform: uppercase;
+        color: var(--mui-palette-primary-main) !important;
+      }
+
+      .overview {
+        max-width: toRem(480);
+        font-family: "Poppins", sans-serif !important;
+        font-weight: 700 !important;
+        text-transform: uppercase;
+        line-height: 1.08;
+        color: var(--mui-palette-grey-900);
+
+        @include media-breakpoint-down(lg) {
+          font-size: toRem(30) !important;
+        }
+      }
+
+      .text {
+        font-family: var(--font-barlow), "Jost", sans-serif;
+        font-size: toRem(16);
+        line-height: 1.85;
+        color: rgba(18, 18, 18, 0.74);
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .visualBox {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.76fr);
+    gap: toRem(18);
+    height: 100%;
+    min-height: toRem(640);
+    padding-left: toRem(24);
+    align-items: stretch;
 
     @include media-breakpoint-down(lg) {
-      flex-direction: column-reverse;
+      grid-template-columns: 1fr;
+      height: auto;
+      min-height: unset;
+      padding-left: 0;
+    }
+  }
+
+  .mainImageBox {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    min-height: toRem(640);
+    border-radius: 0;
+    box-shadow: 0 toRem(24) toRem(80) rgba(18, 18, 18, 0.16);
+
+    @include media-breakpoint-down(lg) {
+      min-height: toRem(460);
     }
 
-    .textBox {
-      display: flex;
-      align-items: center;
-      .overviewBox {
-          display: flex;
-          flex-direction: column;
-          gap: toRem(24);
-
-          @include media-breakpoint-down(lg) {
-            gap: toRem(16)
-          }
-      
-          .overview {
-            text-align: right;
-            font-family: "Poppins_BoldItalic", sans-serif;
-            color: var(--mui-palette-grey-900);
-
-            @include media-breakpoint-down(lg) {
-              font-size: toRem(36);
-            }
-          }
-          .text {
-            text-align: right;
-            font-family: "Jost", sans-serif;
-            color: var(--mui-palette-grey-900);
-          }
-        }
-    }
-  
-    .imageBox {
-      display: flex;
+    .overviewImage {
+      display: block;
       width: 100%;
-      margin: auto;
-  
-      .overviewImage {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .imageOverlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(18, 18, 18, 0.04) 0%,
+        rgba(18, 18, 18, 0.38) 100%
+      );
+    }
+
+    .imageCaption {
+      position: absolute;
+      inset: auto toRem(24) toRem(24) toRem(24);
+      z-index: 2;
+      max-width: toRem(360);
+      padding: toRem(16) toRem(18);
+      border: 1px solid rgba(245, 245, 245, 0.18);
+      background-color: rgba(18, 18, 18, 0.24);
+      backdrop-filter: blur(12px);
+
+      .imageCaptionLabel {
+        margin-bottom: toRem(4);
+        font-family: "Jost", sans-serif;
+        font-size: toRem(12);
+        font-weight: 700;
+        letter-spacing: toRem(2);
+        text-transform: uppercase;
+        color: rgba(245, 245, 245, 0.78) !important;
+      }
+
+      .imageCaptionText {
+        font-family: var(--font-barlow), "Jost", sans-serif;
+        font-size: toRem(14);
+        line-height: 1.6;
+        color: var(--mui-palette-white-900) !important;
+      }
+    }
+  }
+
+  .sideStack {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(18);
+    height: 100%;
+  }
+
+  .factCards {
+    display: grid;
+    gap: toRem(14);
+
+    @include media-breakpoint-down(lg) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include media-breakpoint-down(md) {
+      grid-template-columns: 1fr;
+    }
+
+    .factCard {
+      padding: toRem(20);
+      border: 1px solid rgba(18, 18, 18, 0.08);
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid var(--mui-palette-primary-main);
+
+      .factValue {
+        font-family: "Poppins", sans-serif !important;
+        font-size: toRem(30);
+        font-weight: 700;
+        line-height: 1;
+        color: var(--mui-palette-grey-900) !important;
+      }
+
+      .factLabel {
+        margin-top: toRem(8);
+        font-family: "Jost", sans-serif;
+        font-size: toRem(12);
+        font-weight: 700;
+        letter-spacing: toRem(1.2);
+        text-transform: uppercase;
+        color: rgba(18, 18, 18, 0.58) !important;
+      }
+    }
+  }
+
+  .insetImageBox {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+    border-radius: 0;
+    box-shadow: 0 toRem(16) toRem(44) rgba(18, 18, 18, 0.1);
+    background-color: var(--mui-palette-white-900);
+    border: 1px solid var(--mui-palette-primary-main);
+
+    .insetImage {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: toRem(286);
+      flex: 1;
+      object-fit: cover;
+    }
+
+    .insetCaption {
+      display: flex;
+      flex-direction: column;
+      gap: toRem(4);
+      padding: toRem(18);
+
+      .insetLabel {
+        font-family: "Jost", sans-serif;
+        font-size: toRem(11);
+        font-weight: 700;
+        letter-spacing: toRem(2);
+        text-transform: uppercase;
+        color: var(--mui-palette-primary-main) !important;
+      }
+
+      .insetText {
+        font-family: var(--font-barlow), "Jost", sans-serif;
+        font-size: toRem(14);
+        line-height: 1.65;
+        color: rgba(18, 18, 18, 0.72) !important;
+      }
+    }
+  }
+
+  .highlights {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: toRem(16);
+    margin-top: toRem(20);
+
+    @include media-breakpoint-down(lg) {
+      grid-template-columns: 1fr;
+    }
+
+    .highlightCard {
+      padding: toRem(20);
+      background-color: rgba(255, 255, 255, 0.68);
+      border: 1px solid var(--mui-palette-primary-main);
+
+      .highlightIndex {
+        margin-bottom: toRem(12);
+        font-family: "Poppins", sans-serif !important;
+        font-size: toRem(22);
+        font-weight: 700 !important;
+        color: rgba(18, 18, 18, 0.28) !important;
+      }
+
+      .highlightTitle {
+        margin-bottom: toRem(10);
+        font-family: "Jost", sans-serif;
+        font-size: toRem(14);
+        font-weight: 700;
+        letter-spacing: toRem(1.2);
+        text-transform: uppercase;
+        color: var(--mui-palette-grey-900) !important;
+      }
+
+      .highlightDescription {
+        font-family: var(--font-barlow), "Jost", sans-serif;
+        font-size: toRem(14);
+        line-height: 1.7;
+        color: rgba(18, 18, 18, 0.64) !important;
       }
     }
   }

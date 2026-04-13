@@ -85,20 +85,18 @@ const CarouselPotentiality: React.FC<CarouselPotentialityModel> = ({ data }) => 
                   </Box>
                 </SwiperSlide>
               ))}
-              {!isMobile && (
-                <Box className={styles.carouselButtons}>
-                  <Box className={styles.carouselPrevButton}>
-                    <KeyboardArrowLeftIcon
-                      sx={{ fontSize: theme.spacing(24) }}
-                    />
-                  </Box>
-                  <Box className={styles.carouselNextButton}>
-                    <KeyboardArrowRightIcon
-                      sx={{ fontSize: theme.spacing(24) }}
-                    />
-                  </Box>
+              <Box className={styles.carouselButtons}>
+                <Box className={styles.carouselPrevButton}>
+                  <KeyboardArrowLeftIcon
+                    sx={{ fontSize: isMobile ? theme.spacing(20) : theme.spacing(24) }}
+                  />
                 </Box>
-              )}
+                <Box className={styles.carouselNextButton}>
+                  <KeyboardArrowRightIcon
+                    sx={{ fontSize: isMobile ? theme.spacing(20) : theme.spacing(24) }}
+                  />
+                </Box>
+              </Box>
             </Swiper>
             <Box className={styles.pagination} ref={paginationRef}></Box>
           </Box>

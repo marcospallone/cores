@@ -1,0 +1,679 @@
+@use "@/styles/includes" as *;
+
+// ── HERO ──────────────────────────────────────────────────────────────────────
+
+.heroContent {
+  position: absolute !important;
+  left: 0;
+  bottom: toRem(80);
+  z-index: 2;
+  width: 100%;
+
+  @include media-breakpoint-down(lg) {
+    bottom: toRem(48);
+  }
+}
+
+.heroInner {
+  display: flex;
+  flex-direction: column;
+
+  > div:nth-child(1) {
+    margin-bottom: toRem(14);
+  }
+
+  > div:nth-child(2) {
+    margin-bottom: toRem(18);
+  }
+
+  > div:nth-child(3) {
+    margin-bottom: toRem(48);
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: toRem(32);
+    }
+  }
+}
+
+.heroLabel {
+  font-family: "Jost", sans-serif;
+  font-size: toRem(12);
+  font-weight: 500;
+  letter-spacing: toRem(5);
+  text-transform: uppercase;
+  color: var(--mui-palette-primary-main) !important;
+}
+
+.heroTitle {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--mui-palette-white-900) !important;
+  line-height: 0.95;
+  white-space: pre-line;
+
+  @include media-breakpoint-down(lg) {
+    font-size: toRem(52) !important;
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: toRem(36) !important;
+  }
+}
+
+.heroTagline {
+  font-family: "Jost", sans-serif;
+  font-size: toRem(17);
+  font-weight: 300;
+  letter-spacing: toRem(0.3);
+  color: rgba(245, 245, 245, 0.78) !important;
+  max-width: toRem(560);
+  line-height: 1.65;
+
+  @include media-breakpoint-down(lg) {
+    font-size: toRem(15);
+    max-width: 100%;
+  }
+}
+
+.heroButtons {
+  display: flex;
+  align-items: center;
+  gap: toRem(16);
+
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: toRem(10);
+  }
+}
+
+.heroPrimary {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--mui-palette-primary-main) !important;
+  color: var(--mui-palette-white-900) !important;
+  font-family: "Jost", sans-serif !important;
+  font-weight: 600 !important;
+  letter-spacing: toRem(1.5);
+
+  &:hover {
+    background-color: var(--mui-palette-success-main) !important;
+  }
+
+  .textWrapper {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .text,
+  .textHover {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 0;
+  }
+
+  .text {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .textHover {
+    top: 100%;
+    transform: translateY(0%);
+    opacity: 0;
+  }
+
+  &:hover .text {
+    animation: slideUp 0.5s forwards;
+  }
+
+  &:hover .textHover {
+    animation: slideIn 0.5s forwards;
+  }
+}
+
+.heroSecondary {
+  background-color: transparent !important;
+  color: var(--mui-palette-white-900) !important;
+  border: 1px solid rgba(245, 245, 245, 0.45) !important;
+  font-family: "Jost", sans-serif !important;
+  font-weight: 500 !important;
+  letter-spacing: toRem(1.5);
+
+  &:hover {
+    background-color: rgba(245, 245, 245, 0.08) !important;
+    border-color: rgba(245, 245, 245, 0.8) !important;
+  }
+}
+
+// ── SECTION LABEL ─────────────────────────────────────────────────────────────
+
+.sectionLabel {
+  font-family: "Jost", sans-serif;
+  font-size: toRem(11);
+  font-weight: 600;
+  letter-spacing: toRem(4);
+  text-transform: uppercase;
+  color: var(--mui-palette-primary-main) !important;
+  margin-bottom: toRem(20);
+  display: flex;
+  align-items: center;
+  gap: toRem(12);
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: toRem(28);
+    height: 1px;
+    background-color: var(--mui-palette-primary-main);
+    flex-shrink: 0;
+  }
+
+  @include media-breakpoint-down(lg) {
+    font-size: toRem(10);
+    margin-bottom: toRem(14);
+  }
+}
+
+// ── STUDIO SECTION ───────────────────────────────────────────────────────────
+
+.studioSection {
+  position: relative;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(25, 23, 21, 1) 0%,
+      rgba(30, 28, 25, 1) 54%,
+      rgba(20, 20, 20, 1) 100%
+    );
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(204, 151, 97, 0.06) 0%,
+      rgba(204, 151, 97, 0) 42%
+    );
+    pointer-events: none;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.studioTitle {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--mui-palette-white-900) !important;
+  line-height: 1.1;
+  margin-bottom: toRem(24);
+
+  @include media-breakpoint-down(lg) {
+    font-size: toRem(30) !important;
+    margin-bottom: toRem(16);
+  }
+}
+
+.studioDesc {
+  font-family: "Jost", sans-serif;
+  font-size: toRem(16);
+  font-weight: 300;
+  letter-spacing: toRem(0.2);
+  color: rgba(245, 245, 245, 0.65) !important;
+  line-height: 1.85;
+
+  @include media-breakpoint-down(lg) {
+    font-size: toRem(15);
+    margin-bottom: toRem(32);
+  }
+}
+
+.servicesStack {
+  display: flex;
+  flex-direction: column;
+}
+
+.serviceCard {
+  display: flex;
+  align-items: flex-start;
+  gap: toRem(20);
+  padding: toRem(22) 0;
+  border-bottom: 1px solid rgba(245, 245, 245, 0.07);
+
+  &:first-child {
+    border-top: 1px solid rgba(245, 245, 245, 0.07);
+  }
+}
+
+.serviceIconWrap {
+  flex-shrink: 0;
+  width: toRem(42);
+  height: toRem(42);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(204, 151, 97, 0.1);
+}
+
+.serviceIconSvg {
+  font-size: toRem(20) !important;
+  color: var(--mui-palette-primary-main) !important;
+}
+
+.serviceText {
+  display: flex;
+  flex-direction: column;
+  gap: toRem(5);
+}
+
+.serviceTitle {
+  font-family: "Jost", sans-serif;
+  font-size: toRem(14);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: toRem(1.5);
+  color: var(--mui-palette-white-900) !important;
+}
+
+.serviceDesc {
+  font-family: "Jost", sans-serif;
+  font-size: toRem(14);
+  font-weight: 300;
+  color: rgba(245, 245, 245, 0.55) !important;
+  line-height: 1.65;
+}
+
+// ── GARDEN HOTEL TEASER ───────────────────────────────────────────────────────
+
+.hotelSection {
+  position: relative;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(18, 18, 18, 1) 0%,
+      rgba(22, 21, 19, 1) 50%,
+      rgba(26, 30, 24, 1) 100%
+    );
+  border-top: 1px solid rgba(245, 245, 245, 0.05);
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      270deg,
+      rgba(204, 151, 97, 0.05) 0%,
+      rgba(204, 151, 97, 0) 35%
+    );
+    pointer-events: none;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.hotelRow {
+  align-items: stretch !important;
+}
+
+.hotelImageBox {
+  position: relative;
+  width: 100%;
+  height: toRem(560);
+  overflow: hidden;
+  border: 1px solid var(--mui-palette-primary-main);
+
+  @include media-breakpoint-down(lg) {
+    height: toRem(320);
+  }
+}
+
+.hotelImageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(18, 18, 18, 0.2) 0%,
+    rgba(18, 18, 18, 0) 60%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hotelTextGrid {
+  display: flex;
+  align-items: center;
+  padding-left: toRem(48) !important;
+
+  @include media-breakpoint-down(lg) {
+    padding-left: 0 !important;
+    padding-top: toRem(32) !important;
+  }
+}
+
+.hotelLocation {
+  font-family: "Jost", sans-serif;
+  font-size: toRem(12);
+  font-weight: 500;
+  letter-spacing: toRem(2.5);
+  text-transform: uppercase;
+  color: rgba(245, 245, 245, 0.35) !important;
+  margin-bottom: toRem(8);
+}
+
+.hotelTitle {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--mui-palette-white-900) !important;
+  line-height: 1.05;
+  margin-bottom: toRem(20);
+
+  @include media-breakpoint-down(lg) {
+    font-size: toRem(36) !important;
+  }
+}
+
+.hotelDesc {
+  font-family: "Jost", sans-serif;
+  font-size: toRem(16);
+  font-weight: 300;
+  letter-spacing: toRem(0.2);
+  color: rgba(245, 245, 245, 0.6) !important;
+  line-height: 1.8;
+  margin-bottom: toRem(36) !important;
+
+  @include media-breakpoint-down(lg) {
+    font-size: toRem(15);
+    margin-bottom: toRem(24) !important;
+  }
+}
+
+.hotelStats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: toRem(18);
+  margin-bottom: toRem(44);
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: toRem(28);
+    grid-template-columns: 1fr;
+  }
+}
+
+.hotelStat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: toRem(18);
+  min-height: toRem(236);
+  padding: toRem(24);
+  border: 1px solid rgba(245, 245, 245, 0.08);
+  background-color: rgba(245, 245, 245, 0.04);
+  backdrop-filter: blur(10px);
+
+  @include media-breakpoint-down(lg) {
+    min-height: auto;
+    gap: toRem(16);
+  }
+}
+
+.statIconBox {
+  width: toRem(70);
+  height: toRem(70);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--mui-palette-primary-main);
+  background-color: rgba(204, 151, 97, 0.12);
+}
+
+.statIconSvg {
+  font-size: toRem(52) !important;
+
+  @include media-breakpoint-down(lg) {
+    font-size: toRem(42) !important;
+  }
+}
+
+.statNumber {
+  font-family: "Poppins", sans-serif;
+  font-size: toRem(44);
+  font-weight: 700;
+  color: var(--mui-palette-white-900) !important;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  display: block;
+  white-space: nowrap;
+
+  @include media-breakpoint-down(lg) {
+    font-size: toRem(40);
+  }
+}
+
+.statLabel {
+  font-family: "Jost", sans-serif;
+  font-size: toRem(14);
+  font-weight: 600;
+  line-height: 1.6;
+  text-transform: uppercase;
+  letter-spacing: toRem(1.2);
+  color: rgba(245, 245, 245, 0.76) !important;
+}
+
+.hotelCta {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--mui-palette-primary-main) !important;
+  color: var(--mui-palette-white-900) !important;
+  font-family: "Jost", sans-serif !important;
+  font-weight: 600 !important;
+  letter-spacing: toRem(1.5);
+
+  &:hover {
+    background-color: var(--mui-palette-success-main) !important;
+  }
+
+  .textWrapper {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .text,
+  .textHover {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 0;
+  }
+
+  .text {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .textHover {
+    top: 100%;
+    transform: translateY(0%);
+    opacity: 0;
+  }
+
+  &:hover .text {
+    animation: slideUp 0.5s forwards;
+  }
+
+  &:hover .textHover {
+    animation: slideIn 0.5s forwards;
+  }
+}
+
+// ── CONTACTS SECTION ─────────────────────────────────────────────────────────
+
+.contactsSection {
+  background-color: var(--mui-palette-success-main);
+}
+
+.contactsLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: toRem(48) !important;
+  border-right: 1px solid rgba(245, 245, 245, 0.15);
+
+  @include media-breakpoint-down(lg) {
+    padding-right: 0 !important;
+    border-right: none;
+    border-bottom: 1px solid rgba(245, 245, 245, 0.15);
+    padding-bottom: toRem(32) !important;
+    margin-bottom: toRem(32);
+  }
+}
+
+.contactsTitle {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--mui-palette-white-900) !important;
+  line-height: 1.1;
+  margin-bottom: toRem(16);
+
+  @include media-breakpoint-down(lg) {
+    font-size: toRem(30) !important;
+  }
+}
+
+.contactsTitleAccent {
+  color: rgba(245, 245, 245, 0.88) !important;
+}
+
+.contactsDesc {
+  font-family: "Jost", sans-serif;
+  font-size: toRem(16);
+  font-weight: 300;
+  letter-spacing: toRem(0.2);
+  color: rgba(245, 245, 245, 0.82) !important;
+  line-height: 1.8;
+  margin-top: toRem(24) !important;
+  margin-bottom: toRem(44) !important;
+  max-width: toRem(500);
+
+  @include media-breakpoint-down(lg) {
+    font-size: toRem(15);
+    margin-bottom: toRem(30);
+  }
+}
+
+.contactsCta {
+  background-color: var(--mui-palette-grey-900) !important;
+  color: var(--mui-palette-white-900) !important;
+  font-family: "Jost", sans-serif !important;
+  font-weight: 600 !important;
+  letter-spacing: toRem(1.5);
+  width: fit-content;
+  margin-top: toRem(6);
+
+  &:hover {
+    background-color: var(--mui-palette-primary-main) !important;
+    color: var(--mui-palette-grey-900) !important;
+  }
+}
+
+.contactsRight {
+  display: flex;
+  align-items: center;
+  padding-left: toRem(48) !important;
+
+  @include media-breakpoint-down(lg) {
+    padding-left: 0 !important;
+    padding-bottom: toRem(64) !important;
+  }
+}
+
+.contactItems {
+  display: flex;
+  flex-direction: column;
+  gap: toRem(28);
+  width: 100%;
+  max-width: none;
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: toRem(16);
+  width: 100%;
+  padding: 0;
+}
+
+.contactMeta {
+  width: 100%;
+}
+
+.contactIcon {
+  color: rgba(245, 245, 245, 0.88) !important;
+  flex-shrink: 0;
+  margin-top: toRem(2);
+}
+
+.contactLabel {
+  font-family: "Jost", sans-serif;
+  font-size: toRem(11);
+  font-weight: 600;
+  letter-spacing: toRem(2.5);
+  text-transform: uppercase;
+  color: rgba(245, 245, 245, 0.72) !important;
+  margin-bottom: toRem(10);
+}
+
+.contactValue {
+  font-family: "Jost", sans-serif;
+  font-size: toRem(17);
+  font-weight: 500;
+  color: var(--mui-palette-white-900) !important;
+  text-decoration: none;
+  display: block;
+  line-height: 1.6;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--mui-palette-primary-main) !important;
+  }
+}
+
+// ── KEYFRAMES ─────────────────────────────────────────────────────────────────
+
+@keyframes slideUp {
+  from {
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+  }
+  to {
+    top: -100%;
+    transform: translateY(0%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    top: 100%;
+    transform: translateY(0%);
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+  }
+}

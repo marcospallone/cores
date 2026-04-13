@@ -1,61 +1,115 @@
 @use "@/styles/includes" as *;
 
 .infoContainer {
+  margin-top: toRem(40);
+  padding-top: toRem(40) !important;
+  padding-bottom: toRem(40) !important;
+  border-radius: 0;
+  background:
+    radial-gradient(circle at top left, rgba(204, 151, 97, 0.16), transparent 36%),
+    linear-gradient(135deg, rgba(18, 18, 18, 1) 0%, rgba(35, 38, 34, 1) 100%);
+  color: var(--mui-palette-white-900);
+
+  @include media-breakpoint-down(lg) {
+    margin-top: toRem(24);
+    padding-top: toRem(28) !important;
+    padding-bottom: toRem(28) !important;
+  }
+
   .textBox {
     display: flex;
     flex-direction: column;
-    gap: toRem(8);
+    gap: toRem(12);
+
+    .label {
+      font-family: var(--font-barlow), "Jost", sans-serif;
+      font-size: toRem(11);
+      font-weight: 600;
+      letter-spacing: toRem(4);
+      text-transform: uppercase;
+      color: var(--mui-palette-primary-main) !important;
+    }
 
     .title {
-      font-family: "Poppins", sans-serif;
-      color: var(--mui-palette-primary-main);
+      font-family: "Poppins", sans-serif !important;
+      font-weight: 700 !important;
       text-transform: uppercase;
-      font-weight: 700;
-      font-size: toRem(42);
+      color: var(--mui-palette-white-900) !important;
+      line-height: 1.06;
+
+      @include media-breakpoint-down(lg) {
+        font-size: toRem(30) !important;
+      }
     }
 
     .desc {
-      font-family: "Jost", sans-serif;
-      font-size: toRem(20);
+      max-width: toRem(340);
+      font-family: var(--font-barlow), "Jost", sans-serif;
+      font-size: toRem(16);
+      line-height: 1.75;
+      color: rgba(245, 245, 245, 0.64) !important;
+
+      @include media-breakpoint-down(lg) {
+        max-width: none;
+      }
     }
   }
+
   .numbersBox {
-    display: flex;
-    justify-content: space-between;
-    gap: toRem(88);
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: toRem(18);
 
     @include media-breakpoint-down(lg) {
-      flex-direction: column;
-      align-items: center;
-      gap: toRem(24);
+      grid-template-columns: 1fr;
     }
+
     .numberItem {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      max-width: toRem(270);
+      align-items: flex-start;
+      gap: toRem(18);
+      min-height: toRem(240);
+      padding: toRem(24);
+      border: 1px solid rgba(245, 245, 245, 0.08);
+      background-color: rgba(245, 245, 245, 0.04);
+      backdrop-filter: blur(10px);
+
+      @include media-breakpoint-down(lg) {
+        min-height: unset;
+      }
+
+      .iconBox {
+        width: toRem(70);
+        height: toRem(70);
+        border-radius: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--mui-palette-primary-main);
+        background-color: rgba(204, 151, 97, 0.12);
+      }
 
       .countup {
-        font-size: toRem(64);
-        font-family: "Jost", sans-serif;
+        font-size: toRem(56);
+        line-height: 1;
+        font-family: "Poppins", sans-serif;
         font-weight: 700;
-        color: var(--mui-palette-primary-main);
+        color: var(--mui-palette-white-900);
 
         @include media-breakpoint-down(lg) {
-          font-size: toRem(36);
+          font-size: toRem(40);
         }
       }
 
       .numberTitle {
-        text-align: center;
-        font-size: toRem(24);
-        font-weight: 700;
+        font-family: var(--font-barlow), "Jost", sans-serif;
+        font-size: toRem(14);
+        font-weight: 600;
+        line-height: 1.6;
+        letter-spacing: toRem(1.2);
         text-transform: uppercase;
-        font-family: "Jost", sans-serif;
-
-        @include media-breakpoint-down(lg) {
-          font-size: toRem(20);
-        }
+        color: rgba(245, 245, 245, 0.76) !important;
       }
     }
   }
