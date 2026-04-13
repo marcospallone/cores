@@ -123,7 +123,7 @@
   .landscapeNextButton {
     width: toRem(48);
     height: toRem(48);
-    border-radius: 50%;
+    border-radius: 0;
     background-color: rgba(245, 245, 245, 0.08);
     border: 1px solid rgba(245, 245, 245, 0.12);
     display: flex;
@@ -132,12 +132,16 @@
     cursor: pointer;
     transition:
       background-color 0.2s ease-in-out,
-      border-color 0.2s ease-in-out;
+      border-color 0.2s ease-in-out,
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
     color: var(--mui-palette-white-900);
 
     &:hover {
-      background-color: rgba(204, 151, 97, 0.18);
-      border-color: rgba(204, 151, 97, 0.28);
+      background-color: rgba(204, 151, 97, 0.2);
+      border-color: rgba(204, 151, 97, 0.4);
+      transform: translateY(toRem(-2));
+      box-shadow: 0 toRem(8) toRem(20) rgba(0, 0, 0, 0.3);
     }
   }
 

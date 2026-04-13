@@ -159,9 +159,18 @@
 
     .factCard {
       padding: toRem(20);
-      border: 1px solid rgba(18, 18, 18, 0.08);
-      background: rgba(255, 255, 255, 0.72);
       border: 1px solid var(--mui-palette-primary-main);
+      background: rgba(255, 255, 255, 0.72);
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease;
+
+      &:hover {
+        transform: translateY(toRem(-3));
+        box-shadow: 0 toRem(12) toRem(32) rgba(204, 151, 97, 0.18);
+        background: rgba(255, 255, 255, 0.88);
+      }
 
       .factValue {
         font-family: "Poppins", sans-serif !important;
@@ -240,6 +249,16 @@
       padding: toRem(20);
       background-color: rgba(255, 255, 255, 0.68);
       border: 1px solid var(--mui-palette-primary-main);
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease;
+
+      &:hover {
+        transform: translateY(toRem(-3));
+        box-shadow: 0 toRem(10) toRem(28) rgba(204, 151, 97, 0.16);
+        background-color: rgba(255, 255, 255, 0.88);
+      }
 
       .highlightIndex {
         margin-bottom: toRem(12);

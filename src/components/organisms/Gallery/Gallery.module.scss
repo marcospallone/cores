@@ -91,25 +91,31 @@
       position: absolute;
       display: flex;
       justify-content: center;
-      gap: toRem(24);
+      gap: toRem(14);
       width: 100%;
-      bottom: toRem(16);
+      bottom: toRem(24);
       z-index: 1;
       .swiperPrevButton,
       .swiperNextButton {
         width: toRem(48);
         height: toRem(48);
-        border-radius: 50%;
+        border-radius: 0;
         background-color: var(--mui-palette-primary-main);
         display: flex;
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        transition: background-color 0.2s ease-in-out;
+        box-shadow: 0 toRem(8) toRem(24) rgba(0, 0, 0, 0.32);
+        transition:
+          background-color 0.2s ease-in-out,
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
 
         @include media-breakpoint-up(md) {
           &:hover {
             background-color: var(--mui-palette-success-main);
+            transform: translateY(toRem(-2));
+            box-shadow: 0 toRem(12) toRem(32) rgba(0, 0, 0, 0.4);
           }
         }
       }

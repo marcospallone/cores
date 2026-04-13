@@ -246,9 +246,20 @@
   gap: toRem(20);
   padding: toRem(22) 0;
   border-bottom: 1px solid rgba(245, 245, 245, 0.07);
+  cursor: default;
 
   &:first-child {
     border-top: 1px solid rgba(245, 245, 245, 0.07);
+  }
+
+  &:hover {
+    .serviceIconWrap {
+      background-color: rgba(204, 151, 97, 0.2);
+    }
+
+    .serviceIconSvg {
+      transform: scale(1.12);
+    }
   }
 }
 
@@ -260,11 +271,13 @@
   align-items: center;
   justify-content: center;
   background-color: rgba(204, 151, 97, 0.1);
+  transition: background-color 0.25s ease;
 }
 
 .serviceIconSvg {
   font-size: toRem(20) !important;
   color: var(--mui-palette-primary-main) !important;
+  transition: transform 0.25s ease;
 }
 
 .serviceText {
@@ -421,6 +434,16 @@
   border: 1px solid rgba(245, 245, 245, 0.08);
   background-color: rgba(245, 245, 245, 0.04);
   backdrop-filter: blur(10px);
+  transition:
+    transform 0.28s ease,
+    border-color 0.28s ease,
+    box-shadow 0.28s ease;
+
+  &:hover {
+    transform: translateY(toRem(-5));
+    border-color: rgba(204, 151, 97, 0.24);
+    box-shadow: 0 toRem(20) toRem(48) rgba(0, 0, 0, 0.22);
+  }
 
   @include media-breakpoint-down(lg) {
     min-height: auto;
@@ -612,7 +635,16 @@
   align-items: flex-start;
   gap: toRem(16);
   width: 100%;
-  padding: 0;
+  padding: toRem(14) toRem(16);
+  border: 1px solid rgba(245, 245, 245, 0.08);
+  transition:
+    border-color 0.25s ease,
+    background-color 0.25s ease;
+
+  &:hover {
+    border-color: rgba(245, 245, 245, 0.2);
+    background-color: rgba(245, 245, 245, 0.04);
+  }
 }
 
 .contactMeta {

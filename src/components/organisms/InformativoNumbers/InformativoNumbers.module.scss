@@ -74,6 +74,16 @@
       border: 1px solid rgba(245, 245, 245, 0.08);
       background-color: rgba(245, 245, 245, 0.04);
       backdrop-filter: blur(10px);
+      transition:
+        transform 0.28s ease,
+        border-color 0.28s ease,
+        box-shadow 0.28s ease;
+
+      &:hover {
+        transform: translateY(toRem(-5));
+        border-color: rgba(204, 151, 97, 0.26);
+        box-shadow: 0 toRem(20) toRem(50) rgba(0, 0, 0, 0.24);
+      }
 
       @include media-breakpoint-down(lg) {
         min-height: unset;

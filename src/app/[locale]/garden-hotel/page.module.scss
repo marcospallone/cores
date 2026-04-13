@@ -203,18 +203,23 @@
   min-height: toRem(62);
   padding: toRem(14) toRem(16);
   border: 1px solid rgba(18, 18, 18, 0.08);
+  border-left: 3px solid transparent;
   background-color: rgba(255, 255, 255, 0.58);
   color: var(--mui-palette-grey-900);
   text-decoration: none;
   transition:
-    border-color 0.2s ease,
-    background-color 0.2s ease,
-    transform 0.2s ease;
+    border-color 0.22s ease,
+    border-left-color 0.22s ease,
+    background-color 0.22s ease,
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
 
   &:hover {
     border-color: rgba(204, 151, 97, 0.28);
+    border-left-color: var(--mui-palette-primary-main);
     background-color: rgba(204, 151, 97, 0.08);
     transform: translateX(toRem(4));
+    box-shadow: 0 toRem(6) toRem(18) rgba(204, 151, 97, 0.1);
 
     .introLinkLabel,
     .introLinkIcon {
@@ -325,13 +330,85 @@
 }
 
 .ctaButton {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  gap: toRem(10);
   margin-top: toRem(10);
   background-color: var(--mui-palette-primary-main) !important;
   color: var(--mui-palette-white-900) !important;
-  transition: all 0.2s ease;
 
   &:hover {
     background-color: var(--mui-palette-white-900) !important;
     color: var(--mui-palette-grey-900) !important;
+  }
+
+  &:hover .text {
+    animation: slideUp 0.5s forwards;
+  }
+
+  &:hover .textHover {
+    animation: slideIn 0.5s forwards;
+  }
+}
+
+.ctaButtonTextBox {
+  position: relative;
+  display: block;
+}
+
+.textWrapper {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.text,
+.textHover {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.text {
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 0.3s ease;
+}
+
+.textHover {
+  top: 100%;
+  transform: translateY(0%);
+  opacity: 0;
+}
+
+.ctaButtonIcon {
+  flex-shrink: 0;
+}
+
+@keyframes slideUp {
+  0% {
+    top: 50%;
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+  100% {
+    top: -100%;
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    top: 100%;
+    opacity: 0;
+    transform: translateY(0%);
+  }
+  100% {
+    top: 50%;
+    opacity: 1;
+    transform: translateY(-50%);
   }
 }

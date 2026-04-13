@@ -263,9 +263,19 @@ const GardenHotel: React.FC = () => {
               component={Link}
               href="/contacts"
               className={styles.ctaButton}
-              endIcon={<ArrowForwardIcon />}
             >
-              {t("garden_cta_button")}
+              <span className={styles.ctaButtonTextBox}>
+                <span className={styles.textWrapper}>
+                  {t("garden_cta_button")}
+                </span>
+                <span className={styles.text}>
+                  {t("garden_cta_button")}
+                </span>
+                <span className={styles.textHover}>
+                  {t("garden_cta_button")}
+                </span>
+              </span>
+              <ArrowForwardIcon className={styles.ctaButtonIcon} />
             </Button>
           </Box>
         </Container>

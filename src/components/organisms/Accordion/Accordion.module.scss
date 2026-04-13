@@ -159,12 +159,14 @@
   gap: toRem(16);
   padding: toRem(18);
   border: 1px solid rgba(245, 245, 245, 0.08);
+  border-left: 3px solid transparent;
   background-color: rgba(245, 245, 245, 0.03);
   color: inherit;
   cursor: pointer;
   text-align: left;
   transition:
     border-color 0.2s ease,
+    border-left-color 0.2s ease,
     background-color 0.2s ease,
     transform 0.2s ease,
     box-shadow 0.2s ease;
@@ -172,12 +174,14 @@
   &:hover {
     transform: translateY(toRem(-2));
     border-color: rgba(204, 151, 97, 0.3);
+    border-left-color: rgba(204, 151, 97, 0.45);
     background-color: rgba(245, 245, 245, 0.05);
     box-shadow: 0 toRem(12) toRem(28) rgba(0, 0, 0, 0.14);
   }
 
   &.active {
     border-color: rgba(204, 151, 97, 0.42);
+    border-left-color: var(--mui-palette-primary-main);
     background-color: rgba(204, 151, 97, 0.1);
   }
 
@@ -293,6 +297,14 @@
   padding: toRem(14);
   border: 1px solid rgba(245, 245, 245, 0.05);
   background-color: rgba(245, 245, 245, 0.03);
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+
+  &:hover {
+    border-color: rgba(245, 245, 245, 0.1);
+    background-color: rgba(245, 245, 245, 0.06);
+  }
 
   .listBullet {
     width: toRem(10);

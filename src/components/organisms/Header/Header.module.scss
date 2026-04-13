@@ -37,6 +37,7 @@
       text-decoration: none;
       text-transform: uppercase;
       font-weight: 700;
+      transition: color 0.2s ease;
 
       &::after {
         content: "";
@@ -46,7 +47,7 @@
         height: 1px;
         width: 0;
         background-color: var(--mui-palette-primary-main);
-        transition: width 0.5s ease;
+        transition: width 0.45s cubic-bezier(0.4, 0, 0.2, 1);
       }
 
       &:hover {
@@ -164,6 +165,7 @@
     z-index: 100;
     background-color: var(--mui-palette-grey-800);
     border: 1px solid var(--mui-palette-grey-600);
+    box-shadow: 0 toRem(24) toRem(64) rgba(0, 0, 0, 0.44);
   }
 
   .blur {

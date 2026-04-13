@@ -226,6 +226,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      padding-top: toRem(16);
+      border-top: 1px solid rgba(245, 245, 245, 0.14);
 
       @include media-breakpoint-down(lg) {
         flex-direction: column;
