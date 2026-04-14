@@ -2,6 +2,7 @@
 
 .slideBox {
   position: relative;
+  width: 100%;
   overflow: hidden;
   min-height: toRem(660);
   border-radius: 0;
@@ -46,11 +47,20 @@
 
   .text {
     position: absolute;
-    inset: auto toRem(26) toRem(26) toRem(26);
+    inset: auto 0 0 0;
     z-index: 2;
     display: flex;
     flex-direction: column;
     gap: toRem(10);
+    width: 100%;
+    box-sizing: border-box;
+    padding: toRem(26);
+    background: linear-gradient(
+      180deg,
+      rgba(18, 18, 18, 0) 0%,
+      rgba(18, 18, 18, 0.78) 46%,
+      rgba(18, 18, 18, 0.94) 100%
+    );
 
     .title {
       max-width: toRem(520);

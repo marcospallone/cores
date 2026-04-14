@@ -36,12 +36,39 @@
 }
 
 .heroLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: toRem(10);
+  width: fit-content;
+  padding: toRem(10) toRem(16);
   font-family: "Jost", sans-serif;
   font-size: toRem(12);
   font-weight: 500;
   letter-spacing: toRem(5);
   text-transform: uppercase;
   color: var(--mui-palette-primary-main) !important;
+  border: 1px solid rgba(204, 151, 97, 0.42);
+  background: linear-gradient(
+    90deg,
+    rgba(18, 18, 18, 0.74) 0%,
+    rgba(18, 18, 18, 0.28) 100%
+  );
+  backdrop-filter: blur(14px);
+  box-shadow: 0 toRem(14) toRem(34) rgba(0, 0, 0, 0.24);
+
+  &::before {
+    content: "";
+    width: toRem(8);
+    height: toRem(8);
+    background-color: var(--mui-palette-primary-main);
+    flex-shrink: 0;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: toRem(9) toRem(14);
+    font-size: toRem(11);
+    letter-spacing: toRem(4);
+  }
 }
 
 .heroTitle {
@@ -373,6 +400,18 @@
   }
 }
 
+.hotelLocationRow {
+  display: inline-flex;
+  align-items: center;
+  gap: toRem(8);
+  margin-bottom: toRem(8);
+}
+
+.hotelLocationIcon {
+  font-size: toRem(18) !important;
+  color: rgba(245, 245, 245, 0.62) !important;
+}
+
 .hotelLocation {
   font-family: "Jost", sans-serif;
   font-size: toRem(12);
@@ -380,7 +419,7 @@
   letter-spacing: toRem(2.5);
   text-transform: uppercase;
   color: rgba(245, 245, 245, 0.35) !important;
-  margin-bottom: toRem(8);
+  margin-bottom: 0 !important;
 }
 
 .hotelTitle {
@@ -616,6 +655,10 @@
   align-items: center;
   padding-left: toRem(48) !important;
 
+  > * {
+    width: 100%;
+  }
+
   @include media-breakpoint-down(lg) {
     padding-left: 0 !important;
     padding-bottom: toRem(64) !important;
@@ -625,7 +668,7 @@
 .contactItems {
   display: flex;
   flex-direction: column;
-  gap: toRem(28);
+  gap: toRem(18);
   width: 100%;
   max-width: none;
 }
@@ -635,26 +678,44 @@
   align-items: flex-start;
   gap: toRem(16);
   width: 100%;
-  padding: toRem(14) toRem(16);
-  border: 1px solid rgba(245, 245, 245, 0.08);
+  box-sizing: border-box;
+  min-height: toRem(110);
+  padding: toRem(18) toRem(20);
+  border: 1px solid rgba(245, 245, 245, 0.12);
+  background-color: rgba(245, 245, 245, 0.04);
+  text-decoration: none;
+  cursor: pointer;
   transition:
     border-color 0.25s ease,
-    background-color 0.25s ease;
+    background-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 
   &:hover {
-    border-color: rgba(245, 245, 245, 0.2);
-    background-color: rgba(245, 245, 245, 0.04);
+    border-color: rgba(204, 151, 97, 0.4);
+    background-color: rgba(245, 245, 245, 0.08);
+    transform: translateX(toRem(4));
+    box-shadow: 0 toRem(18) toRem(38) rgba(0, 0, 0, 0.16);
+
+    .contactIcon,
+    .contactValue {
+      color: var(--mui-palette-primary-main) !important;
+    }
   }
 }
 
 .contactMeta {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: toRem(8);
 }
 
 .contactIcon {
   color: rgba(245, 245, 245, 0.88) !important;
   flex-shrink: 0;
   margin-top: toRem(2);
+  transition: color 0.2s ease;
 }
 
 .contactLabel {
@@ -672,14 +733,9 @@
   font-size: toRem(17);
   font-weight: 500;
   color: var(--mui-palette-white-900) !important;
-  text-decoration: none;
   display: block;
   line-height: 1.6;
   transition: color 0.2s ease;
-
-  &:hover {
-    color: var(--mui-palette-primary-main) !important;
-  }
 }
 
 // ── KEYFRAMES ─────────────────────────────────────────────────────────────────

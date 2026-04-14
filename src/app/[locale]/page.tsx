@@ -73,6 +73,29 @@ export default function Home() {
     },
   ];
 
+  const contactItems = [
+    {
+      icon: PlaceIcon,
+      label: t("contacts_address"),
+      value: t("address"),
+      href: "https://maps.app.goo.gl/uisG3vD5gRauRJTH7",
+      target: "_blank",
+      rel: "noopener noreferrer",
+    },
+    {
+      icon: PhoneIcon,
+      label: t("contacts_phone"),
+      value: "+39 348 7921802",
+      href: "tel:+393487921802",
+    },
+    {
+      icon: MailOutlineIcon,
+      label: t("contacts_email"),
+      value: "p.spallone@libero.it",
+      href: "mailto:p.spallone@libero.it",
+    },
+  ];
+
   return (
     <Box>
       <Hero images={heroImages}>
@@ -176,9 +199,12 @@ export default function Home() {
                 <Typography className={styles.sectionLabel}>
                   {t("home_hotel_label")}
                 </Typography>
-                <Typography className={styles.hotelLocation}>
-                  {t("home_hotel_location")}
-                </Typography>
+                <Box className={styles.hotelLocationRow}>
+                  <PlaceIcon className={styles.hotelLocationIcon} />
+                  <Typography className={styles.hotelLocation}>
+                    {t("home_hotel_location")}
+                  </Typography>
+                </Box>
                 <Typography variant="h2" className={styles.hotelTitle}>
                   {t("home_hotel_title")}
                 </Typography>
@@ -241,47 +267,29 @@ export default function Home() {
             <Grid2 size={{ xs: 12, lg: 6 }} className={styles.contactsRight}>
               <FadeIn delay={0.15}>
                 <Box className={styles.contactItems}>
-                  <Box className={styles.contactItem}>
-                    <PlaceIcon className={styles.contactIcon} />
-                    <Box className={styles.contactMeta}>
-                      <Typography className={styles.contactLabel}>
-                        {t("contacts_address")}
-                      </Typography>
+                  {contactItems.map((item) => {
+                    const Icon = item.icon;
+
+                    return (
                       <Link
-                        href="https://maps.app.goo.gl/uisG3vD5gRauRJTH7"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={styles.contactValue}
+                        key={item.href}
+                        href={item.href}
+                        target={item.target}
+                        rel={item.rel}
+                        className={styles.contactItem}
                       >
-                        {t("address")}
+                        <Icon className={styles.contactIcon} />
+                        <Box className={styles.contactMeta}>
+                          <Typography component="span" className={styles.contactLabel}>
+                            {item.label}
+                          </Typography>
+                          <Typography component="span" className={styles.contactValue}>
+                            {item.value}
+                          </Typography>
+                        </Box>
                       </Link>
-                    </Box>
-                  </Box>
-                  <Box className={styles.contactItem}>
-                    <PhoneIcon className={styles.contactIcon} />
-                    <Box className={styles.contactMeta}>
-                      <Typography className={styles.contactLabel}>
-                        {t("contacts_phone")}
-                      </Typography>
-                      <Link href="tel:+393487921802" className={styles.contactValue}>
-                        +39 348 7921802
-                      </Link>
-                    </Box>
-                  </Box>
-                  <Box className={styles.contactItem}>
-                    <MailOutlineIcon className={styles.contactIcon} />
-                    <Box className={styles.contactMeta}>
-                      <Typography className={styles.contactLabel}>
-                        {t("contacts_email")}
-                      </Typography>
-                      <Link
-                        href="mailto:p.spallone@libero.it"
-                        className={styles.contactValue}
-                      >
-                        p.spallone@libero.it
-                      </Link>
-                    </Box>
-                  </Box>
+                    );
+                  })}
                 </Box>
               </FadeIn>
             </Grid2>

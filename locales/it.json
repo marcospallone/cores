@@ -20,8 +20,8 @@
   "contacts_email": "Email",
   "not_compiled": "Compila tutti i campi contrassegnati con *",
   "invalid_email": "Email non valida",
-  "garden_hero_label": "Scanno, Abruzzo",
-  "garden_hero_tagline": "Una struttura quattro stelle con presenza riconoscibile nel profilo del borgo, dimensioni generose e un impianto distributivo adatto a un rilancio di livello.",
+  "garden_hero_label": "Proposta immobiliare",
+  "garden_hero_tagline": "Descrizione hotel paragrafo p sotto titolo in garden-hotel font grigio 20px.",
   "garden_hero_primary": "Esplora la struttura",
   "garden_intro_label": "Opportunità immobiliare",
   "garden_desc": "Una struttura alberghiera versatile, in posizione centrale a Scanno, nel cuore dell'Abruzzo.",
@@ -41,7 +41,7 @@
     },
     {
       "title": "Distribuzione gia articolata",
-      "description": "Camere, sale comuni, ristorante, cucina e spazi tecnici costruiscono una base rara per una riqualificazione."
+      "description": "Camere, sale comuni, ristorante, cucina e spazi tecnici costruiscono una base solida per una riqualificazione."
     },
     {
       "title": "Presenza riconoscibile",
@@ -159,7 +159,7 @@
     ]
   },
   "garden_numbers_title": "L'hotel in numeri",
-  "garden_numbers_desc": "Alcune delle caratteristiche che rendono l’hotel una straordinaria opportunità.",
+  "garden_numbers_desc": "Alcune delle caratteristiche che rendono l’hotel una importante opportunità.",
   "garden_images": [
     {
       "src": "/assets/171.jpg",
@@ -387,8 +387,8 @@
   "garden_features_title": "Ambienti già presenti, potenziale già leggibile",
   "garden_features_desc": "La struttura dispone di ambienti differenziati e già riconoscibili. Seleziona una sezione per vedere come si presenta e quale ruolo può avere nel progetto di rilancio.",
   "garden_gallery_label": "Interni e atmosfera",
-  "garden_gallery_title": "Una lettura più ravvicinata della struttura",
-  "garden_gallery_desc": "Dagli spazi comuni alle camere, la galleria accompagna il visitatore dentro il carattere concreto dell'immobile.",
+  "garden_gallery_title": "Una lettura ravvicinata della struttura",
+  "garden_gallery_desc": "Dagli spazi comuni alle camere, la galleria accompagna il visitatore dentro l'immobile.",
   "garden_potential_title": "Potenzialità edilizia",
   "garden_potential_description": "La forma articolata e i più livelli consentono anche una diversa destinazione del fabbricato. La struttura risulta eventualmente di facile trasformazione per diverse distribuzioni interne. Dai uno sguardo alle possibili riqualificazioni del Garden Hotel.",
   "garden_potential_items": [
@@ -440,7 +440,7 @@
     {
       "title": "Parco Nazionale d’Abruzzo, Lazio e Molise",
       "content": "Scanno si trova nel cuore di uno dei parchi naturali più antichi e affascinanti d’Italia. Il Parco Nazionale d’Abruzzo, Lazio e Molise è un paradiso di biodiversità, con una straordinaria varietà di flora e fauna protetta, tra cui l’orso marsicano. I suoi sentieri offrono panorami mozzafiato, boschi secolari, laghi e rifugi immersi nella natura. Un’esperienza imperdibile per escursionisti, fotografi e amanti dell’aria aperta.",
-      "image": "/assets/orso.jpg"
+      "image": "/assets/parco.jpg"
     },
     {
       "title": "Tradizioni e Gastronomia",
@@ -452,12 +452,12 @@
   "notFoundButton": "Torna alla home",
   "home_hero_label": "Studio Tecnico",
   "home_hero_title": "Geom. Spallone\nPierfrancesco",
-  "home_hero_tagline": "Professionalità tecnica al servizio del territorio abruzzese da oltre trent'anni.",
+  "home_hero_tagline": "Intro Hero.",
   "home_hero_cta_hotel": "Scopri il Garden Hotel",
   "home_hero_cta_contacts": "Contattaci",
   "home_studio_label": "Chi Siamo",
-  "home_studio_title": "Studio Tecnico del Geometra",
-  "home_studio_desc": "Con oltre trent'anni di esperienza nel settore, lo Studio Tecnico del Geom. Spallone Pierfrancesco opera nel cuore dell'Abruzzo con competenza, rigore professionale e un profondo radicamento nel territorio. Offriamo consulenza specializzata per privati, aziende ed enti pubblici, coprendo l'intero ciclo di vita degli immobili: dalla progettazione alla perizia, dalla compravendita alla valorizzazione patrimoniale.",
+  "home_studio_title": "Studio Tecnico titolo sezchisiamo hp",
+  "home_studio_desc": "Descrizione Studio Tecnico sezione chi siamo HP. Font grigio 20px mb da title 24px.",
   "home_studio_service1_title": "Progettazione",
   "home_studio_service1_desc": "Progettazione architettonica e edilizia civile, con gestione completa dei lavori dal concept al collaudo.",
   "home_studio_service2_title": "Stime e Perizie",
@@ -467,7 +467,7 @@
   "home_hotel_label": "La Nostra Proposta",
   "home_hotel_title": "Garden Hotel",
   "home_hotel_location": "Scanno, Abruzzo",
-  "home_hotel_desc": "Una struttura ricettiva storica nel cuore dell'Abruzzo. Quattro stelle, 2.600 m² su cinque livelli, pronta per essere rilanciata o trasformata in nuove destinazioni d'uso.",
+  "home_hotel_desc": "Una struttura ricettiva storica nel cuore dell'Abruzzo. 2.600 m² su cinque livelli, pronta per essere rilanciata o trasformata in nuove destinazioni d'uso.",
   "home_hotel_cta": "Scopri l'opportunità",
   "home_hotel_stat1_value": "2.600",
   "home_hotel_stat1_label": "m² superficie",

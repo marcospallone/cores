@@ -159,9 +159,6 @@ const InformativoDinamico: React.FC<InformativoDinamicoModel> = ({ infos }) => {
                     <Typography className={styles.featureIndex}>
                       {String(selectedIndex + 1).padStart(2, "0")}
                     </Typography>
-                    <Typography className={styles.featureKicker}>
-                      {t("garden_features_label")}
-                    </Typography>
                   </Box>
                   <Box className={styles.featureContent}>
                     <Typography variant="h3" className={styles.featureTitle}>
