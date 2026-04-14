@@ -1,6 +1,10 @@
 @use "@/styles/includes" as *;
 
 .sectionShell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background:
     radial-gradient(circle at top right, rgba(204, 151, 97, 0.16), transparent 30%),
     linear-gradient(180deg, rgba(18, 18, 18, 1) 0%, rgba(27, 30, 28, 1) 100%);
@@ -135,22 +139,44 @@
 .rightBox {
   display: flex;
   flex-direction: column;
-  gap: toRem(18);
-  min-height: toRem(660);
+  height: 100%;
+}
 
-  @include media-breakpoint-down(lg) {
-    min-height: unset;
-  }
+// ── Selector zone ──────────────────────────────────────────────────────────────
+
+.selectorSection {
+  flex-shrink: 0;
+  padding: toRem(20) toRem(20) toRem(18) toRem(20);
+  background-color: rgba(245, 245, 245, 0.025);
+  border: 1px solid rgba(245, 245, 245, 0.06);
+  border-bottom: 2px solid rgba(204, 151, 97, 0.28);
 }
 
 .tabGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: toRem(14);
+  gap: toRem(12);
 
   @include media-breakpoint-down(md) {
     grid-template-columns: 1fr;
   }
+}
+
+// ── Content zone ───────────────────────────────────────────────────────────────
+
+.contentSection {
+  flex: 1;
+  position: relative;
+  min-height: toRem(480);
+
+  @include media-breakpoint-down(lg) {
+    min-height: toRem(360);
+  }
+}
+
+.motionWrapper {
+  position: absolute;
+  inset: 0;
 }
 
 .tabButton {
@@ -224,15 +250,15 @@
 .detailsCard {
   display: flex;
   flex-direction: column;
-  flex: 1;
-  min-height: toRem(454);
+  height: 100%;
   padding: toRem(28);
-  border: 1px solid rgba(245, 245, 245, 0.08);
-  background-color: rgba(245, 245, 245, 0.04);
+  border: 1px solid rgba(245, 245, 245, 0.1);
+  border-top: none; // already separated by selectorSection bottom border
+  background-color: rgba(245, 245, 245, 0.055);
   box-shadow: 0 toRem(18) toRem(42) rgba(0, 0, 0, 0.14);
+  overflow-y: auto;
 
   @include media-breakpoint-down(lg) {
-    min-height: unset;
     padding: toRem(22);
   }
 }

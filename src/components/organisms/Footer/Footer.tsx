@@ -12,6 +12,7 @@ import styles from "./Footer.module.scss";
 const Footer: React.FC = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
   const t = useTranslations();
+  const email = "p.spallone@libero.it";
 
   const isContacts = usePathname().endsWith("/contacts");
 
@@ -41,17 +42,27 @@ const Footer: React.FC = () => {
             </Link>
           </Box>
           <Box className={styles.location}>
-            <PlaceIcon
-              className={styles.icon}
-              sx={{ color: theme.palette.white[900] }}
-            />
             <Link
               href={"https://maps.app.goo.gl/uisG3vD5gRauRJTH7"}
               target="_blank"
               rel="noopener noreferrer"
-              className={styles.address}
+              className={styles.locationLink}
             >
-              {t("address")}
+              <PlaceIcon
+                className={styles.locationIcon}
+                sx={{ color: theme.palette.white[900] }}
+              />
+              <span className={styles.locationText}>{t("address")}</span>
+            </Link>
+            <Link
+              href={`mailto:${email}`}
+              className={`${styles.locationLink} ${styles.emailLink}`}
+            >
+              <MailIcon
+                className={styles.locationIcon}
+                sx={{ color: theme.palette.white[900] }}
+              />
+              <span className={styles.locationText}>{email}</span>
             </Link>
           </Box>
           {!isContacts && (

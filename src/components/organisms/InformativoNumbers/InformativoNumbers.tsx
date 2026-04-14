@@ -20,7 +20,7 @@ const InformativoNumbers: React.FC = () => {
   const locale = useLocale();
   const t = useTranslations();
   const { ref: countUpRef, inView: inView } = useInView({ triggerOnce: true });
-  const numberSeparator = locale === "it" ? "." : ",";
+  const numberFormatter = new Intl.NumberFormat(locale);
 
   const stats = [
     {
@@ -33,7 +33,7 @@ const InformativoNumbers: React.FC = () => {
       ),
       end: 2600,
       duration: 2.2,
-      separator: numberSeparator,
+      separator: locale === "it" ? "." : ",",
       suffix: " m²",
       label: t("garden_area"),
     },
@@ -84,24 +84,26 @@ const InformativoNumbers: React.FC = () => {
             </Typography>
           </Box>
         </Grid2>
-        <Grid2
-          size={{ xs: 0, xxl: 1 }}
-          display={{ xs: "none", xxl: "block" }}
-        ></Grid2>
-        <Grid2 size={{ xs: 12, xxl: 7 }}>
+        <Grid2 size={{ xs: 12, xxl: 8 }}>
           <Box className={styles.numbersBox} ref={countUpRef}>
             {stats.map((stat) => (
               <Box key={stat.label} className={styles.numberItem}>
                 <Box className={styles.iconBox}>{stat.icon}</Box>
-                {inView && (
-                  <CountUp
-                    end={stat.end}
-                    duration={stat.duration}
-                    separator={stat.separator}
-                    suffix={stat.suffix}
-                    className={styles.countup}
-                  />
-                )}
+                <Box className={styles.countupWrap}>
+                  <Box component="span" className={styles.countupPlaceholder}>
+                    {numberFormatter.format(stat.end)}
+                    {stat.suffix ?? ""}
+                  </Box>
+                  {inView && (
+                    <CountUp
+                      end={stat.end}
+                      duration={stat.duration}
+                      separator={stat.separator}
+                      suffix={stat.suffix}
+                      className={styles.countup}
+                    />
+                  )}
+                </Box>
                 <Typography
                   variant="body1"
                   component={"div"}

@@ -20,8 +20,8 @@
   "contacts_email": "Email",
   "not_compiled": "Fill in all fields marked with *",
   "invalid_email": "Invalid email address",
-  "garden_hero_label": "Scanno, Abruzzo",
-  "garden_hero_tagline": "A four-star property with a recognizable presence in the village skyline, generous dimensions and a layout suited to a high-level relaunch.",
+  "garden_hero_label": "Four-star hotel · Scanno (AQ)",
+  "garden_hero_tagline": "The Garden Hotel is Scanno's an historic landmark property: a building overlooking the medieval village centre, set within the natural landscape of the Sagittario Valley. Today it represents a concrete opportunity for those wishing to invest in tourism, residential development or the socio-health sector in one of Italy's most captivating villages.",
   "garden_hero_primary": "Explore the property",
   "garden_intro_label": "Real estate opportunity",
   "garden_desc": "A versatile hospitality property in the heart of Scanno, nestled in the soul of Abruzzo.",
@@ -32,7 +32,7 @@
   "garden_location": "From the historic center of Scanno",
   "garden_overview": "Overview",
   "garden_overview_label": "Overview",
-  "garden_overview_title": "A historic property ready for a new chapter",
+  "garden_overview_title": "Sixty years of history, an unprecedented opportunity",
   "garden_text1": "The Garden Hotel represents a unique opportunity in the heart of Abruzzo: a historic accommodation facility, well-distributed and ready to be relaunched or transformed according to new needs. <br></br><br></br> Thanks to its versatility, the structure lends itself to numerous alternative uses: tourist residence, retirement home for self-sufficient elderly people, health residence, wellness center or SPA, apartment complex for sale or rent. <br></br><br></br> Born as a three-star hotel in 1964, it has been the subject of numerous expansions and modernizations until it achieved the four-star classification in 1996, remaining the only hotel of this category in Scanno. <br></br><br></br> The structure was managed continuously until a few years ago and is currently in good general condition, although it requires system updates and partial but not structural renovation work.",
   "garden_overview_highlights": [
     {
@@ -44,8 +44,8 @@
       "description": "Rooms, common areas, restaurant, kitchen and technical spaces create a rare foundation for redevelopment."
     },
     {
-      "title": "Recognizable presence",
-      "description": "The Garden Hotel keeps a strong visual identity within Scanno and a direct relationship with the landscape."
+      "title": "A dialogue with the landscape",
+      "description": "The Garden Hotel opens onto Scanno's historic centre and the Apennine peaks with direct views and generous outlooks onto a landscape of rare beauty."
     }
   ],
   "garden_overview_fact1_value": "1964",
@@ -108,7 +108,7 @@
   "garden_kitchen_preview_suffix": "key assets",
   "garden_kitchen_zone1": {
     "title": "Kitchen Areas",
-    "description": "The kitchen is divided into various rooms, for a total of 150 m²:",
+    "description": "The kitchen is divided into various rooms, for a total of 150 m².",
     "items": [
       "kitchen area",
       "appetizers and fruit section",
@@ -158,8 +158,8 @@
       "glass washer"
     ]
   },
-  "garden_numbers_title": "Our hotel in numbers",
-  "garden_numbers_desc": "Main features that make our hotel an excellent opportunity.",
+  "garden_numbers_title": "The hotel in numbers",
+  "garden_numbers_desc": "Some of the features that make the hotel an important opportunity.",
   "garden_images": [
     {
       "src": "/assets/171.jpg",
@@ -387,7 +387,7 @@
   "garden_features_title": "Existing rooms, already legible potential",
   "garden_features_desc": "The property includes differentiated and clearly identifiable spaces. Select a section to see how it looks and what role it could play in the relaunch strategy.",
   "garden_gallery_label": "Interiors and atmosphere",
-  "garden_gallery_title": "A closer reading of the property",
+  "garden_gallery_title": "A closer view of the property",
   "garden_gallery_desc": "From common areas to bedrooms, the gallery brings visitors inside the concrete character of the building.",
   "garden_potential_title": "Building potential",
   "garden_potential_description": "The complex shape and multiple levels also allow for a different use of the building. The structure can be easily transformed for different internal distributions. Take a look at the possible redevelopments of the Garden Hotel.",
@@ -419,7 +419,7 @@
   "garden_landscape_items": [
     {
       "title": "Scanno Lake",
-      "content": "Scanno Lake is the largest natural lake in Abruzzo, famous for its heart shape and crystalline waters. It is an ideal place for walks, picnics and water sports.",
+      "content": "Scanno Lake is the largest natural lake in Abruzzo, famous for its heart shape and crystalline waters. It is an ideal place for walks, escursions and sports activities.",
       "image": "/assets/lago.jpg"
     },
     {
@@ -444,20 +444,20 @@
     },
     {
       "title": "Traditions and Gastronomy",
-      "content": "Scanno is a village that jealously preserves its ancient traditions. The traditional female costume, rich in embroidery and symbolism, is among the most fascinating in Abruzzo and is still worn on special occasions. As for gastronomy, between cheeses, mountain honey and traditional sweets such as Pan dell'Orso, every flavor tells the story of the territory.",
+      "content": "Scanno is a village that jealously preserves its ancient traditions. The traditional female costume, rich in embroidery and symbolism, is among the most fascinating in Abruzzo and is still worn on special occasions. As for gastronomy, between cheeses, mountain honey and traditional sweets, every flavor tells the story of the territory.",
       "image": "/assets/tradizioni.jpg"
     }
   ],
   "notFound": "The page you are looking for does not exist!",
   "notFoundButton": "Back to Home",
-  "home_hero_label": "Technical Studio",
-  "home_hero_title": "Geom. Spallone\nPierfrancesco",
-  "home_hero_tagline": "Technical expertise at the service of the Abruzzo territory for over thirty years.",
+  "home_hero_label": "Studio Tecnico - Geometra Spallone Pierfrancesco",
+  "home_hero_title": "Your project,\nour expertise.",
+  "home_hero_tagline": "With over thirty years of practice across the Abruzzo territory, our studio offers integrated technical consultancy: from architectural design to cadastral practices, from property appraisals to building amnesties. A trusted point of reference for private clients, businesses and public bodies.",
   "home_hero_cta_hotel": "Discover the Garden Hotel",
   "home_hero_cta_contacts": "Contact Us",
   "home_studio_label": "About Us",
-  "home_studio_title": "Technical Studio of the Surveyor",
-  "home_studio_desc": "With over thirty years of experience in the sector, the Technical Studio of Geom. Spallone Pierfrancesco operates in the heart of Abruzzo with competence, professional rigor and deep roots in the territory. We offer specialized consultancy for private individuals, companies and public bodies, covering the entire life cycle of real estate: from design to appraisal, from buying and selling to asset enhancement.",
+  "home_studio_title": "From design to cadastre: integrated technical expertise",
+  "home_studio_desc": "With over thirty years of practice, the Technical Studio of Geom. Spallone Pierfrancesco supports private clients, businesses and public bodies across all technical, construction and real estate matters. From architectural and structural design to construction management, from property valuations to cadastral practices, from building amnesties to regulatory filings, from energy certifications to planning permits (SCIA, DIA): a single professional expertise for every need.",
   "home_studio_service1_title": "Design",
   "home_studio_service1_desc": "Architectural and civil engineering design, with complete management of works from concept to testing.",
   "home_studio_service2_title": "Valuations & Appraisals",
@@ -467,7 +467,7 @@
   "home_hotel_label": "Our Proposal",
   "home_hotel_title": "Garden Hotel",
   "home_hotel_location": "Scanno, Abruzzo",
-  "home_hotel_desc": "A historic hospitality structure in the heart of Abruzzo. Four stars, 2,600 m² over five floors, ready to be relaunched or transformed for new uses.",
+  "home_hotel_desc": "A historic hospitality structure in the heart of Abruzzo. 2,600 m² over five floors, ready to be relaunched or transformed for new uses.",
   "home_hotel_cta": "Discover the opportunity",
   "home_hotel_stat1_value": "2,600",
   "home_hotel_stat1_label": "m² total area",

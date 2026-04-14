@@ -39,7 +39,8 @@
       }
 
       .title {
-        font-family: "Jost", sans-serif !important;
+        font-family: var(--font-barlow), "Jost", sans-serif !important;
+        text-transform: uppercase;
         font-weight: 500;
         color: var(--mui-palette-primary-main);
       }

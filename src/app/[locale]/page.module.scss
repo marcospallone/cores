@@ -179,28 +179,71 @@
 
 .sectionLabel {
   font-family: "Jost", sans-serif;
-  font-size: toRem(11);
-  font-weight: 600;
-  letter-spacing: toRem(4);
+  position: relative;
+  // top: toRem(-72);
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  margin: 0;
+  padding-bottom: toRem(24);
+  margin-bottom: toRem(72) !important;
+  font-size: toRem(36) !important;
+  font-weight: 700 !important;
+  letter-spacing: toRem(4.5);
+  line-height: 1;
   text-transform: uppercase;
   color: var(--mui-palette-primary-main) !important;
-  margin-bottom: toRem(20);
-  display: flex;
-  align-items: center;
-  gap: toRem(12);
+  text-align: center;
+  z-index: 2;
 
   &::before {
     content: "";
-    display: inline-block;
-    width: toRem(28);
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: toRem(480);
     height: 1px;
-    background-color: var(--mui-palette-primary-main);
-    flex-shrink: 0;
+    transform: translateX(-50%);
+    background: linear-gradient(
+      90deg,
+      rgba(204, 151, 97, 0) 0%,
+      rgba(204, 151, 97, 0.22) 18%,
+      rgba(204, 151, 97, 0.78) 50%,
+      rgba(204, 151, 97, 0.22) 82%,
+      rgba(204, 151, 97, 0) 100%
+    );
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: toRem(-4);
+    width: toRem(10);
+    height: toRem(10);
+    border: 1px solid rgba(204, 151, 97, 0.75);
+    transform: translateX(-50%) rotate(45deg);
+    box-shadow: 0 0 toRem(14) rgba(204, 151, 97, 0.14);
+    background-color: rgba(18, 18, 18, 0.2);
   }
 
   @include media-breakpoint-down(lg) {
-    font-size: toRem(10);
-    margin-bottom: toRem(14);
+    top: 0;
+    padding-bottom: toRem(18);
+    font-size: toRem(22) !important;
+    letter-spacing: toRem(3.2);
+    position: relative;
+    margin-bottom: toRem(36) !important;
+
+    &::before {
+      width: toRem(160);
+    }
+
+    &::after {
+      bottom: toRem(-3);
+      width: toRem(8);
+      height: toRem(8);
+    }
   }
 }
 
@@ -208,6 +251,10 @@
 
 .studioSection {
   position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background:
     linear-gradient(
       135deg,
@@ -334,6 +381,10 @@
 
 .hotelSection {
   position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background:
     linear-gradient(
       135deg,
@@ -370,7 +421,6 @@
   width: 100%;
   height: toRem(560);
   overflow: hidden;
-  border: 1px solid var(--mui-palette-primary-main);
 
   @include media-breakpoint-down(lg) {
     height: toRem(320);
@@ -381,12 +431,60 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    135deg,
-    rgba(18, 18, 18, 0.2) 0%,
-    rgba(18, 18, 18, 0) 60%
+    to top,
+    rgba(10, 10, 10, 0.9) 0%,
+    rgba(10, 10, 10, 0.3) 42%,
+    rgba(10, 10, 10, 0) 68%
   );
   z-index: 1;
   pointer-events: none;
+}
+
+.hotelImageCaption {
+  position: absolute;
+  bottom: toRem(32);
+  left: toRem(32);
+  z-index: 2;
+
+  @include media-breakpoint-down(lg) {
+    bottom: toRem(20);
+    left: toRem(20);
+  }
+}
+
+.hotelImageCaptionBar {
+  width: toRem(36);
+  height: toRem(2);
+  background-color: var(--mui-palette-primary-main);
+  margin-bottom: toRem(14);
+}
+
+.hotelImageCaptionTitle {
+  font-family: "Poppins", sans-serif !important;
+  font-size: toRem(30) !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  color: var(--mui-palette-white-900) !important;
+  line-height: 1 !important;
+  letter-spacing: toRem(1);
+  margin-bottom: toRem(8) !important;
+}
+
+.hotelImageCaptionMeta {
+  display: flex;
+  align-items: center;
+  gap: toRem(8);
+}
+
+.hotelImageCaptionStars {
+  display: flex;
+  align-items: center;
+  gap: toRem(1);
+}
+
+.hotelImageCaptionStarIcon {
+  font-size: toRem(14) !important;
+  color: var(--mui-palette-primary-main) !important;
 }
 
 .hotelTextGrid {
@@ -582,6 +680,10 @@
 // ── CONTACTS SECTION ─────────────────────────────────────────────────────────
 
 .contactsSection {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: var(--mui-palette-success-main);
 }
 

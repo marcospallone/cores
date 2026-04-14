@@ -20,8 +20,8 @@
   "contacts_email": "Email",
   "not_compiled": "Compila tutti i campi contrassegnati con *",
   "invalid_email": "Email non valida",
-  "garden_hero_label": "Proposta immobiliare",
-  "garden_hero_tagline": "Descrizione hotel paragrafo p sotto titolo in garden-hotel font grigio 20px.",
+  "garden_hero_label": "Hotel quattro stelle · Scanno (AQ)",
+  "garden_hero_tagline": "Il Garden Hotel è una struttura ricettiva storica di Scanno: un edificio affacciato sul centro medievale del borgo, immerso nel paesaggio naturale della Valle del Sagittario. Oggi rappresenta un'opportunità concreta per chi intende investire nel turismo, nella residenzialità o nel settore socio-sanitario in uno dei borghi più affascinanti d'Italia.",
   "garden_hero_primary": "Esplora la struttura",
   "garden_intro_label": "Opportunità immobiliare",
   "garden_desc": "Una struttura alberghiera versatile, in posizione centrale a Scanno, nel cuore dell'Abruzzo.",
@@ -32,20 +32,20 @@
   "garden_location": "Dal centro storico di Scanno",
   "garden_overview": "Panoramica",
   "garden_overview_label": "Panoramica",
-  "garden_overview_title": "Una struttura storica pronta a una nuova stagione",
+  "garden_overview_title": "Sessant'anni di storia, un'opportunità senza precedenti",
   "garden_text1": "Il Garden Hotel rappresenta un'opportunità unica nel cuore dell’Abruzzo: una struttura ricettiva storica, ben distribuita e pronta per essere rilanciata o trasformata secondo nuove esigenze. <br></br><br></br> Grazie alla sua versatilità, la struttura si presta a numerose destinazioni d’uso alternative: residence turistico, casa di riposo per anziani autosufficienti, residenza sanitaria, centro benessere o SPA, complesso di appartamenti in vendita o in affitto. <br></br><br></br>Nato come hotel tre stelle nel 1964, è stato oggetto di numerosi ampliamenti e ammodernamenti fino al conseguimento della classificazione quattro stelle nel 1996, rimanendo l’unico hotel di tale categoria a Scanno. <br></br><br></br> La struttura è stata gestita con continuità fino a pochi anni fa ed è attualmente in buone condizioni generali, pur richiedendo aggiornamenti impiantistici e interventi di rinnovo parziale ma non strutturale.",
   "garden_overview_highlights": [
     {
       "title": "Vocazione multipla",
-      "description": "Hotel, residence, residenza assistita, SPA o appartamenti: l'impianto si presta a piu scenari di valorizzazione."
+      "description": "Hotel, residence, residenza assistita, SPA o appartamenti: l'impianto si presta a più scenari di valorizzazione."
     },
     {
-      "title": "Distribuzione gia articolata",
+      "title": "Distribuzione già articolata",
       "description": "Camere, sale comuni, ristorante, cucina e spazi tecnici costruiscono una base solida per una riqualificazione."
     },
     {
-      "title": "Presenza riconoscibile",
-      "description": "Il Garden Hotel conserva una forte identita visiva nel contesto di Scanno e un rapporto diretto con il paesaggio."
+      "title": "Dialogo con il paesaggio",
+      "description": "Il Garden Hotel si apre sul centro storico di Scanno e sulle vette dell'Appennino con vedute dirette e affacci generosi su un paesaggio di rara bellezza."
     }
   ],
   "garden_overview_fact1_value": "1964",
@@ -108,7 +108,7 @@
   "garden_kitchen_preview_suffix": "dotazioni chiave",
   "garden_kitchen_zone1": {
     "title": "Ambienti",
-    "description": "La cucina è suddivisa in vari ambienti, per un totale di 150 m²:",
+    "description": "La cucina è suddivisa in vari ambienti, per un totale di 150 m².",
     "items": [
       "zona cucina",
       "reparto antipasti e frutta",
@@ -159,7 +159,7 @@
     ]
   },
   "garden_numbers_title": "L'hotel in numeri",
-  "garden_numbers_desc": "Alcune delle caratteristiche che rendono l’hotel una importante opportunità.",
+  "garden_numbers_desc": "Alcune delle caratteristiche che rendono l’hotel un’importante opportunità.",
   "garden_images": [
     {
       "src": "/assets/171.jpg",
@@ -387,7 +387,7 @@
   "garden_features_title": "Ambienti già presenti, potenziale già leggibile",
   "garden_features_desc": "La struttura dispone di ambienti differenziati e già riconoscibili. Seleziona una sezione per vedere come si presenta e quale ruolo può avere nel progetto di rilancio.",
   "garden_gallery_label": "Interni e atmosfera",
-  "garden_gallery_title": "Una lettura ravvicinata della struttura",
+  "garden_gallery_title": "Una visione ravvicinata della struttura",
   "garden_gallery_desc": "Dagli spazi comuni alle camere, la galleria accompagna il visitatore dentro l'immobile.",
   "garden_potential_title": "Potenzialità edilizia",
   "garden_potential_description": "La forma articolata e i più livelli consentono anche una diversa destinazione del fabbricato. La struttura risulta eventualmente di facile trasformazione per diverse distribuzioni interne. Dai uno sguardo alle possibili riqualificazioni del Garden Hotel.",
@@ -419,7 +419,7 @@
   "garden_landscape_items": [
     {
       "title": "Lago di Scanno",
-      "content": "Il Lago di Scanno è il lago naturale più grande dell'Abruzzo, famoso per la sua forma a cuore e le acque cristalline. È un luogo ideale per passeggiate, pic-nic e sport acquatici.",
+      "content": "Il Lago di Scanno è il lago naturale più grande dell'Abruzzo, famoso per la sua forma a cuore e le acque cristalline. È un luogo ideale per passeggiate, escursioni e attività sportive.",
       "image": "/assets/lago.jpg"
     },
     {
@@ -444,20 +444,20 @@
     },
     {
       "title": "Tradizioni e Gastronomia",
-      "content": "Scanno è un borgo che conserva gelosamente le sue antiche tradizioni. Il Costume tradizionale femminile, ricco di ricami e simbolismi, è tra i più affascinanti d’Abruzzo e viene ancora indossato in occasioni speciali. Per quanto riguarda la gastronomia, tra formaggi, miele di montagna e dolci tradizionali come il Pan dell'Orso, ogni sapore racconta il territorio.",
+      "content": "Scanno è un borgo che conserva gelosamente le sue antiche tradizioni. Il Costume tradizionale femminile, ricco di ricami e simbolismi, è tra i più affascinanti d’Abruzzo e viene ancora indossato in occasioni speciali. Per quanto riguarda la gastronomia, tra formaggi, miele di montagna e dolci tradizionali, ogni sapore racconta il territorio.",
       "image": "/assets/tradizioni.jpg"
     }
   ],
   "notFound": "La pagina che stai cercando non esiste!",
   "notFoundButton": "Torna alla home",
-  "home_hero_label": "Studio Tecnico",
-  "home_hero_title": "Geom. Spallone\nPierfrancesco",
-  "home_hero_tagline": "Intro Hero.",
+  "home_hero_label": "Studio Tecnico - Geometra Spallone Pierfrancesco",
+  "home_hero_title": "Il vostro progetto,\nla nostra competenza.",
+  "home_hero_tagline": "Con oltre trent'anni di attività sul territorio abruzzese, il nostro studio offre una consulenza tecnica integrata: dalla progettazione architettonica alle pratiche catastali, dalle perizie immobiliari ai condoni edilizi. Un punto di riferimento affidabile per privati, imprese ed enti pubblici.",
   "home_hero_cta_hotel": "Scopri il Garden Hotel",
   "home_hero_cta_contacts": "Contattaci",
   "home_studio_label": "Chi Siamo",
-  "home_studio_title": "Studio Tecnico titolo sezchisiamo hp",
-  "home_studio_desc": "Descrizione Studio Tecnico sezione chi siamo HP. Font grigio 20px mb da title 24px.",
+  "home_studio_title": "Dalla progettazione al catasto: competenza tecnica integrata",
+  "home_studio_desc": "Con oltre trent'anni di attività, lo Studio Tecnico del Geom. Spallone Pierfrancesco supporta privati, imprese ed enti pubblici in ogni ambito tecnico edilizio e immobiliare. Dalla progettazione architettonica e strutturale alla direzione lavori, dalle perizie e stime immobiliari alle pratiche catastali, dai condoni edilizi alle sanatorie, dalle certificazioni energetiche alle pratiche SCIA e DIA: un'unica competenza professionale per ogni esigenza.",
   "home_studio_service1_title": "Progettazione",
   "home_studio_service1_desc": "Progettazione architettonica e edilizia civile, con gestione completa dei lavori dal concept al collaudo.",
   "home_studio_service2_title": "Stime e Perizie",

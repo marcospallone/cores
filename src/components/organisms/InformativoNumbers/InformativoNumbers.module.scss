@@ -100,16 +100,42 @@
         background-color: rgba(204, 151, 97, 0.12);
       }
 
+      .countupWrap {
+        position: relative;
+        display: inline-block;
+        min-height: toRem(56);
+
+        @include media-breakpoint-down(lg) {
+          min-height: toRem(40);
+        }
+      }
+
+      .countupPlaceholder,
       .countup {
-        font-size: toRem(56);
+        display: block;
+        font-size: toRem(48);
         line-height: 1;
         font-family: "Poppins", sans-serif;
         font-weight: 700;
         color: var(--mui-palette-white-900);
+        white-space: nowrap;
+        font-variant-numeric: tabular-nums;
+        font-feature-settings: "tnum";
 
         @include media-breakpoint-down(lg) {
           font-size: toRem(40);
         }
+      }
+
+      .countup {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .countupPlaceholder {
+        visibility: hidden;
+        pointer-events: none;
       }
 
       .numberTitle {

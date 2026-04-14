@@ -88,46 +88,40 @@
 
       .location {
         display: flex;
-        align-items: center;
-        gap: toRem(8);
-        cursor: pointer;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: toRem(6);
 
         @include media-breakpoint-down(xl) {
           gap: toRem(4);
         }
 
-        &:hover {
-          .icon {
-            color: var(--mui-palette-success-main);
-          }
-
-          .address {
-            color: var(--mui-palette-success-main);
-
-            &::after {
-              width: 100%;
-            }
-          }
-        }
-
-        .icon {
-          transition: color 0.2s ease;
-        }
-
-        .address {
+        .locationLink {
+          display: inline-flex;
+          align-items: center;
+          gap: toRem(8);
           color: var(--mui-palette-white-900);
-          font-size: toRem(20);
           text-decoration: none;
-          position: relative;
+          width: fit-content;
           transition: color 0.2s ease;
+        }
 
-          @include media-breakpoint-down(xl) {
-            font-size: toRem(18);
-          }
+        .emailLink {
+          align-items: flex-end;
+        }
 
-          @include media-breakpoint-down(lg) {
-            font-size: toRem(16);
-          }
+        .locationIcon {
+          transition: color 0.2s ease;
+        }
+
+        .locationText {
+          position: relative;
+          color: var(--mui-palette-white-900);
+          font-size: 1rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          text-decoration: none;
+          transition: color 0.2s ease;
 
           &::after {
             content: "";
@@ -138,6 +132,17 @@
             width: 0;
             background-color: var(--mui-palette-success-main);
             transition: width 0.5s ease;
+          }
+        }
+
+        .locationLink:hover {
+          .locationIcon,
+          .locationText {
+            color: var(--mui-palette-success-main);
+          }
+
+          .locationText::after {
+            width: 100%;
           }
         }
       }
