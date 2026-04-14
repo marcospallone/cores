@@ -5,7 +5,7 @@ import MenuMobile from "@/components/molecules/MenuMobile/MenuMobile";
 import theme from "@/theme/theme";
 import AddIcon from "@mui/icons-material/Add";
 import { Box, Button, Container, useMediaQuery } from "@mui/material";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion, type Variants } from "motion/react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -39,7 +39,7 @@ const Header: React.FC = () => {
     };
   }, [menuMobileOpen]);
 
-  const menuVariants = {
+  const menuVariants: Variants = {
     hidden: {
       y: "-100%",
       opacity: 0,
